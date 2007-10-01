@@ -1,4 +1,5 @@
 #summary SWFObject v2.0 test pages (or just study/reuse the source code)
+#labels Featured
 
 == SWFObject v2.0 test pages ==
 
