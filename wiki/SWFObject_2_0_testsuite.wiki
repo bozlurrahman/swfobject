@@ -1,0 +1,25 @@
+#summary SWFObject v2.0 test pages (or just study/reuse the source code)
+
+== SWFObject v2.0 test pages ==
+
+=== Static embed method (using option 1): ===
+
+  # Basic example [ http://www.swffix.org/swfobject/testsuite/test.html ]
+  # Parameters test page [ http://www.swffix.org/swfobject/testsuite/test_params.html ]
+  # Streaming Flash content test page [ http://www.swffix.org/swfobject/testsuite/test_streaming.html ]
+  # Browser communication test page [ http://www.swffix.org/swfobject/testsuite/test_com.html ]
+  # Embedding multiple SWFs [ http://www.swffix.org/swfobject/testsuite/test_multiple.html ]
+  # DomLoad test page [ http://www.swffix.org/swfobject/testsuite/test_domload.html ]
+  # Full browser Flash test page [ http://www.swffix.org/swfobject/testsuite/test_fullbrowserflash.html ]
+
+=== Dynamic embed method (using option 2): ===
+
+  # Basic example [ http://www.swffix.org/swfobject/testsuite/test_dynamic.html ]
+  # Parameters test page [ http://www.swffix.org/swfobject/testsuite/test_dynamic_params.html ]
+  # Streaming Flash content test page [ http://www.swffix.org/swfobject/testsuite/test_dynamic_streaming.html ]
+  # Browser communication test page [ http://www.swffix.org/swfobject/testsuite/test_dynamic_com.html ]
+  # Embedding multiple SWFs [ http://www.swffix.org/swfobject/testsuite/test_dynamic_multiple.html ]
+  # DomLoad test page [ http://www.swffix.org/swfobject/testsuite/test_dynamic_domload.html ]
+  # Full browser Flash test page [ http://www.swffix.org/swfobject/testsuite/test_dynamic_fullbrowserflash.html ]
+  # Example of the different Object notation methods (to define your flashvars, params and object's attributes) [ http://www.swffix.org/swfobject/testsuite/test_dynamic_notations.html ]
+  
