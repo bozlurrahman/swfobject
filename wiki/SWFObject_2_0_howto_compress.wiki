@@ -1,0 +1,33 @@
+#summary How to compress the swfobject.js source file using Dojo ShrinkSafe
+#labels Phase-Deploy
+
+== How to compress the swfobject.js source file using Dojo ShrinkSafe ==
+
+  # Open a web browser and browse to: [ http://alex.dojotoolkit.org/shrinksafe/ ]
+  # Select the swfobject.js source file from your file system
+  # Check "strip newline chars?"
+  # Press "shrink em!"
+  # Open the resulting swfobject.compressed.js file in a code editor
+  # Because ShrinkSafe removes all comments, you have to re-add the copyright header. Create a new line and copy-paste the following comments: 
+{{{
+/*	SWFObject v2.0 <http://code.google.com/p/swfobject/>
+	Copyright (c) 2007 Geoff Stearns, Michael Williams, and Bobby van der Sluis
+	This software is released under the MIT License <http://www.opensource.org/licenses/mit-license.php>
+*/
+}}}
+  # Adjust the version number in the copyright header to the current version
+  # Because ShrinkSafe removes all comments, you have to re-add the Internet Explorer conditional compiling directives and the JavaScript code it embodies (this is a proprietary feature test to check e.g. whether a browser is Internet Explorer): 
+{{{
+Paste the following code block:
+
+/*@cc_on ie=true;@if(@_jscript_version>=5.6)ie6AndUp=true;@end@if(@_win32)win=true;@elif(@_mac)mac=true;@end@*/
+
+In between:
+
+... var mac=p?/mac/.test(p):/mac/.test(u);
+
+And:
+
+return {w3cdom:_9,playerVersion:_a,opera:_10,operaVersion:_11,webkit:_14,webkitVersion:_15,ie:ie,ie6AndUp:_17,win:win,mac:mac};}(); ...
+}}}
+  # Save the file as swfobject.js
