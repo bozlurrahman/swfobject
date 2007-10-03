@@ -3,6 +3,10 @@
 
 == SWFObject release notes ==
 
+=== SWFObject v2.0 beta2 (October 3rd, 2007) ===
+
+  * We fixed a bug in the compressed version of the library, which caused that the active content fix was never applied to Internet Explorer 6+
+
 === SWFObject v2.0 beta1 (October 1st, 2007) ===
 
   * We changed both the project's and library's name from SWFFix to SWFObject
