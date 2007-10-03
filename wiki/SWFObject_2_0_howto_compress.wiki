@@ -20,7 +20,7 @@
 {{{
 Paste the following code block:
 
-/*@cc_on ie=true;@if(@_jscript_version>=5.6)ie6AndUp=true;@end@if(@_win32)win=true;@elif(@_mac)mac=true;@end@*/
+/*@cc_on ie=true;@if(@_jscript_version>=5.6)_15=true;@end@if(@_win32)win=true;@elif(@_mac)mac=true;@end@*/
 
 In between:
 
