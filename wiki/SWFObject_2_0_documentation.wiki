@@ -173,6 +173,36 @@ First add a unique `id` to the outer `object` tag that defines your Flash conten
 
 Just repeat steps 1 and 3 (As mentioned under option 1: "How to embed Flash content using standards compliant markup and use SWFObject to solve its issues?") to add as many SWF files to your page as you like.
 
+== How can you reference the active object element with JavaScript (using option 1)? ==
+
+One of the side-effects of the nested-objects approach is that per SWF there are two object elements available in the HTML code, however you can only use one id or name attribute, because these have to be unique within a web page.
+
+The following browsers map to the following active object element:
+  * Internet Explorer on Windows only sees the outer object, because the nested object is commented out by conditional comments
+  * Both Opera and Safari support the notation for the outer object (Reference: [ http://www.swffix.org/testsuite/ ], row: object ActiveX)
+  * Firefox, Mozilla and all other Gecko based browsers use the inner object 
+
+You can reference the active object element by:
+  # Only add the id or name attribute to the outer object tag
+  # Use the following code to reference the correct object:
+
+{{{
+var obj = document.getElementById("myId");
+var nestedObj = obj.getElementsByTagName("object")[0];
+var ref = false;
+if (obj) {
+  if (!nestedObj || (nestedObj && typeof obj.SetVariable != "undefined")) {
+    ref = obj;
+  }
+  else if (typeof nestedObj.SetVariable != "undefined") {
+    ref = nestedObj;
+  }
+}
+if (ref) {
+  ref.doSomething(); // e.g. an external interface call
+}
+}}}
+
 == How to use SWFObject to dynamically embed Flash content? (option 2) ==
 
 === STEP 1: Create alternative content using standards compliant markup ===
@@ -448,4 +478,3 @@ There are a number of reasons why we are not supporting this:
   * Only a very small (non-significant) amount of web authors is using it
   * We are unsure if it is the direction to go. Internet Explorer does not support it and all other major browser vendors are aiming their arrows at a new standard way of HTML parsing (with HTML 5), which departs from the current W3C vision of parsing HTML as XML
   * We save a considerate amount of file size and effort (testing, issue resolving) by not supporting it
-
