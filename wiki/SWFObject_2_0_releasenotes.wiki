@@ -10,7 +10,7 @@
   * Fixed script crash in Internet Explorer when ActiveX is disabled [ http://code.google.com/p/swfobject/issues/detail?id=8 ]
   * Added an additional test within the `callDomLoadFunctions` method for Internet Explorer on Windows (which tries to append and remove a childNode and catches a thrown error) to avoid that it executes the DOM dependent part of the script too early (in this case it degrades to unload)
   * Made sure the script degrades properly in case no Flash plug-in is installed (we introduced a flow bug in beta1)
-  * Also applied the `fixOutOfMemoryError` (occurs when unloading a web page in IE using fp9 and multiple SWFs using ExternalInterface) and `fixObjectLeaks` (removes hanging audio/video threads when unloading a web page in IE using fp8+ and innerHTML/outerHTML) to the dynamic publishing method (flow bug)
+  * Also applied the `fixOutOfMemoryError` method (occurs when unloading a web page in IE using fp9 and multiple SWFs using ExternalInterface) and `fixObjectLeaks` method (removes hanging audio/video threads when unloading a web page in IE using fp8+ and innerHTML/outerHTML) to the dynamic publishing method (flow bug)
   * Fixed a broken-loading-file-reference bug in Internet Explorer (when the display of alternative content is forced, we now wait until the onload event fires to remove the hidden SWF)
   * Did some file size optimization (e.g. removed some unnecessary feature tests)
 
