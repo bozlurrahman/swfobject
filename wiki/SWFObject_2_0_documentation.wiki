@@ -99,9 +99,11 @@ When you take a close look at the cross-browser support of this markup approach,
 
 The SWFObject JavaScript library will attempt to solve these issues. You can best see it an add-on, which primary goals are to fix issues of using standards compliant markup and to add functionality to improve the user experience.
 
+*NOTE: The fix to avoid the click-to-activate mechanism (option 1 only) appeared to have drawbacks and is therefore removed. From SWFObject 2.0 beta3 onwards only option 2 offers a solution for the active content issue.*
+
 === STEP 2: Include the SWFObject JavaScript library in the head of your HTML page ===
 
-The SWFObject library consists of one external JavaScript file (size: 11.4Kb, GZIPed: 3.5Kb). SWFObject will be executed as soon as it is read and will perform all DOM manipulations as soon as the DOM is loaded - for all browsers that support this, like IE, Firefox, Safari and Opera 9+ - or otherwise as soon as the onload event fires:
+The SWFObject library consists of one external JavaScript file (size: 9.8Kb, GZIPed: 3.3Kb). SWFObject will be executed as soon as it is read and will perform all DOM manipulations as soon as the DOM is loaded - for all browsers that support this, like IE, Firefox, Safari and Opera 9+ - or otherwise as soon as the onload event fires:
 	
 {{{
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -228,7 +230,7 @@ SWFObject's dynamic embed method follows the principle of progressive enhancemen
 
 === STEP 2: Include the SWFObject JavaScript library in the head of your HTML page ===
 
-The SWFObject library consists of one external JavaScript file (size: 11.4Kb, GZIPed: 3.5Kb). SWFObject will be executed as soon as it is read and will perform all DOM manipulations as soon as the DOM is loaded - for all browsers that support this, like IE, Firefox, Safari and Opera 9+ - or otherwise as soon as the onload event fires:
+The SWFObject library consists of one external JavaScript file (size: 9.8Kb, GZIPed: 3.3Kb). SWFObject will be executed as soon as it is read and will perform all DOM manipulations as soon as the DOM is loaded - for all browsers that support this, like IE, Firefox, Safari and Opera 9+ - or otherwise as soon as the onload event fires:
 	
 {{{
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
