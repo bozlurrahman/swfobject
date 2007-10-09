@@ -20,7 +20,7 @@
 {{{
 Paste the following code block:
 
-/*@cc_on ie=true;@if(@_jscript_version>=5.6)_15=true;@end@if(@_win32)win=true;@elif(@_mac)mac=true;@end@*/
+/*@cc_on ie=true;@if(@_win32)win=true;@elif(@_mac)mac=true;@end@*/
 
 In between:
 
@@ -28,6 +28,6 @@ In between:
 
 And:
 
-return {w3cdom:_9,playerVersion:_a,opera:_10,operaVersion:_11,webkit:_14,webkitVersion:_15,ie:ie,ie6AndUp:_17,win:win,mac:mac};}(); ...
+return {w3cdom:_8,playerVersion:_9,webkit:_f,webkitVersion:_10,ie:ie,win:win,mac:mac};}(); ...
 }}}
   # Save the file as swfobject.js
