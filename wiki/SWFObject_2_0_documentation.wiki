@@ -462,12 +462,16 @@ Please note that while Flash version numbers normally consist of major.minor.rel
 
 Embed option 2 (as described under "How to use SWFObject?") works similar as SWFObject v1.5 and UFO, and uses JavaScript to dynamically replace marked up alternative content by Flash content.
 
-Embed option 1 departs from this conceptual principle by using standards compliant markup  to embed Flash content and use JavaScript to solve issues that cannot be solved by markup alone. The advantages of this new method are that the actual authoring of standards compliant markup is promoted and that the mechanism of inserting Flash content doesn't rely on JavaScript anymore, so it degrades properly:
-  * If you have the Flash plug-in installed, but have JavaScript disabled or a use a browser that doesn't support JavaScript, you will still be able to see your Flash content
-  * Flash will now also run on a device like Sony PSP, which has very poor JavaScript support
-  * Automated tools like RSS readers are able to pick up Flash content
+Embed option 1 departs from this conceptual principle by using standards compliant markup  to embed Flash content and use JavaScript to solve issues that cannot be solved by markup alone. The advantages of this new method are that:
+  # The actual authoring of standards compliant markup is promoted
+  # The mechanism of inserting Flash content doesn't rely on JavaScript anymore, so it degrades properly:
+    * If you have the Flash plug-in installed, but have JavaScript disabled or a use a browser that doesn't support JavaScript, you will still be able to see your Flash content
+    * Flash will now also run on a device like Sony PSP, which has very poor JavaScript support
+    * Automated tools like RSS readers are able to pick up Flash content 
 
-The advantage of the second option over the first is that it is easier to author, because it is less verbose and it contains no redundant code.
+The advantages of the second method over the first are that:
+  # It is easier to author, because it is less verbose and it contains no redundant code
+  # It avoids the 'click-to-activate' mechanism to activate active content in Internet Explorer 6+ and Opera 9+
 			
 == What are the risks of using SWFObject? ==
 
