@@ -25,7 +25,7 @@ function resizeHandler(event:Event):void {
 }
 }}}
 
-*NOTE:* For positioning elements always define a resize handler, because a user can resize the browser window and in Internet Explorer (using the dynamic publishing method or option 2) the stage size is available on first load, however it will be 0 when a page is be reloaded/revisited, causing the Flash player to keep on triggering the stage.resize event until it receives its current value
+*NOTE:* For positioning elements always define a resize handler, because a user can resize the browser window and in Internet Explorer (using the dynamic publishing method or option 2) the stage size is only available on first load. When reloading or revisiting a page it will initially be 0, causing the Flash player to keep on triggering the stage.resize event until it receives its current value
 
 Two code examples can be found in the SWFObject 2.0 test suite:
   * Static publishing (option 1): [ http://www.swffix.org/swfobject/testsuite/test_fullbrowserflash.html ]
