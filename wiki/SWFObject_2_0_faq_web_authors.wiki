@@ -1,0 +1,65 @@
+#SWFObject 2.0 FAQ for web authors
+
+= SWFObject 2.0 FAQ for web authors =
+
+== 1. How can I create a SWF that will encompass 100% of the browser window  ==
+
+The following technique is also known as Full Browser Flash:
+  # Set both the width and height of your SWF to 100% in your SWFObject definition
+  # Include CSS to get rid of any default margins/padding and set the height of the `html` element, the `body` element and the entire chain of block level HTML elements that your SWF will be nested in to 100%, because Firefox (or: any Gecko based browser) in standards compliant mode (or: using a valid DOCTYPE) interprets percentages in a very strict way (to be precise: the percentage of the height of its parent container, which has to be set explicitly):
+{{{
+<style type="text/css" media="screen">
+  html, body, #containerA, #containerB { height:100%; }
+  body { margin:0; padding:0; overflow:hidden; }
+</style>
+}}}
+  # Manage the scaling and alignment of your SWF and the positioning of your SWF's elements, within your ActionScript code, e.g.:
+{{{
+stage.scaleMode = StageScaleMode.NO_SCALE;
+stage.align = StageAlign.TOP_LEFT;
+stage.addEventListener(Event.RESIZE, resizeHandler);
+
+function resizeHandler(event:Event):void {
+  // center stuff
+}
+}}}
+
+*NOTE:* For positioning elements always define a resize handler, because a user can resize the browser window and in Internet Explorer (using the dynamic publishing method or option 2) the stage size is available on first load, however it will be 0 when a page is be reloaded/revisited, causing the Flash player to keep on triggering the stage.resize event until it receives its current value
+
+Two code examples can be found in the SWFObject 2.0 test suite:
+  * Static publishing (option 1): [ http://www.swffix.org/swfobject/testsuite/test_fullbrowserflash.html ]
+  * Dynamic publishing (option 2): [ http://www.swffix.org/swfobject/testsuite/test_dynamic_fullbrowserflash.html ]
+
+== 2. How do I prevent Internet Explorer from crashing when a `<base>` tag is defined? ==
+
+Including a closing `</base>` tag will prevent this bug in Internet Explorer being triggered. For HTML 4 compliant pages (a closing `base` tag is forbidden under HTML 4), you could use Internet Explorer conditional comments to keep your HTML valid and still include a closing `base` tag for HTML 4 documents:
+{{{
+<base href="http://www.yourdomain.com/"><!--[if IE]></base><![endif]-->
+}}}
+
+== 3. Why doesn't `fscommand` work in Internet Explorer with dynamic publishing (option 2) ? ==
+
+A In order to make `fscommand` work in Internet Explorer Adobe recommends to add a block of VBScript to capture and forward the FSCommand calls to JavaScript. However VBScript doesn't work anymore when a Flash movie is inserted using `innerHTML` or `outerHTML`,  as SWFObject's dynamic publishing method does.
+
+Fortunately you can also use JavaScript instead of VBScript to catch the `fscommand` calls. A small downside is that it uses proprietary attributes (which, again, wrapped in conditional comments will keep your code valid). E.g. the following block of VBScript code:
+{{{
+<SCRIPT LANGUAGE=VBScript>
+on error resume next
+Sub myCom_FSCommand(ByVal command, ByVal args)
+  call myCom_DoFSCommand(command, args)
+end sub
+</SCRIPT>
+}}}
+
+Can be replaced with:
+{{{
+<!--[if IE]>
+<script type="text/javascript" event="FSCommand(command,args)" for="myCom">
+  myCom_DoFSCommand(command, args);
+</script>
+<![endif]-->
+}}}
+
+*NOTE:* When publishing for Flash 8 or higher, the use of ExternalInterface is recommended for JavaScript-ActionScript communication over the use of fscommand()
+
+A code example can be found in the SWFObject 2.0 test suite: [ http://www.swffix.org/swfobject/testsuite/test_dynamic_com.html ]
