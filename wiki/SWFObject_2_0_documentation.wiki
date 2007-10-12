@@ -58,11 +58,19 @@ SWFObject's base markup uses the nested-objects method (with proprietary Interne
 </html>
 }}}
 
-Note 1: The nested-objects method requires a double `object` definition (the outer `object` targeting Internet Explorer and the inner `object` targeting all other browsers), so you need to define your `object` attributes and nested `param` elements twice.
+*NOTE:* The nested-objects method requires a double `object` definition (the outer `object` targeting Internet Explorer and the inner `object` targeting all other browsers), so you need to define your `object` attributes and nested `param` elements twice.
 
-Note 2: The `id` and `classid` attributes, and the `movie` `param` element should be used for the outer `object` only. The `type` and `data` attributes should be used by the inner `object` only.
+Required attributes:
+  * `classid` (outer `object` element only, value is always `clsid:D27CDB6E-AE6D-11cf-96B8-444553540000`)
+  * `type` (inner `object` element only, value is always `application/x-shockwave-flash`)
+  * `data` (inner `object` element only, defines the URL of a SWF)
+  * `width` (both `object` elements, defines the width of a SWF)
+  * `height` (both `object` elements, defines the height of a SWF)
 
-Note 3: We advise not to use the `codebase` attribute to point to the URL of the Flash plugin installer on Adobe's servers, because this is illegal according to the specifications which restrict its access to the domain of the current document only. We recommend the use of alternative content with a subtle message that a user can have a richer experience by downloading the Flash plugin instead.
+Required `param` element:
+  * `movie` (outer `object` element only, defines the URL of a SWF)
+
+*NOTE:* We advise not to use the `codebase` attribute to point to the URL of the Flash plugin installer on Adobe's servers, because this is illegal according to the specifications which restrict its access to the domain of the current document only. We recommend the use of alternative content with a subtle message that a user can have a richer experience by downloading the Flash plugin instead.
 
 ==== How can you use HTML to configure your Flash content? ====
 
@@ -97,13 +105,13 @@ The `object` element allows you to nest alternative content inside of it, which 
 ==== What are the downsides of the nested-objects method? ====
 
 When you take a close look at the cross-browser support of this markup approach, you will find the following deficiencies:
-  * Safari 1.2.2 and lower will ignore all nested param elements
-  * Internet Explorer 6+ on Windows XP SP2+ and Opera 9+ will include a click-to-activate mechanism
-  * There is a risk that an outdated Flash player will run your Flash content with the possibility of broken or no content at all
+  # Safari 1.2.2 and lower will ignore all nested param elements
+  # Internet Explorer 6+ on Windows XP SP2+ and Opera 9+ will include a click-to-activate mechanism
+  # There is a risk that an outdated Flash player will run your Flash content with the possibility of broken or no content at all
 
 The SWFObject JavaScript library will attempt to solve these issues. You can best see it an add-on, which primary goals are to fix issues of using standards compliant markup and to add functionality to improve the user experience.
 
-*NOTE: All currently known workarounds to avoid the 'click-to-activate' mechanism for static SWF content appear to have severe drawbacks. Dynamic publishing (option 2) is currently the only real solution available that to avoid having to activate active content.*
+*NOTE:* All currently known workarounds to avoid the 'click-to-activate' mechanism for static SWF content appear to have severe drawbacks. Dynamic publishing (option 2) is currently the only real solution available that avoids having to activate active content.
 
 === STEP 2: Include the SWFObject JavaScript library in the head of your HTML page ===
 
@@ -293,7 +301,7 @@ The SWFObject library consists of one external JavaScript file (size: 9.8Kb, GZI
 You can add the following often-used optional attributes [ http://www.w3schools.com/tags/tag_object.asp ] to the `object` element:
   * `id`
   * `name`
-  * `class`
+  * `styleclass` (used instead of `class`, because this is also an ECMA4 reserved keyword)
   * `align`
 
 You can use the following optional Flash specific `param` elements [ http://www.adobe.com/cfusion/knowledgebase/index.cfm?id=tn_12701 ]:
@@ -463,18 +471,17 @@ The advantage of the second option over the first is that it is easier to author
 			
 == What are the risks of using SWFObject? ==
 
-=== When using embed option 1 ===
-
-Users that have JavaScript disabled or have browsers that don't support JavaScript at all or not well enough may face a degraded user experience caused by active content or in the worst case, broken Flash content. Let's calculate the odds:
-  * 4% of all web users have no JavaScript support or have JavaScript disabled (source: thecounter.com [ http://www.thecounter.com/stats/2007/June/javas.php ]). When you consider that IE6, IE7 and Opera have a market share of around 80% [ http://www.thecounter.com/stats/2007/June/browser.php ], you can do the math that there is a risk of 3.2% (4% of 80%) on a degraded user experience (having to click to activate active content).
-  * When you publish your Flash content for Flash player version 8 and a user has Flash Player 6 installed, there is a 0.2% (around 5% version gap of 4% no JavaScript) chance on broken or no content at all. When you publish your Flash content for Flash player version 8 and a user has Flash Player 7 installed this chance is already reduced to 0.1% (source: Adobe [ http://www.adobe.com/products/player_census/flashplayer/version_penetration.html ]).
+When using embed option 1:
+  # 73% of all web users (the combined market share of IE6, IE7 and Opera, source: thecounter.com [ http://www.thecounter.com/stats/2007/September/browser.php ]) will have a somewhat degraded user experience because of a 'click-to-activate' mechanism
+  # Less than 1% of all web users may face broken Flash content:
+    * When you publish your Flash content for Flash player 9 and a user has Flash Player 6 installed, there is a 0.4% (around 6% Flash player version gap of 6% no JavaScript) chance on broken or no content at all
+    * When you publish your Flash content for Flash player 8 and a user has Flash Player 6 installed, there is a 0.04% (around 0.7% Flash player version gap of 6% no JavaScript) chance on broken or no content at all (source: thecounter.com [ http://www.thecounter.com/stats/2007/September/javas.php ] and Adobe [ http://www.adobe.com/products/player_census/flashplayer/version_penetration.html ])
 
 Please note that although this approach still has its risks, the odds will be equal or lower than any other Flash embed method available.
 
-=== When using embed option 2 ===
+When using embed option 2:
 
-Users that have JavaScript disabled or have browsers that don't support JavaScript at all, will never be able to see any Flash content at all (regardless whether the latest Flash player is installed or not), however they will see alternative content instead. The odds:
-  * 4% of all web users have no JavaScript support or have JavaScript disabled (source: thecounter.com [ http://www.thecounter.com/stats/2007/June/javas.php ]).
+  * 6% of all web users have JavaScript disabled, or have browsers that don't support JavaScript at all, or not well enough, and will never be able to see any Flash content at all (regardless whether the latest Flash player is installed or not), however they will see alternative content instead (source: thecounter.com [ http://www.thecounter.com/stats/2007/September/javas.php ])
 
 == Does SWFObject support MIME type application/xhtml+xml? ==
 
