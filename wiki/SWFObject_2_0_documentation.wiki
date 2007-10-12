@@ -15,12 +15,16 @@ SWFObject offers two ways to embed Flash content:
   # Embed Flash content using standards compliant markup, and use SWFObject to resolve the issues that markup alone cannot solve
   # Use SWFObject to dynamically embed Flash content (similar like previous versions of SWFObject and UFO)
 
-The advantage of the first method over the second is that the actual authoring of standards compliant markup is promoted and that the mechanism of inserting Flash content doesn't rely on JavaScript anymore, so it degrades properly:
-  * If you have the Flash plug-in installed, but have JavaScript disabled or a use a browser that doesn't support JavaScript, you will still be able to see your Flash content
-  * Flash will now also run on a device like Sony PSP, which has very poor JavaScript support
-  * Automated tools like RSS readers are able to pick up Flash content 
+The advantages of the first method over the second are that:
+  # The actual authoring of standards compliant markup is promoted
+  # The mechanism of inserting Flash content doesn't rely on JavaScript anymore, so it degrades properly:
+    * If you have the Flash plug-in installed, but have JavaScript disabled or a use a browser that doesn't support JavaScript, you will still be able to see your Flash content
+    * Flash will now also run on a device like Sony PSP, which has very poor JavaScript support
+    * Automated tools like RSS readers are able to pick up Flash content 
 
-The advantage of the second method over the first is that it is easier to author, because it is less verbose and it contains no redundant code.
+The advantages of the second method over the first are that:
+  # It is easier to author, because it is less verbose and it contains no redundant code
+  # It avoids the 'click-to-activate' mechanism to activate active content in Internet Explorer 6+ and Opera 9+.
 
 == How to embed Flash content using standards compliant markup and use SWFFix to solve its issues? (option 1) ==
 
@@ -99,7 +103,7 @@ When you take a close look at the cross-browser support of this markup approach,
 
 The SWFObject JavaScript library will attempt to solve these issues. You can best see it an add-on, which primary goals are to fix issues of using standards compliant markup and to add functionality to improve the user experience.
 
-*NOTE: The fix to avoid the click-to-activate mechanism (option 1 only) appeared to have drawbacks and is therefore removed. From SWFObject 2.0 beta3 onwards only option 2 offers a solution for the active content issue.*
+*NOTE: All currently known workarounds to avoid the 'click-to-activate' mechanism for static SWF content appear to have severe drawbacks. Dynamic publishing (option 2) is currently the only real solution available that to avoid having to activate active content.*
 
 === STEP 2: Include the SWFObject JavaScript library in the head of your HTML page ===
 
