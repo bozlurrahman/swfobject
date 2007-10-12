@@ -33,7 +33,7 @@ Two code examples can be found in the SWFObject 2.0 test suite:
 
 == 2. How do I prevent Internet Explorer from crashing when a `<base>` tag is defined? ==
 
-Including a closing `</base>` tag will prevent this bug in Internet Explorer being triggered. For HTML 4 compliant pages (a closing `base` tag is forbidden under HTML 4), you could use Internet Explorer conditional comments to keep your HTML valid and still include a closing `base` tag for HTML 4 documents:
+Including a closing `</base>` tag will prevent this bug in Internet Explorer being triggered. Because for HTML 4 compliant pages (a closing `base` tag is forbidden under HTML 4), you could use Internet Explorer conditional comments to keep your HTML valid and still include a closing `base` tag for HTML 4 documents:
 {{{
 <base href="http://www.yourdomain.com/"><!--[if IE]></base><![endif]-->
 }}}
