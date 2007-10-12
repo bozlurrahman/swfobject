@@ -12,8 +12,8 @@ The A List Apart article Flash Embedding Cage Match [ http://www.alistapart.com/
 == How to use SWFObject? ==
 
 SWFObject offers two ways to embed Flash content:
-  # Embed Flash content using standards compliant markup, and use JavaScript to resolve the issues that markup alone cannot solve (also called static publishing)
-  # Use JavaScript to embed Flash content (similar like previous versions of SWFObject and UFO, also called dynamic publishing)
+  # Embed Flash content and alternative content using standards compliant markup, and use JavaScript to resolve the issues that markup alone cannot solve (also called static publishing)
+  # Insert alternative content using standards compliant markup and embed Flash content with unobtrusive JavaScript (similar like previous versions of SWFObject and UFO, also called dynamic publishing)
 
 The advantages of the first method over the second are that:
   # The actual authoring of standards compliant markup is promoted
