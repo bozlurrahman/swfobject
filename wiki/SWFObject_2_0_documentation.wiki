@@ -24,7 +24,7 @@ The advantages of the first method over the second are that:
 
 The advantages of the second method over the first are that:
   # It is easier to author, because it is less verbose and it contains no redundant code
-  # It avoids the 'click-to-activate' mechanism to activate active content in Internet Explorer 6+ and Opera 9+.
+  # It avoids the 'click-to-activate' mechanism to activate active content in Internet Explorer 6+ and Opera 9+
 
 == How to embed Flash content using standards compliant markup and use SWFFix to solve its issues? (option 1) ==
 
