@@ -6,7 +6,7 @@
 === SWFObject v2.0 beta4 (October 15th, 2007) ===
 
   * Added extra checks to ensure safe object enumerations
-  * Fixed Safari bug when defining the `class` attribute when using dynamic publishing;  `class` is an ECMA4 reserved keyword, so for dynamic publishing `styleclass` should be used instead
+  * Fixed Safari bug the `class` attribute is an ECMA4 reserved keyword, so for dynamic publishing `styleclass` should be used instead
 
 === SWFObject v2.0 beta3 (October 9th, 2007) ===
 
