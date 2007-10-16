@@ -1,5 +1,3 @@
-#summary One-sentence summary of this page.
+#summary SWFObject v2.0 documentation for JavaScript developers
 
-= Introduction =
-
-Add your content here.
+= SWFObject v2.0 documentation for JavaScript developers =
