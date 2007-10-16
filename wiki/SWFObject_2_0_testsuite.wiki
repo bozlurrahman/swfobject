@@ -23,4 +23,12 @@
   # DomLoad test page [ http://www.swffix.org/swfobject/testsuite/test_dynamic_domload.html ]
   # Full browser Flash test page [ http://www.swffix.org/swfobject/testsuite/test_dynamic_fullbrowserflash.html ]
   # Example of the different Object notation methods (to define your flashvars, params and object's attributes) [ http://www.swffix.org/swfobject/testsuite/test_dynamic_notations.html ]
-  
+ 
+ === Other API methods: ===
+ 
+   # swfobject.getFlashPlayerVersion() [ http://www.swffix.org/swfobject/testsuite/test_api_getflashplayerversion.html ]
+   # swfobject.hasFlashPlayerVersion(versionStr) [ http://www.swffix.org/swfobject/testsuite/test_api_hasflashplayerversion.html ]
+   # swfobject.addLoadEvent(fn) [ http://www.swffix.org/swfobject/testsuite/test_api_addloadevent.html ]
+   # swfobject.addDomLoadEvent(fn) [ http://www.swffix.org/swfobject/testsuite/test_api_adddomloadevent.html ]
+   # swfobject.createSWF(attObj, parObj, el) [ http://www.swffix.org/swfobject/testsuite/test_api_createswf.html ]
+   # swfobject.createCSS(selStr, declStr) [ http://www.swffix.org/swfobject/testsuite/test_api_createcss.html ]

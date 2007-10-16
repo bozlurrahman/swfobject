@@ -3,6 +3,10 @@
 
 == SWFObject release notes ==
 
+=== SWFObject v2.0 beta5 (October 16th, 2007) ===
+  * Extended the API to suit the needs of JavaScript developers [ http://code.google.com/p/swfobject/wiki/SWFObject_2_0_api_javascript_dev ]
+  * Removed the `fixOutOfMemoryError` method, and added the solution of the issue to the FAQ for web authors [ http://code.google.com/p/swfobject/wiki/SWFObject_2_0_faq_web_authors ] 
+
 === SWFObject v2.0 beta4 (October 15th, 2007) ===
 
   * Added extra checks to ensure safe object enumerations

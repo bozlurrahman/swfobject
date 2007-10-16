@@ -64,3 +64,18 @@ Can be replaced with:
 *NOTE:* When publishing for Flash 8 or higher, the use of ExternalInterface is recommended for JavaScript-ActionScript communication over the use of fscommand()
 
 A code example can be found in the SWFObject 2.0 test suite: [ http://www.swffix.org/swfobject/testsuite/test_dynamic_com.html ]
+
+== 4. How do I fix a "Line 56: Out of Memory" error, when unloading a page in Internet Explorer using earlier versions of Flash Player 9 and multiple SWFs using ExternalInterface? ==
+
+This issue was introduced with the release of Flash Player 9, and is fixed in recent versions of Flash Player 9. You can fix it by adding the following JavaScript code in the head of your (X)HTML page:
+{{{
+<!--[if IE]>
+<script type="text/javascript">
+function fixOutOfMemoryError() {
+  __flash_unloadHandler = function() {};
+  __flash_savedUnloadHandler = function() {};
+}
+window.attachEvent("onbeforeunload", fixOutOfMemoryError);
+</script>
+<![endif]-->
+}}}
