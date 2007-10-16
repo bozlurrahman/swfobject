@@ -2,7 +2,7 @@
 
 = SWFObject v2.0 documentation for JavaScript developers =
 
-== SWFObject v2.0 public API
+== SWFObject v2.0 public API ==
 
 SWFObject 2.0 contains a public API that allows JavaScript developers to reuse SWFObject's internal functions and aims to deliver a complete toolset for publishing SWF's and retrieving Flash player related information.
 
