@@ -53,7 +53,7 @@ A safe (it doesn't overwrite existing onload events) cross-browser method to exe
 An example:
 {{{
 function sayHi() {
-	alert("Hi!");
+  alert("Hi!");
 }
 swfobject.addLoadEvent(sayHi);
 }}}
@@ -67,7 +67,7 @@ A cross-browser method to execute a function as soon as the DOM of a web page is
 An example:
 {{{
 function sayHi() {
-	alert("Hi!");
+  alert("Hi!");
 }
 swfobject.addDomLoadEvent(sayHi);
 }}}
@@ -82,7 +82,8 @@ Exposes SWFObject's internal cross-browser method to create a SWF. This 'low lev
   * `el` is the HTML element that you want to have replaced by your SWF content
   
 *NOTE:* You should only call this function as soon as the DOM of a web page is available or on the window onload event
-  
+
+
 Don't specify the following attributes:
   * `classid:"D27CDB6E-AE6D-11cf-96B8-444553540000"` (SWFObject publishes this automatically for Internet Explorer on Windows)
   * `type:"application/x-shockwave-flash"` (SWFObject publishes this automatically for all browsers except Internet Explorer on Windows)
