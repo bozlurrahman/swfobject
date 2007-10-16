@@ -48,7 +48,7 @@ Sample page: [ http://www.swffix.org/swfobject/testsuite/test_api_hasflashplayer
 
 === `swfobject.addLoadEvent(fn)` ===
 
-A safe (it doesn't overwrite existing onload events) cross-browser method to execute a function on the window onload event (which will fire as soon as a web page including all of its assets are loaded). Based on a soultion by James Edwards [ http://brothercake.com/site/resources/scripts/onload/ ]
+A safe (it doesn't overwrite existing onload events) cross-browser method to execute a function on the window onload event (which will fire as soon as a web page including all of its assets are loaded). Based on a solution by James Edwards [ http://brothercake.com/site/resources/scripts/onload/ ]
 
 An example:
 {{{
