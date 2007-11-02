@@ -162,6 +162,6 @@ if (swfobject.hasFlashPlayerVersion("6.0.0")) {
 
  Sample page: [ http://www.swffix.org/swfobject/testsuite/test_api_createcss.html ]
 
-=== swfobject.getQueryParamValue(paramStr) ===
+=== `swfobject.getQueryParamValue(paramStr)` ===
 
  Utility function that returns the value of the `paramStr` parameter in the URL query string or hash string. This functionality was already available in SWFObject 1.5 and lower.
