@@ -104,7 +104,7 @@ swfobject.addDomLoadEvent(sayHi);
   * `parObj` is a JavaScript Object that contains the name value pairs of the `object` element's nested `param` element's names and values, as explained in [ http://code.google.com/p/swfobject/wiki/SWFObject_2_0_documentation ]
   * `el` is the HTML element that you want to have replaced by your SWF content
   
- [*NOTE:*] You should only call this function as soon as the DOM of a web page is available or on the window onload event
+ You should only call this function when the DOM of a web page is available
 
  Don't specify the following attributes:
   * `classid:"D27CDB6E-AE6D-11cf-96B8-444553540000"` (SWFObject publishes this automatically for Internet Explorer on Windows)
