@@ -115,7 +115,7 @@ The SWFObject JavaScript library will attempt to solve these issues. You can bes
 
 === STEP 2: Include the SWFObject JavaScript library in the head of your HTML page ===
 
-The SWFObject library consists of one external JavaScript file (size: 10.2Kb, GZIPed: 3.3Kb). SWFObject will be executed as soon as it is read and will perform all DOM manipulations as soon as the DOM is loaded - for all browsers that support this, like IE, Firefox, Safari and Opera 9+ - or otherwise as soon as the onload event fires:
+The SWFObject library consists of one external JavaScript file (size: 10.7Kb, GZIPed: 3.5Kb). SWFObject will be executed as soon as it is read and will perform all DOM manipulations as soon as the DOM is loaded - for all browsers that support this, like IE, Firefox, Safari and Opera 9+ - or otherwise as soon as the onload event fires:
 	
 {{{
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -197,25 +197,17 @@ The following browsers map to the following active object element:
   * Firefox, Mozilla and all other Gecko based browsers use the inner object 
 
 You can reference the active object element by:
-  # Only add the id or name attribute to the outer object tag
-  # Use the following code to reference the correct object:
+  # Add an id to the outer object element
+  # Use the following code to reference the active object element:
 
 {{{
-var obj = document.getElementById("myId");
-var nestedObj = obj.getElementsByTagName("object")[0];
-var ref = false;
+var obj = swfobject.getObjectById("myId");
 if (obj) {
-  if (!nestedObj || (nestedObj && typeof obj.SetVariable != "undefined")) {
-    ref = obj;
-  }
-  else if (typeof nestedObj.SetVariable != "undefined") {
-    ref = nestedObj;
-  }
-}
-if (ref) {
-  ref.doSomething(); // e.g. an external interface call
+  obj.doSomething(); // e.g. an external interface call
 }
 }}}
+
+Sample page: [ http://www.swffix.org/swfobject/testsuite/test_com.html ]
 
 == How to use SWFObject to dynamically embed Flash content? (option 2) ==
 
@@ -242,7 +234,7 @@ SWFObject's dynamic embed method follows the principle of progressive enhancemen
 
 === STEP 2: Include the SWFObject JavaScript library in the head of your HTML page ===
 
-The SWFObject library consists of one external JavaScript file (size: 10.2Kb, GZIPed: 3.3Kb). SWFObject will be executed as soon as it is read and will perform all DOM manipulations as soon as the DOM is loaded - for all browsers that support this, like IE, Firefox, Safari and Opera 9+ - or otherwise as soon as the onload event fires:
+The SWFObject library consists of one external JavaScript file (size: 10.7Kb, GZIPed: 3.5Kb). SWFObject will be executed as soon as it is read and will perform all DOM manipulations as soon as the DOM is loaded - for all browsers that support this, like IE, Firefox, Safari and Opera 9+ - or otherwise as soon as the onload event fires:
 	
 {{{
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
