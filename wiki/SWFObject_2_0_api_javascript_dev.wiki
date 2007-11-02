@@ -1,4 +1,5 @@
 #summary SWFObject v2.0 documentation for JavaScript developers
+#labels Featured
 
 = SWFObject v2.0 documentation for JavaScript developers =
 
