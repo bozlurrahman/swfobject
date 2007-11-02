@@ -26,6 +26,7 @@ SWFObject 2.0 contains a public API that allows JavaScript developers to reuse S
  You can reference the active object element by:
   # Add an id to the outer object element
   # Use the following code to reference the active object element:
+
 {{{
 var obj = swfobject.getObjectById("myId");
 if (obj) {
