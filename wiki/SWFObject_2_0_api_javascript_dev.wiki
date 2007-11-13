@@ -107,7 +107,9 @@ swfobject.addDomLoadEvent(sayHi);
   * `parObj` is a JavaScript Object that contains the name value pairs of the `object` element's nested `param` element's names and values, as explained in [ http://code.google.com/p/swfobject/wiki/SWFObject_2_0_documentation ]
   * `el` is the HTML element that you want to have replaced by your SWF content
   
- You should only call this function when the DOM of a web page is available
+ Please note:
+  * You should only call this function when the DOM of a web page is available
+  * The method has no return value
 
  Don't specify the following attributes:
   * `classid:"D27CDB6E-AE6D-11cf-96B8-444553540000"` (SWFObject publishes this automatically for Internet Explorer on Windows)
@@ -117,7 +119,7 @@ swfobject.addDomLoadEvent(sayHi);
  Don't specify the following `param` element:
   * `movie` (use the `object` element's `data` attribute instead, SWFObject publishes this automatically for Internet Explorer on Windows)
 
- An example:
+ A basic example:
 {{{
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
@@ -144,6 +146,36 @@ swfobject.addDomLoadEvent(sayHi);
 }}}
 
  Sample page: [ http://www.swffix.org/swfobject/testsuite/test_api_createswf.html ]
+
+ An example how to reference your newly created element:
+{{{
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <title>SWFObject v2.0 - low level dynamic publishing example</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <script type="text/javascript" src="swfobject.js"></script>
+    <script type="text/javascript">
+    if (swfobject.hasFlashPlayerVersion("6.0.0")) {
+      var fn = function() {
+        var att = { data:"test.swf", width:"780", height:"400", id:"myRef" };
+        var par = { flashvars:"foo=bar" };
+        var el = document.getElementById("replaceMe");
+        swfobject.createSWF(att, par, el);
+        var o = document.getElementById("myRef");
+        if (o) {
+          // Use element reference...
+        }
+      };
+      swfobject.addDomLoadEvent(fn);
+    }
+    </script>
+  </head>
+  <body>
+    <div id="replaceMe">Alternative content</div>
+  </body>
+</html>
+}}}
 
 === `swfobject.createCSS(selStr, declStr)` ===
 
