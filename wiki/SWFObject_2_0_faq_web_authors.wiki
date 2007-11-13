@@ -79,3 +79,7 @@ window.attachEvent("onbeforeunload", fixOutOfMemoryError);
 </script>
 <![endif]-->
 }}}
+
+== 5. How do I prevent Internet Explorer from showing an error message when using External Interface and SWF that is inside a `<form>` tag? ==
+
+This technote provides a solution: http://www.adobe.com/go/kb400730
