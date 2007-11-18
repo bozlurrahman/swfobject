@@ -1,5 +1,5 @@
 #summary SWFObject v2.0 FAQ for web authors
-#labels Phase-Support
+#labels Featured
 
 = SWFObject 2.0 FAQ for web authors =
 
