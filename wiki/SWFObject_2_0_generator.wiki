@@ -1,0 +1,10 @@
+#labels Featured
+#SWFObject 2.0 HTML and JavaScript generator v0.21 beta
+
+= SWFObject 2.0 HTML and JavaScript generator v0.21 beta =
+
+http://www.swffix.org/swfobject/generator/
+
+= Blog entry =
+
+http://www.swffix.org/devblog/?p=21
