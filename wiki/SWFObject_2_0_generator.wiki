@@ -1,4 +1,4 @@
-#summary SWFObject 2.0 HTML and JavaScript generator v0.21 beta
+#summary SWFObject v2.0 HTML and JavaScript generator v0.21 beta
 #labels Featured
 
 = SWFObject 2.0 HTML and JavaScript generator v0.21 beta =
