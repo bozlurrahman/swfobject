@@ -1,10 +1,18 @@
-#summary SWFObject v2.0 HTML and JavaScript generator v0.21 beta
+#summary SWFObject v2.0 HTML and JavaScript generator v0.3 beta
 #labels Featured
 
-= SWFObject 2.0 HTML and JavaScript generator v0.21 beta =
+= SWFObject 2.0 HTML and JavaScript generator v0.3 beta =
 
-http://www.swffix.org/swfobject/generator/
+Download the ZIP file from downloads page or use the online version: http://www.swffix.org/swfobject/generator/
 
-= Blog entry =
+== version 0.3 beta ==
 
-http://www.swffix.org/devblog/?p=21
+  * Added option to choose HTML template (based on DOCTYPE)
+  * Added option to choose HTML character encoding
+  * Prefilled all required or important fields with a default (or dummy) value
+  * By default collapsed all optional SWF configuration fields
+  * Fixed a series of small bugs that caused the generated HTML to be invalid 
+
+== version 0.21 beta ==
+
+Initial release, blog entry: http://www.swffix.org/devblog/?p=21
