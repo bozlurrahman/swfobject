@@ -3,11 +3,17 @@
 
 == SWFObject release notes ==
 
+=== SWFObject v2.0 rc1 (December 3rd, 2007) ===
+
+  * Fixed addDomLoadEvent issue for Internet Explorer: if embedSWF was called after the DOM was loaded (e.g. AJAX-loaded content), the resultant call to createSWF was incorrectly run (an old cached version was shown instead) [ http://code.google.com/p/swfobject/issues/detail?id=22 ]
+
 === SWFObject v2.0 beta6 (November 2nd, 2007) ===
+
   * Added the `swfobject.getObjectById(objectIdStr)` and `swfobject.getQueryParamValue(paramStr)` methods to the API [ http://code.google.com/p/swfobject/wiki/SWFObject_2_0_api_javascript_dev ]
   * Fixed an express install callback related bug [ http://code.google.com/p/swfobject/issues/detail?id=14 ]
 
 === SWFObject v2.0 beta5 (October 16th, 2007) ===
+ 
   * Extended the API to suit the needs of JavaScript developers [ http://code.google.com/p/swfobject/wiki/SWFObject_2_0_api_javascript_dev ]
   * Removed the `fixOutOfMemoryError` method, and added the solution of the issue to the FAQ for web authors [ http://code.google.com/p/swfobject/wiki/SWFObject_2_0_faq_web_authors ] 
 
