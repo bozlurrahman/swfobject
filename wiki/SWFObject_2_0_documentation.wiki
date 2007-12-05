@@ -385,12 +385,12 @@ swfobject.embedSWF("myContent.swf", "myContent", "300", "120", "9.0.0","expressI
 </script>
 }}}
 
-If you don't want to use an argument you can define it as 'null' or as an empty Object:
+If you don't want to use an argument you can define it as `false` or as an empty Object:
 
 {{{
 <script type="text/javascript">
 
-var flashvars = null;
+var flashvars = false;
 var params = {};
 var attributes = {
   id: "myDynamicContent",
@@ -407,7 +407,7 @@ The flashvars Object is a shorthand notation that is there for your ease of use.
 {{{
 <script type="text/javascript">
 
-var flashvars = null;
+var flashvars = false;
 var params = {
   menu: "false",
   flashvars: "name1=hello&name2=world&name3=foobar"
