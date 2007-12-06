@@ -181,7 +181,9 @@ First add a unique `id` to the outer `object` tag that defines your Flash conten
     </div>
   </body>
 </html>
-}}} 
+}}}
+
+*TIP:* Use the SWFObject 2.0 HTML and JavaScript generator to help you author your code: [ http://code.google.com/p/swfobject/wiki/SWFObject_2_0_generator ]
 			
 == How to embed multiple SWF files into one HTML page (using option 1)? ==
 
@@ -422,6 +424,8 @@ swfobject.embedSWF("myContent.swf", "myContent", "300", "120", "9.0.0","expressI
 </script>
 }}}
 
+*TIP:* Use the SWFObject 2.0 HTML and JavaScript generator to help you author your code: [ http://code.google.com/p/swfobject/wiki/SWFObject_2_0_generator ]
+
 == How to embed multiple SWF files into one HTML page (using option 2)? ==
 
 Just repeat steps 1 and 3 (As mentioned under option 2: "How to use SWFObject to dynamically embed Flash content?") to add as many SWF files to your page as you like.
@@ -464,7 +468,20 @@ Embed option 1 departs from this conceptual principle by using standards complia
 The advantages of the second method over the first are that:
   # It is easier to author, because it is less verbose and it contains no redundant code
   # It avoids the 'click-to-activate' mechanism to activate active content in Internet Explorer 6+ and Opera 9+
-			
+
+== SWFObject v1.5 to SWFObject v2.0 migration tips ==
+
+  # It is now preferred to insert all script blocks in the head of your HTML page
+  # The library itself is now written in lowercase: `swfobject` instead of `SWFObject`
+  # Method invocations now happen on the library (instead of a SWFObject instance in SWFObject 1.5)
+  # The API is entirely different and more elaborate: [ http://code.google.com/p/swfobject/wiki/SWFObject_2_0_api_javascript_dev ]
+  # SWFObject 2.0 replaces your entire alternative HTML content block, including the referenced HTML container element, for Flash content when enough JavaScript and Flash support is available, while SWFObject 1.5 only replaces the content inside the referenced HTML container. You can now transfer existing style rules (CSS) by giving your Flash content the same `id` attribute as the HTML container element of your alternative content (the first will replace the latter, so your `id` itself will stay unique)
+
+== UFO to SWFObject v2.0 migration tips ==
+  
+  # SWFObject 2.0 replaces your entire alternative HTML content block, including the referenced HTML container element, for Flash content when enough JavaScript and Flash support is available, while UFO only replaces the content inside the referenced HTML container. You can now transfer existing style rules (CSS) by giving your Flash content the same `id` attribute as the HTML container element of your alternative content (the first will replace the latter, so your `id` itself will stay unique)
+  # UFO's `setcontainercss` feature is has not been incorporated in SWFObject 2.0, however it can easily be replicated by using the SWFObject 2.0 API, see: `swfobject.createCSS(selStr, declStr)` in [ http://code.google.com/p/swfobject/wiki/SWFObject_2_0_api_javascript_dev ]
+  		
 == What are the risks of using SWFObject? ==
 
 When using embed option 1:
