@@ -473,7 +473,7 @@ The advantages of the second method over the first are that:
 
   # It is now preferred to insert all script blocks in the head of your HTML page
   # The library itself is now written in lowercase: `swfobject` instead of `SWFObject`
-  # Method can only be accessed via the library (instead via a SWFObject instance in SWFObject 1.5)
+  # Methods can only be accessed via the library (instead via a SWFObject instance in SWFObject 1.5)
   # The API is entirely different and more elaborate: [ http://code.google.com/p/swfobject/wiki/SWFObject_2_0_api_javascript_dev ]
   # SWFObject 2.0 replaces your entire alternative HTML content block, including the referenced HTML container element, for Flash content when enough JavaScript and Flash support is available, while SWFObject 1.5 only replaces the content inside the referenced HTML container. You can now transfer existing style rules (CSS) by giving your Flash content the same `id` attribute as the HTML container element of your alternative content (the first will replace the latter, so your `id` itself will stay unique)
 
