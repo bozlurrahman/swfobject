@@ -22,6 +22,7 @@
   # Embedding multiple SWFs [ http://www.swffix.org/swfobject/testsuite/test_dynamic_multiple.html ]
   # DomLoad test page [ http://www.swffix.org/swfobject/testsuite/test_dynamic_domload.html ]
   # Full browser Flash test page [ http://www.swffix.org/swfobject/testsuite/test_dynamic_fullbrowserflash.html ]
+  # Full browser Flash test page including min-width, min-height and scrollbars: [ http://www.swffix.org/swfobject/testsuite/test_dynamic_fullbrowserflash_adv.html ]
   # Example of the different Object notation methods (to define your flashvars, params and object's attributes) [ http://www.swffix.org/swfobject/testsuite/test_dynamic_notations.html ]
  
 === Other API methods: ===
