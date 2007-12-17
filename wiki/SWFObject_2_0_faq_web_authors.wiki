@@ -28,9 +28,10 @@ function resizeHandler(event:Event):void {
 
 *NOTE:* For positioning elements always define a resize handler, because a user can resize the browser window and in Internet Explorer (using the dynamic publishing method or option 2) the stage size is only available on first load. When reloading or revisiting a page it will initially be 0, causing the Flash player to keep on triggering the stage.resize event until it receives its current value
 
-Two code examples can be found in the SWFObject 2.0 test suite:
+Three code examples can be found in the SWFObject 2.0 test suite:
   * Static publishing (option 1): [ http://www.swffix.org/swfobject/testsuite/test_fullbrowserflash.html ]
   * Dynamic publishing (option 2): [ http://www.swffix.org/swfobject/testsuite/test_dynamic_fullbrowserflash.html ]
+  * Dynamic publishing (option 2) including min-width, min-height and scrollbars: [ http://www.swffix.org/swfobject/testsuite/test_dynamic_fullbrowserflash_adv.html ]
 
 == 2. How do I prevent Internet Explorer from crashing when a `<base>` tag is defined? ==
 
