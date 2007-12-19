@@ -1,6 +1,11 @@
 #summary Embedding Adobe Flash content using SWFObject v2.0
 #labels Featured
 
+=== Translations ===
+
+Japanese translation (onofficial) by Shuhei Terai: [ http://mtl.recruit.co.jp/blog/2007/10/swfobject_v20.html ]
+
+
 == How does SWFObject v2.0 relate to SWFObject v1.5 and SWFFix? ==
 
 SWFObject v2.0 is the new name for the project formerly known as SWFFix [ http://code.google.com/p/swffix/ ]. It is an open source project by Geoff Stearns, Michael Williams and Bobby van der Sluis that aims to create the next generation JavaScript library for embedding Flash content that will replace SWFObject v1.5 [ http://blog.deconcept.com/swfobject/ ], the Flash player detection kit [ http://www.adobe.com/products/flashplayer/download/detection_kit/ ] and UFO [ http://www.bobbyvandersluis.com/ufo/ ].
