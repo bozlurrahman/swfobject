@@ -2,7 +2,8 @@
 #labels Featured
 
 === Translations ===
-- Japanese translation (unofficial) by Shuhei Terai: [ http://mtl.recruit.co.jp/blog/2007/10/swfobject_v20.html ]
+
+  * Japanese translation (unofficial) by Shuhei Terai: [ http://mtl.recruit.co.jp/blog/2007/10/swfobject_v20.html ]
 
 == How does SWFObject v2.0 relate to SWFObject v1.5 and SWFFix? ==
 
