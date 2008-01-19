@@ -198,3 +198,15 @@ if (swfobject.hasFlashPlayerVersion("6.0.0")) {
 === `swfobject.getQueryParamValue(paramStr)` ===
 
  Utility function that returns the value of the `paramStr` parameter in the URL query string or hash string. This functionality was already available in SWFObject 1.5 and lower.
+
+ An example that uses sample URL "http://www.myurl.com?foo=bar&abc=123" and passes the parameters from the URL query string to the SWF via flashvars:
+{{{
+var flashvars = {};
+if (swfobject.getQueryParamValue("foo") && swfobject.getQueryParamValue("abc")) {
+  flashvars.foo = swfobject.getQueryParamValue("foo");
+  flashvars.abc = swfobject.getQueryParamValue("abc");
+}
+var params = {};
+var attributes = {};
+swfobject.embedSWF("myContent.swf", "altContent", "100%", "100%", "9.0.0","expressInstall.swf", flashvars, params, attributes);
+}}}
