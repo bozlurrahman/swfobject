@@ -100,7 +100,7 @@ swfobject.addDomLoadEvent(sayHi);
 
  Sample page: [ http://www.swffix.org/swfobject/testsuite/test_api_adddomloadevent.html ]
 
-=== `swfobject.createSWF(attObj, parObj, el)` ===
+=== `swfobject.createSWF(attObj, parObj, replaceElemIdStr)` ===
 
  Exposes SWFObject's internal cross-browser method to create a SWF. This 'low level' method will primarily be useful when combining it with other JavaScript libraries:
   * `attObj` is a JavaScript Object that contains the name value pairs of the `object` element's attributes and values, as explained in [ http://code.google.com/p/swfobject/wiki/SWFObject_2_0_documentation ]
