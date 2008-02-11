@@ -151,7 +151,7 @@ The SWFObject library consists of one external JavaScript file (size: 11.0Kb, GZ
 First add a unique `id` to the outer `object` tag that defines your Flash content. Second add the `swfobject.registerObject` method:
   # The first argument (String, required) specifies the `id` used in the markup.
   # The second argument (String, required) specifies the Flash player version your content is published for. It activates the Flash version detection for a SWF to determine whether to show Flash content or force alternative content by doing a DOM manipulation. While Flash version numbers normally consist of major.minor.release.build, SWFObject only looks at the first 3 numbers, so both "WIN 9,0,18,0" (IE) or "Shockwave Flash 9 r18" (all other browsers) will translate to "9.0.18".
-  # The third argument (String, optional) can be used to activate Adobe express install [ http://www.adobe.com/cfusion/knowledgebase/index.cfm?id=6a253b75 ] and specifies the URL of your express install SWF file. Express install displays a standardized Flash plugin download dialog instead of your Flash content when the required plugin version is not available. A default expressInstall.swf file is packaged with the project. It also contains the corresponding expressInstall.fla and AS files (in the SRC directory) to let you create your own custom express install experience.
+  # The third argument (String, optional) can be used to activate Adobe express install [ http://www.adobe.com/cfusion/knowledgebase/index.cfm?id=6a253b75 ] and specifies the URL of your express install SWF file. Express install displays a standardized Flash plugin download dialog instead of your Flash content when the required plugin version is not available. A default expressInstall.swf file is packaged with the project. It also contains the corresponding expressInstall.fla and AS files (in the SRC directory) to let you create your own custom express install experience. Please note that express install will only fire once (the first time that it is invoked), that it is only supported by Flash Player 6.0.65 or higher on Win or Mac platforms, and that it requires a minimal SWF size of 310x137px. 
 	
 {{{
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -266,7 +266,7 @@ The SWFObject library consists of one external JavaScript file (size: 11.0Kb, GZ
   # width (String, required) specifies the width of your SWF
   # height (String, required) specifies the height of your SWF
   # version (String, required) specifies the Flash player version your SWF is published for (format is: "major.minor.release")
-  # expressInstallSwfurl (String, optional) specifies the URL of your express install SWF and activates Adobe express install [ http://www.adobe.com/cfusion/knowledgebase/index.cfm?id=6a253b75 ] 
+  # expressInstallSwfurl (String, optional) specifies the URL of your express install SWF and activates Adobe express install [ http://www.adobe.com/cfusion/knowledgebase/index.cfm?id=6a253b75 ]. Please note that express install will only fire once (the first time that it is invoked), that it is only supported by Flash Player 6.0.65 or higher on Win or Mac platforms, and that it requires a minimal SWF size of 310x137px. 
   # flashvars (Object, optional) specifies your flashvars with name:value pairs 
   # params (Object, optional) specifies your nested `object` element `params` with name:value pairs 
   # attributes (Object, optional) specifies your `object`'s attributes with name:value pairs 
