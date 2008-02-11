@@ -3,7 +3,7 @@
 
 == How to compress the swfobject.js source file using Dojo ShrinkSafe ==
 
-  # Open a web browser and browse to: [ http://alex.dojotoolkit.org/shrinksafe/ ]
+  # Open a web browser and browse to: [ http://shrinksafe.dojotoolkit.org/ ]
   # Select the swfobject.js source file from your file system
   # Check "strip newline chars?"
   # Press "shrink em!"
