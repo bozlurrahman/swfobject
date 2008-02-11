@@ -146,6 +146,7 @@ swfobject.addDomLoadEvent(sayHi);
 }}}
 
  Sample page: [ http://www.swffix.org/swfobject/testsuite/test_api_createswf.html ]
+ 
  Sample page that uses the returned `object` element for browser communication: [ http://www.swffix.org/swfobject/testsuite/test_api_createswf_com.html ]
 
 === `swfobject.createCSS(selStr, declStr)` ===
