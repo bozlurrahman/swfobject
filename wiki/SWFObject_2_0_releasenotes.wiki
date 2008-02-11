@@ -3,7 +3,7 @@
 
 == SWFObject release notes ==
 
-=== SWFObject v2.0 rc1 (February 11th, 2008) ===
+=== SWFObject v2.0 rc2 (February 11th, 2008) ===
 
   * IMPORTANT! API updates:
     * `swfobject.createSWF(attObj, parObj, el)` has now become `swfobject.createSWF(attObj, parObj, replaceElemIdStr)`
