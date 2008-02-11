@@ -117,7 +117,7 @@ The SWFObject JavaScript library will attempt to solve these issues. You can bes
 
 === STEP 2: Include the SWFObject JavaScript library in the head of your HTML page ===
 
-The SWFObject library consists of one external JavaScript file (size: 10.7Kb, GZIPed: 3.5Kb). SWFObject will be executed as soon as it is read and will perform all DOM manipulations as soon as the DOM is loaded - for all browsers that support this, like IE, Firefox, Safari and Opera 9+ - or otherwise as soon as the onload event fires:
+The SWFObject library consists of one external JavaScript file (size: 11.0Kb, GZIPed: 3.6Kb). SWFObject will be executed as soon as it is read and will perform all DOM manipulations as soon as the DOM is loaded - for all browsers that support this, like IE, Firefox, Safari and Opera 9+ - or otherwise as soon as the onload event fires:
 	
 {{{
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -238,7 +238,7 @@ SWFObject's dynamic embed method follows the principle of progressive enhancemen
 
 === STEP 2: Include the SWFObject JavaScript library in the head of your HTML page ===
 
-The SWFObject library consists of one external JavaScript file (size: 10.7Kb, GZIPed: 3.5Kb). SWFObject will be executed as soon as it is read and will perform all DOM manipulations as soon as the DOM is loaded - for all browsers that support this, like IE, Firefox, Safari and Opera 9+ - or otherwise as soon as the onload event fires:
+The SWFObject library consists of one external JavaScript file (size: 11.0Kb, GZIPed: 3.6Kb). SWFObject will be executed as soon as it is read and will perform all DOM manipulations as soon as the DOM is loaded - for all browsers that support this, like IE, Firefox, Safari and Opera 9+ - or otherwise as soon as the onload event fires:
 	
 {{{
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -295,7 +295,7 @@ The SWFObject library consists of one external JavaScript file (size: 10.7Kb, GZ
 ==== How can you configure your Flash content? ====
 
 You can add the following often-used optional attributes [ http://www.w3schools.com/tags/tag_object.asp ] to the `object` element:
-  * `id`
+  * `id` (NOTE: when undefined, the `object` element automatically inherits the `id` from the alternative content container element)
   * `name`
   * `styleclass` (used instead of `class`, because this is also an ECMA4 reserved keyword)
   * `align`
@@ -477,26 +477,26 @@ The advantages of the second method over the first are that:
   # The library itself is now written in lowercase: `swfobject` instead of `SWFObject`
   # Methods can only be accessed via the library (instead via a SWFObject instance in SWFObject 1.5)
   # The API is entirely different and more elaborate: [ http://code.google.com/p/swfobject/wiki/SWFObject_2_0_api_javascript_dev ]
-  # SWFObject 2.0 replaces your entire alternative HTML content block, including the referenced HTML container element, for Flash content when enough JavaScript and Flash support is available, while SWFObject 1.5 only replaces the content inside the referenced HTML container. You can now transfer existing style rules (CSS) by giving your Flash content the same `id` attribute as the HTML container element of your alternative content (the first will replace the latter, so your `id` itself will stay unique)
+  # SWFObject 2.0 replaces your entire alternative HTML content block, including the referenced HTML container element, for Flash content when enough JavaScript and Flash support is available, while SWFObject 1.5 only replaces the content inside the referenced HTML container. When you don't specify an `id` attribute, the `object` element will automatically inherit the `id` of the HTML container element of your alternative content.
 
 == UFO to SWFObject v2.0 migration tips ==
   
-  # SWFObject 2.0 replaces your entire alternative HTML content block, including the referenced HTML container element, for Flash content when enough JavaScript and Flash support is available, while UFO only replaces the content inside the referenced HTML container. You can now transfer existing style rules (CSS) by giving your Flash content the same `id` attribute as the HTML container element of your alternative content (the first will replace the latter, so your `id` itself will stay unique)
+  # SWFObject 2.0 replaces your entire alternative HTML content block, including the referenced HTML container element, for Flash content when enough JavaScript and Flash support is available, while UFO only replaces the content inside the referenced HTML container. When you don't specify an `id` attribute, the `object` element will automatically inherit the `id` of the HTML container element of your alternative content.
   # UFO's `setcontainercss` feature is has not been incorporated in SWFObject 2.0, however it can easily be replicated by using the SWFObject 2.0 API, see: `swfobject.createCSS(selStr, declStr)` in [ http://code.google.com/p/swfobject/wiki/SWFObject_2_0_api_javascript_dev ]
   		
 == What are the risks of using SWFObject? ==
 
 When using embed option 1:
-  # 73% of all web users (the combined market share of IE6, IE7 and Opera, source: thecounter.com [ http://www.thecounter.com/stats/2007/September/browser.php ]) will have a somewhat degraded user experience because of a 'click-to-activate' mechanism
+  # 80% of all web users (the combined market share of IE6, IE7 and Opera, source: thecounter.com [ http://www.thecounter.com/stats/2008/January/browser.php ]) will have a somewhat degraded user experience because of a 'click-to-activate' mechanism
   # Less than 1% of all web users may face broken Flash content:
-    * When you publish your Flash content for Flash player 9 and a user has Flash Player 6 installed, there is a 0.4% (around 6% Flash player version gap of 6% no JavaScript) chance on broken or no content at all
-    * When you publish your Flash content for Flash player 8 and a user has Flash Player 6 installed, there is a 0.04% (around 0.7% Flash player version gap of 6% no JavaScript) chance on broken or no content at all (source: thecounter.com [ http://www.thecounter.com/stats/2007/September/javas.php ] and Adobe [ http://www.adobe.com/products/player_census/flashplayer/version_penetration.html ])
+    * When you publish your Flash content for Flash player 9 and a user has Flash Player 6 installed, there is a 0.19% (around 3.1% Flash player version gap of 6% no JavaScript) chance on broken or no content at all
+    * When you publish your Flash content for Flash player 8 and a user has Flash Player 6 installed, there is a 0.03% (around 0.5% Flash player version gap of 6% no JavaScript) chance on broken or no content at all (source: thecounter.com [ http://www.thecounter.com/stats/2008/January/javas.php ] and Adobe [ http://www.adobe.com/products/player_census/flashplayer/version_penetration.html ])
 
 Please note that although this approach still has its risks, the odds will be equal or lower than any other Flash embed method available.
 
 When using embed option 2:
 
-  * 6% of all web users have JavaScript disabled, or have browsers that don't support JavaScript at all, or not well enough, and will never be able to see any Flash content at all (regardless whether the latest Flash player is installed or not), however they will see alternative content instead (source: thecounter.com [ http://www.thecounter.com/stats/2007/September/javas.php ])
+  * 6% of all web users have JavaScript disabled, or have browsers that don't support JavaScript at all, or not well enough, and will never be able to see any Flash content at all (regardless whether the latest Flash player is installed or not), however they will see alternative content instead (source: thecounter.com [ http://www.thecounter.com/stats/2008/January/javas.php ])
 
 == Does SWFObject support MIME type application/xhtml+xml? ==
 

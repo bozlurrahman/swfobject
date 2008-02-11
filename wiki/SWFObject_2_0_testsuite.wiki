@@ -32,4 +32,5 @@
    # swfobject.addLoadEvent(fn) [ http://www.swffix.org/swfobject/testsuite/test_api_addloadevent.html ]
    # swfobject.addDomLoadEvent(fn) [ http://www.swffix.org/swfobject/testsuite/test_api_adddomloadevent.html ]
    # swfobject.createSWF(attObj, parObj, el) [ http://www.swffix.org/swfobject/testsuite/test_api_createswf.html ]
+   # swfobject.createSWF and browser communication test page [ http://www.swffix.org/swfobject/testsuite/test_api_createswf_com.html ]
    # swfobject.createCSS(selStr, declStr) [ http://www.swffix.org/swfobject/testsuite/test_api_createcss.html ]

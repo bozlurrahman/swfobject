@@ -3,6 +3,16 @@
 
 == SWFObject release notes ==
 
+=== SWFObject v2.0 rc1 (February 11th, 2008) ===
+
+  * IMPORTANT! API updates:
+    * `swfobject.createSWF(attObj, parObj, el)` has now become `swfobject.createSWF(attObj, parObj, replaceElemIdStr)`
+    * `swfobject.createSWF(attObj, parObj, replaceElemIdStr)` now returns the newly created object element, a request made by many JavaScript developers, e.g. Issue report 17 [ http://code.google.com/p/swfobject/issues/detail?id=17 ] 
+    * A dynamically embedded object element (using `swfobject.createSWF` or `swfobject.embedSWF`) now automatically inherits the `id` attribute from the alternative content container element if no `id` is defined for the object element in the `attObj` JavaScript Object, also a request made by many web authors, e.g. Issue reports 17 [ http://code.google.com/p/swfobject/issues/detail?id=17 ] and 19 [ http://code.google.com/p/swfobject/issues/detail?id=19 ]
+  * Fixed an express install related bug: percentages for width and height are not supported; Issue report 28 [ http://code.google.com/p/swfobject/issues/detail?id=28 ]
+  * Added workaround for potential Norton AV issue; Issue report 33 [ http://code.google.com/p/swfobject/issues/detail?id=33 ] 
+  * A series of code enhancements as described in Issue report 27 [ http://code.google.com/p/swfobject/issues/detail?id=27 ]
+
 === SWFObject v2.0 rc1 (December 3rd, 2007) ===
 
   * Fixed addDomLoadEvent issue for Internet Explorer: if embedSWF was called after the DOM was loaded (e.g. AJAX-loaded content), the resultant call to createSWF was incorrectly run (an old cached version was shown instead) [ http://code.google.com/p/swfobject/issues/detail?id=22 ]
