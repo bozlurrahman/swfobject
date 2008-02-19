@@ -40,7 +40,7 @@
  }}}   
   # Save your adjusted compressed swfobject.js file
 
-== How to compress the swfobject.js source file using Dojo ShrinkSafe? [DEPRECATED as of SWFObject 2.0 rc3] ==
+== How to compress the swfobject.js source file using Dojo ShrinkSafe? (Deprercated as of SWFObject 2.0 rc3) ==
 
   # Open a web browser and browse to: [ http://shrinksafe.dojotoolkit.org/ ]
   # Select the swfobject.js source file from your file system
