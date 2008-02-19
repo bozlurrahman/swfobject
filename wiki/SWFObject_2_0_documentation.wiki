@@ -117,7 +117,7 @@ The SWFObject JavaScript library will attempt to solve these issues. You can bes
 
 === STEP 2: Include the SWFObject JavaScript library in the head of your HTML page ===
 
-The SWFObject library consists of one external JavaScript file (size: 11.0Kb, GZIPed: 3.6Kb). SWFObject will be executed as soon as it is read and will perform all DOM manipulations as soon as the DOM is loaded - for all browsers that support this, like IE, Firefox, Safari and Opera 9+ - or otherwise as soon as the onload event fires:
+The SWFObject library consists of one external JavaScript file (size: 9.2Kb, GZIPed: 3.4Kb). SWFObject will be executed as soon as it is read and will perform all DOM manipulations as soon as the DOM is loaded - for all browsers that support this, like IE, Firefox, Safari and Opera 9+ - or otherwise as soon as the onload event fires:
 	
 {{{
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -238,7 +238,7 @@ SWFObject's dynamic embed method follows the principle of progressive enhancemen
 
 === STEP 2: Include the SWFObject JavaScript library in the head of your HTML page ===
 
-The SWFObject library consists of one external JavaScript file (size: 11.0Kb, GZIPed: 3.6Kb). SWFObject will be executed as soon as it is read and will perform all DOM manipulations as soon as the DOM is loaded - for all browsers that support this, like IE, Firefox, Safari and Opera 9+ - or otherwise as soon as the onload event fires:
+The SWFObject library consists of one external JavaScript file (size: 9.2Kb, GZIPed: 3.4Kb). SWFObject will be executed as soon as it is read and will perform all DOM manipulations as soon as the DOM is loaded - for all browsers that support this, like IE, Firefox, Safari and Opera 9+ - or otherwise as soon as the onload event fires:
 	
 {{{
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">

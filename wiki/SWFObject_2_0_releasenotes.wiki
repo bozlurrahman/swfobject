@@ -3,6 +3,13 @@
 
 == SWFObject release notes ==
 
+=== SWFObject v2.0 rc3 (February 19th, 2008) ===
+
+  * Includes file size optimizations resulting in a 19% smaller file size, by:
+    * Use of constants for recurrent Strings
+    * Use of only one `var` keyword per scope (where structure and readability wasn't hurt)
+    * Using YUI compressor [ http://developer.yahoo.com/yui/compressor/ ] instead of Dojo Shrinksafe
+
 === SWFObject v2.0 rc2 (February 11th, 2008) ===
 
   * IMPORTANT! API updates:
