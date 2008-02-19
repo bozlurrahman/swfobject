@@ -21,7 +21,7 @@
 {{{
    java -jar /yuicompressorpath/yuicompressor-2.3.5/build/yuicompressor-2.3.5.jar -o /swfobjectpath/swfobject.js /swfobjectpath/src/swfobject.js
   
-   For more info, please read the YUI Compressor documentation: [ http://developer.yahoo.com/yui/compressor/ ]
+   For more info, please read the YUI Compressor documentation [ http://developer.yahoo.com/yui/compressor/ ]
 }}}  
   # Open the compressed swfobject.js file
   # You have to re-add the Internet Explorer conditional compiling directives and the JavaScript code it embodies (this is a proprietary feature test to check e.g. whether a browser is Internet Explorer):
@@ -40,7 +40,7 @@
  }}}   
   # Save your adjusted compressed swfobject.js file
 
-== How to compress the swfobject.js source file using Dojo ShrinkSafe? (Deprercated as of SWFObject 2.0 rc3) ==
+== How to compress the swfobject.js source file using Dojo ShrinkSafe? (Deprecated as of SWFObject 2.0 rc3) ==
 
   # Open a web browser and browse to: [ http://shrinksafe.dojotoolkit.org/ ]
   # Select the swfobject.js source file from your file system
