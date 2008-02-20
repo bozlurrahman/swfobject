@@ -88,13 +88,13 @@ This technote provides a solution: http://www.adobe.com/go/kb400730
 
 == 6. How can I avoid an infinite Express Install loop in Safari? ==
 
-In the past years there have been 2 occasions where a Flash player didn't expose the right version number externally (as can be retrieved with JavaScript) in Safari:
+In the past years there have been 2 occasions where a Flash player didn't expose the right version number externally (as can be retrieved with JavaScript) in Safari (NOTE: we suspect that all browser on Mac OS X are affected by this):
 
-  * 9.0.47 exposes 9.0.19
+  * 9.0.47 exposes 9.0.19 (NOTE: the fp9r47 Mac installer was fixed as soon as the issue was known)
   * 8.0.24 exposes 8.0.23
 
 When this is the latest browser version and if you do a minor version test for the latest minor version, an install sequence will trigger in Safari even if the latest player is installed.
 
 Often, you just want to make sure that a visitor has a certain major player version, which makes it a good practice to test for whole version numbers only (e.g. "9.0.0").
 
-When your Flash content needs certain functionality that is only available in newer releases or a when a severe bug hinders your Flash content in some lower release numbers, you will need to test for the minor version too. In this case you can solve the issue by just testing for the lower of the two minor version numbers as shown in the table above.
+When your Flash content needs certain functionality that is only available in newer releases or a when a severe bug hinders your Flash content in some lower release numbers, you will need to test for the minor version too. In this case you can solve the issue by avoiding to test for a browser version that lies within the erroneous range (e.g. don't test for version 9.0.19 - 9.0.47, but test for version 9.0.48 or higher).
