@@ -95,7 +95,7 @@ You can use the following optional Flash specific `param` elements [ http://www.
   * `swliveconnect`
   * `flashvars`
   * `devicefont` [ http://www.adobe.com/cfusion/knowledgebase/index.cfm?id=tn_13331 ]
-  * `allowscriptaccess` [ http://www.adobe.com/cfusion/knowledgebase/index.cfm?id=tn_16494 ]
+  * `allowscriptaccess` [ http://www.adobe.com/cfusion/knowledgebase/index.cfm?id=tn_16494 ] and [ http://www.adobe.com/go/kb402975 ]
   * `seamlesstabbing` [ http://www.adobe.com/support/documentation/en/flashplayer/7/releasenotes.html ]
   * `allowfullscreen` [ http://www.adobe.com/devnet/flashplayer/articles/full_screen_mode.html ]
   * `allownetworking` [ http://livedocs.adobe.com/flash/9.0/main/00001079.html ]
@@ -117,7 +117,7 @@ The SWFObject JavaScript library will attempt to solve these issues. You can bes
 
 === STEP 2: Include the SWFObject JavaScript library in the head of your HTML page ===
 
-The SWFObject library consists of one external JavaScript file (size: 9.2Kb, GZIPed: 3.4Kb). SWFObject will be executed as soon as it is read and will perform all DOM manipulations as soon as the DOM is loaded - for all browsers that support this, like IE, Firefox, Safari and Opera 9+ - or otherwise as soon as the onload event fires:
+The SWFObject library consists of one external JavaScript file (size: 8.5Kb, GZIPed: 3.4Kb). SWFObject will be executed as soon as it is read and will perform all DOM manipulations as soon as the DOM is loaded - for all browsers that support this, like IE, Firefox, Safari and Opera 9+ - or otherwise as soon as the onload event fires:
 	
 {{{
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -238,7 +238,7 @@ SWFObject's dynamic embed method follows the principle of progressive enhancemen
 
 === STEP 2: Include the SWFObject JavaScript library in the head of your HTML page ===
 
-The SWFObject library consists of one external JavaScript file (size: 9.2Kb, GZIPed: 3.4Kb). SWFObject will be executed as soon as it is read and will perform all DOM manipulations as soon as the DOM is loaded - for all browsers that support this, like IE, Firefox, Safari and Opera 9+ - or otherwise as soon as the onload event fires:
+The SWFObject library consists of one external JavaScript file (size: 8.5Kb, GZIPed: 3.4Kb). SWFObject will be executed as soon as it is read and will perform all DOM manipulations as soon as the DOM is loaded - for all browsers that support this, like IE, Firefox, Safari and Opera 9+ - or otherwise as soon as the onload event fires:
 	
 {{{
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -313,7 +313,7 @@ You can use the following optional Flash specific `param` elements [ http://www.
   * `swliveconnect`
   * `flashvars`
   * `devicefont` [ http://www.adobe.com/cfusion/knowledgebase/index.cfm?id=tn_13331 ]
-  * `allowscriptaccess` [ http://www.adobe.com/cfusion/knowledgebase/index.cfm?id=tn_16494 ]
+  * `allowscriptaccess` [ http://www.adobe.com/cfusion/knowledgebase/index.cfm?id=tn_16494 ] and [ http://www.adobe.com/go/kb402975 ]
   * `seamlesstabbing` [ http://www.adobe.com/support/documentation/en/flashplayer/7/releasenotes.html ]
   * `allowfullscreen` [ http://www.adobe.com/devnet/flashplayer/articles/full_screen_mode.html ]
   * `allownetworking` [ http://livedocs.adobe.com/flash/9.0/main/00001079.html ]

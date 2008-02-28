@@ -33,14 +33,28 @@ Three code examples can be found in the SWFObject 2.0 test suite:
   * Dynamic publishing (option 2): [ http://www.swffix.org/swfobject/testsuite/test_dynamic_fullbrowserflash.html ]
   * Dynamic publishing (option 2) including min-width, min-height and scrollbars: [ http://www.swffix.org/swfobject/testsuite/test_dynamic_fullbrowserflash_adv.html ]
 
-== 2. How do I prevent Internet Explorer from crashing when a `<base>` tag is defined? ==
+== 2. Why don't I see Flash content in Internet Explorer on Windows while I do have the required minimal Flash Player version installed? ==
+
+When an install gets corrupted (very often caused by corrupt installers) it is impossible to read the Flash Player version number externally using scripting languages. When using dynamic publishing this results in the display of alternative content, with static publishing we let the object element do its job (it decides whether to show Flash content or alternative content based on its built-in MIME type mechanism) which results in the display of Flash content.
+
+The only way to avoid this issue is by uninstalling the Flash Player using the Adobe uninstaller [ http://www.adobe.com/go/tn_14157 ] and by reinstalling the plug-in via the Adobe Flash Player installation page [ http://www.adobe.com/go/getflashplayer ].
+
+== 3. How can I avoid an infinite express install loop in Firefox on Mac OS X? ==
+
+When you are using Firefox and upgrade your Flash Player via the Adobe express install mechanism on Mac OS X, you may get stuck in an infinite express install loop. This issue is characterized by the following symptoms: the express install dialog flashes for a brief moment, after which you see a white box and a hanging browser connection to fpdownload.macromedia.com.
+
+This issue is caused by corrupt Adobe Flash Player installers on the express install server and only affects Firefox on Mac OS X, as long as Flash Player 9 release 115 is the latest version, because in this browser the Flash plug-in exposes itself externally (for scripting languages) either as version 9.0.47 or 9.0.64 instead of 9.0.115.
+
+The only way to avoid this issue is by reinstalling the Flash Player via the Adobe Flash Player installation page [ http://www.adobe.com/go/getflashplayer ].
+
+== 4. How do I prevent Internet Explorer from crashing when a `<base>` tag is defined? ==
 
 Including a closing `</base>` tag will prevent this bug in Internet Explorer being triggered. Because for HTML 4 compliant pages (a closing `base` tag is forbidden under HTML 4), you could use Internet Explorer conditional comments to keep your HTML valid and still include a closing `base` tag for HTML 4 documents:
 {{{
 <base href="http://www.yourdomain.com/"><!--[if IE]></base><![endif]-->
 }}}
 
-== 3. Why doesn't `fscommand` work in Internet Explorer with dynamic publishing (option 2) ? ==
+== 5. Why doesn't `fscommand` work in Internet Explorer with dynamic publishing (option 2) ? ==
 
 A In order to make `fscommand` work in Internet Explorer Adobe recommends to add a block of VBScript to capture and forward the FSCommand calls to JavaScript. However VBScript doesn't work anymore when a Flash movie is inserted using `innerHTML` or `outerHTML`,  as SWFObject's dynamic publishing method does.
 
@@ -67,7 +81,7 @@ Can be replaced with:
 
 A code example can be found in the SWFObject 2.0 test suite: [ http://www.swffix.org/swfobject/testsuite/test_dynamic_com.html ]
 
-== 4. How do I fix a "Line 56: Out of Memory" error, when unloading a page in Internet Explorer using earlier versions of Flash Player 9 and multiple SWFs using ExternalInterface? ==
+== 6. How do I fix a "Line 56: Out of Memory" error, when unloading a page in Internet Explorer using earlier versions of Flash Player 9 and multiple SWFs using ExternalInterface? ==
 
 This issue was introduced with the release of Flash Player 9, and is fixed in recent versions of Flash Player 9. You can fix it for the earlier versions by adding the following JavaScript code in the head of your (X)HTML page:
 {{{
@@ -82,6 +96,6 @@ window.attachEvent("onbeforeunload", fixOutOfMemoryError);
 <![endif]-->
 }}}
 
-== 5. How do I prevent Internet Explorer from showing an error message when using External Interface and SWF that is inside a `<form>` tag? ==
+== 7. How do I prevent Internet Explorer from showing an error message when using External Interface and SWF that is inside a `<form>` tag? ==
 
 This technote provides a solution: http://www.adobe.com/go/kb400730

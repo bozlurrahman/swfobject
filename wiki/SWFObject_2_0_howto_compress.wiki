@@ -5,12 +5,12 @@
 
   # Download the latest version of the YUI Compressor from [ http://www.julienlecomte.net/yuicompressor/ ]
   # Unzip the yuicompressor-x.x.x.zip file
-  # Open the uncompressed swfobject.js file in a text or code editor and remove the following conditional compiling directives and JavaScript code (line 83-90):
+  # Open the uncompressed swfobject.js file in a text or code editor and remove the following conditional compiling directives and JavaScript code (line 86-93):
 {{{  
    /*@cc_on
      ie = true;
      @if (@_win32)
-       win = true;
+       windows = true;
      @elif (@_mac)
        mac = true;
      @end
@@ -28,15 +28,15 @@
 {{{  
    Paste the following code block:
 
-   /*@cc_on f=true;@if(@_win32)i=true;@elif(@_mac)l=true;@end@*/
+   /*@cc_on i=true;@if(@_win32)q=true;@elif(@_mac)m=true;@end@*/
    
    In between:
    
-   l=h?/mac/.test(h):/mac/.test(s);
+   ... i=false,q=j?/win/.test(j):/win/.test(v),m=j?/mac/.test(j):/mac/.test(v);
    
    And:  
    
-   return{w3cdom:k,playerVersion:r,webkit:o,webkitVersion:g,ie:f,win:i,mac:l}}(); ...
+   return{w3cdom:l,pv:t,webkit:r,ie:i,win:q,mac:m}}(); ...
  }}}   
   # Save your adjusted compressed swfobject.js file
 

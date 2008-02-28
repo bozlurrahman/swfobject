@@ -3,6 +3,11 @@
 
 == SWFObject release notes ==
 
+=== SWFObject v2.0 rc4 (February 28th, 2008) ===
+
+  * Includes a couple of file size optimizations
+  * A few code enhancements, e.g. consistent typing for internal version numbering
+  
 === SWFObject v2.0 rc3 (February 19th, 2008) ===
 
   * Includes file size optimizations resulting in a 19% smaller file size, by:
