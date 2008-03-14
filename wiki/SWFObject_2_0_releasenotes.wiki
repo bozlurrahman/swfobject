@@ -3,6 +3,11 @@
 
 == SWFObject release notes ==
 
+=== SWFObject v2.0 (March 14th, 2008) ===
+
+  * Added an extra check in the Internet Explorer object cleanup code to test if the object still exists before calls are made upon it (e.g. to avoid errors when an object gets deleted by scripting); issue report 49 [ http://code.google.com/p/swfobject/issues/detail?id=49 ] 
+  * Optimized the visibility mechanism a bit: now only dynamic style sheets are added when the DOM hasn't been loaded yet, otherwise the element.style.visibility property is set; issue report 51 [ http://code.google.com/p/swfobject/issues/detail?id=51 ] 
+  
 === SWFObject v2.0 rc4 (February 28th, 2008) ===
 
   * Includes a couple of file size optimizations
