@@ -16,7 +16,7 @@
      @end
    @*/
 }}}  
-  # Save your adjusted uncompressed swfobject.js file
+  # Save your adjusted uncompressed swfobject.js file 
   # Compress this file, e.g.:
 {{{
    java -jar /yuicompressorpath/yuicompressor-2.3.5/build/yuicompressor-2.3.5.jar -o /swfobjectpath/swfobject.js /swfobjectpath/src/swfobject.js
