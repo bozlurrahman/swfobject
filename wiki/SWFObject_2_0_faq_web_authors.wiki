@@ -26,7 +26,7 @@ function resizeHandler(event:Event):void {
 }
 }}}
 
-*NOTE:* For positioning elements always define a resize handler, because a user can resize the browser window and in Internet Explorer (using the dynamic publishing method or option 2) the stage size is only available on first load. When reloading or revisiting a page it will initially be 0, causing the Flash player to keep on triggering the stage.resize event until it receives its current value
+*NOTE:* For positioning elements always define a resize handler, because a user can resize the browser window and in Internet Explorer (using the _dynamic publishing method_) the stage size is only available on first load. When reloading or revisiting a page it will initially be 0, causing the Flash player to keep on triggering the stage.resize event until it receives its current value
 
 Three code examples can be found in the SWFObject 2.0 test suite:
   * Static publishing: [ http://www.swffix.org/swfobject/testsuite/test_fullbrowserflash.html ]
@@ -54,7 +54,7 @@ Including a closing `</base>` tag will prevent this bug in Internet Explorer bei
 <base href="http://www.yourdomain.com/"><!--[if IE]></base><![endif]-->
 }}}
 
-== 5. Why doesn't `fscommand` work in Internet Explorer with dynamic publishing (option 2) ? ==
+== 5. Why doesn't `fscommand` work in Internet Explorer with _dynamic publishing_ ? ==
 
 A In order to make `fscommand` work in Internet Explorer Adobe recommends to add a block of VBScript to capture and forward the FSCommand calls to JavaScript. However VBScript doesn't work anymore when a Flash movie is inserted using `innerHTML` or `outerHTML`,  as SWFObject's dynamic publishing method does.
 
