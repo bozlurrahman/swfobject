@@ -5,7 +5,7 @@
 
 SWFObject 2.0:
   * Offers two optimized Flash Player embed methods; a markup based approach and a method that relies on JavaScript
-  * Offers a JavaScript API that aims to provide a complete tool set for publishing SWF files and retrieving Flash Player related information
+  * Offers a JavaScript API that aims to provide a complete tool set for dynamically embedding SWF files and retrieving Flash Player related information
   * Utilizes only one small JavaScript file (size: 8.7Kb, GZIPed: 3.4Kb)
   * Is the successor of SWFObject v1.5 [ http://blog.deconcept.com/swfobject/ ] and UFO [ http://www.bobbyvandersluis.com/ufo/ ]
   * Will eventually replace the Adobe Flash Player Detection Kit [ http://www.adobe.com/products/flashplayer/download/detection_kit/ ]
@@ -29,7 +29,7 @@ SWFObject 2.0 primarily uses JavaScript to overcome issues that cannot be solved
   * Detects the Flash Player version and tests whether Flash content or alternative content should be shown, to avoid that outdated Flash plug-ins break Flash content
   * Offers functionality to revert to alternative content by means of a DOM manipulation (Note: if no Flash plug-in is installed the HTML `object` element automatically falls back to its nested alternative content) 
   * Offers the option to use Adobe Express Install to download the latest Flash Player
-  * Solves the issue that older Webkit engines ignore the `object` elementÕs nested `param` elements, by using proprietary `embed` element instead (Note: this is the only place where proprietary markup is used and will be phased out in a future version)
+  * Solves the issue that older Webkit engines ignore the `object` elementï¿½s nested `param` elements, by using proprietary `embed` element instead (Note: this is the only place where proprietary markup is used and will be phased out in a future version)
   * Offers the option to publish Flash Player content with JavaScript and hereby avoid possible click-to-activate mechanisms
   * Offers a complete JavaScript API to perform Flash Player and Flash Player content related tasks 
 
