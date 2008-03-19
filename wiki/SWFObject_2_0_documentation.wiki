@@ -1,34 +1,56 @@
-#summary Embedding Adobe Flash content using SWFObject v2.0
+#summary Embedding Adobe Flash Player content using SWFObject 2.0
 #labels Featured
 
-  * _Japanese translation (unofficial) by Shuhei Terai: [ http://mtl.recruit.co.jp/blog/2007/10/swfobject_v20.html ]_
+== What is SWFObject 2.0? ==
 
-== How does SWFObject v2.0 relate to SWFObject v1.5 and SWFFix? ==
+SWFObject 2.0:
+  * Offers two optimized Flash Player embed methods; a markup based approach and a method that relies on JavaScript
+  * Offers a JavaScript API that aims to provide a complete tool set for publishing SWF files and retrieving Flash Player related information
+  * Utilizes only one small JavaScript file (size: 8.7Kb, GZIPed: 3.4Kb)
+  * Is the successor of SWFObject v1.5 [ http://blog.deconcept.com/swfobject/ ] and UFO [ http://www.bobbyvandersluis.com/ufo/ ]
+  * Will eventually replace the Adobe Flash Player Detection Kit [ http://www.adobe.com/products/flashplayer/download/detection_kit/ ]
+  * Intends to unify all existing Flash Player embed methods and provide a new standard for embedding Adobe Flash Player content
+  * Is an open source project by Geoff Stearns, Michael Williams, and Bobby van der Sluis, and is formerly known as SWFFix [ http://code.google.com/p/swffix/ ]
 
-SWFObject v2.0 is the new name for the project formerly known as SWFFix [ http://code.google.com/p/swffix/ ]. It is an open source project by Geoff Stearns, Michael Williams and Bobby van der Sluis that aims to create the next generation JavaScript library for embedding Flash content that will replace SWFObject v1.5 [ http://blog.deconcept.com/swfobject/ ], the Flash player detection kit [ http://www.adobe.com/products/flashplayer/download/detection_kit/ ] and UFO [ http://www.bobbyvandersluis.com/ufo/ ].
+== Why should you use SWFObject 2.0? ==
 
-== Why should you use SWFObject? ==
+SWFObject 2.0:
+  * Is more optimized and flexible than any other Flash Player embed method around
+  * Offers one solution for everybody: It shouldn’t matter if you are an HTML, Flash, or JavaScript developer, there should be something in it for everyone 
+  * Breaks the cycle of being locked into vendor specific markup and promotes the use of web standards and alternative content
+  * Uses unobtrusive JavaScript and JavaScript best practices
+  * Is easy to use
 
-The A List Apart article Flash Embedding Cage Match [ http://www.alistapart.com/articles/flashembedcagematch/ ] describes the rationale behind SWFObject v2.0 (formerly known as SWFFix) and why it should be better than any other available Flash embed method.
+The A List Apart article Flash Embedding Cage Match [ http://www.alistapart.com/articles/flashembedcagematch/ ] describes the full rationale behind SWFObject 2.0.
 
-== How to use SWFObject? ==
+== Why does SWFObject 2.0 use JavaScript? ==
 
-SWFObject offers two ways to embed Flash content:
-  # Embed Flash content and alternative content using standards compliant markup, and use JavaScript to resolve the issues that markup alone cannot solve (also called static publishing)
-  # Insert alternative content using standards compliant markup and embed Flash content with unobtrusive JavaScript (similar like previous versions of SWFObject and UFO, also called dynamic publishing)
+SWFObject 2.0 primarily uses JavaScript to overcome issues that cannot be solved by markup alone; it:
+  * Detects the Flash Player version and tests whether Flash content or alternative content should be shown, to avoid that outdated Flash plug-ins break Flash content
+  * Offers functionality to revert to alternative content by means of a DOM manipulation (Note: if no Flash plug-in is installed the HTML `object` element automatically falls back to its nested alternative content) 
+  * Offers the option to use Adobe Express Install to download the latest Flash Player
+  * Solves the issue that older Webkit engines ignore the `object` element’s nested `param` elements, by using proprietary `embed` element instead (Note: this is the only place where proprietary markup is used and will be phased out in a future version)
+  * Offers the option to publish Flash Player content with JavaScript and hereby avoid possible click-to-activate mechanisms
+  * Offers a complete JavaScript API to perform Flash Player and Flash Player content related tasks 
 
-The advantages of the first method over the second are that:
+== Should I use the static or dynamic publishing method? ==
+
+SWFObject 2.0 offers two distinct methods to embed Flash Player content:
+  # The *static publishing method* embeds both Flash content and alternative content using standards compliant markup, and uses JavaScript to resolve the issues that markup alone cannot solve
+  # The *dynamic publishing method* is based on marked up alternative content and uses JavaScript to replace this content with Flash content if the minimal Flash Player version is installed and enough JavaScript support is available (similar like previous versions of SWFObject and UFO)
+
+The advantages of the *static publishing method* are:
   # The actual authoring of standards compliant markup is promoted
-  # The mechanism of inserting Flash content doesn't rely on JavaScript anymore, so it degrades properly:
+  # The mechanism of embedding Flash Player content does not rely on a scripting language, so your Flash content can reach a significant bigger audience:
     * If you have the Flash plug-in installed, but have JavaScript disabled or a use a browser that doesn't support JavaScript, you will still be able to see your Flash content
     * Flash will now also run on a device like Sony PSP, which has very poor JavaScript support
     * Automated tools like RSS readers are able to pick up Flash content 
 
-The advantages of the second method over the first are that:
-  # It is easier to author, because it is less verbose and it contains no redundant code
-  # It avoids the 'click-to-activate' mechanism to activate active content in Internet Explorer 6+ and Opera 9+
-
-== How to embed Flash content using standards compliant markup and use SWFFix to solve its issues? (option 1) ==
+The advantages of the *dynamic publishing method* are:
+  # It avoids _click-to-activate mechanisms_ to activate _active content_ in Internet Explorer 6/7 and Opera 9+. Please note that Microsoft is currently phasing out all active content from its Internet Explorer browsers [ http://www.swffix.org/devblog/?p=19 ]
+  # It integrates very well with scripted applications  
+ 
+== How to embed Flash Player content using SWFObject 2.0 _static publishing_ ==
 
 === STEP 1: Embed both Flash content and alternative content using standards compliant markup ===
 
@@ -102,22 +124,11 @@ You can use the following optional Flash specific `param` elements [ http://www.
 
 ==== Why should you use alternative content? ====
 
-The `object` element allows you to nest alternative content inside of it, which will be displayed if Flash is not installed or supported. This content will also be picked up by search engines, making it a great tool for creating search-engine-friendly content. Summarizing, you should use alternative content when you like to create content that is accessible for people who browse the Web without plugins [ http://www.adobe.com/devnet/flash/articles/progressive_enhancement_03.html ], create search-engine-friendly content [ http://www.adobe.com/devnet/flash/articles/progressive_enhancement_04.html ] or tell visitors that they can have a richer user experience by downloading the Flash plugin.
-
-==== What are the downsides of the nested-objects method? ====
-
-When you take a close look at the cross-browser support of this markup approach, you will find the following deficiencies:
-  # Safari 1.2.2 and lower will ignore all nested param elements
-  # Internet Explorer 6+ on Windows XP SP2+ and Opera 9+ will include a click-to-activate mechanism
-  # There is a risk that an outdated Flash player will run your Flash content with the possibility of broken or no content at all
-
-The SWFObject JavaScript library will attempt to solve these issues. You can best see it an add-on, which primary goals are to fix issues of using standards compliant markup and to add functionality to improve the user experience.
-
-*NOTE:* All currently known workarounds to avoid the 'click-to-activate' mechanism for static SWF content appear to have severe drawbacks. Dynamic publishing (option 2) is currently the only real solution available that avoids having to activate active content.
+The `object` element allows you to nest alternative content inside of it, which will be displayed if Flash is not installed or supported. This content will also be picked up by search engines, making it a great tool for creating search-engine-friendly content. Summarizing, you should use alternative content when you like to create content that is accessible for people who browse the Web without plugins [ http://www.adobe.com/devnet/flash/articles/progressive_enhancement_03.html ], create search-engine-friendly content [ http://www.adobe.com/devnet/flash/articles/progressive_enhancement_04.html ] or tell visitors that they can have a richer user experience by downloading the Flash plug-in.
 
 === STEP 2: Include the SWFObject JavaScript library in the head of your HTML page ===
 
-The SWFObject library consists of one external JavaScript file (size: 8.7Kb, GZIPed: 3.4Kb). SWFObject will be executed as soon as it is read and will perform all DOM manipulations as soon as the DOM is loaded - for all browsers that support this, like IE, Firefox, Safari and Opera 9+ - or otherwise as soon as the onload event fires:
+The SWFObject library consists of one external JavaScript file. SWFObject will be executed as soon as it is read and will perform all DOM manipulations as soon as the DOM is loaded - for all browsers that support this, like IE, Firefox, Safari and Opera 9+ - or otherwise as soon as the onload event fires:
 	
 {{{
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -185,35 +196,13 @@ First add a unique `id` to the outer `object` tag that defines your Flash conten
 </html>
 }}}
 
-*TIP:* Use the SWFObject 2.0 HTML and JavaScript generator to help you author your code: [ http://code.google.com/p/swfobject/wiki/SWFObject_2_0_generator ]
-			
-== How to embed multiple SWF files into one HTML page (using option 1)? ==
+=== TIPS ===
 
-Just repeat steps 1 and 3 (As mentioned under option 1: "How to embed Flash content using standards compliant markup and use SWFObject to solve its issues?") to add as many SWF files to your page as you like.
+  * Use the SWFObject 2.0 HTML and JavaScript generator to help you author your code [ http://code.google.com/p/swfobject/wiki/SWFObject_2_0_generator ]
+  * Just repeat steps 1 and 3 to embed multiple SWF files into one HTML page
+  * The easiest way to reference the active `object` element is by using the JavaScript API: `swfobject.getObjectById(objectIdStr)` [ http://code.google.com/p/swfobject/wiki/SWFObject_2_0_api_javascript_dev ]
 
-== How can you reference the active object element with JavaScript (using option 1)? ==
-
-One of the side-effects of the nested-objects approach is that per SWF there are two object elements available in the HTML code, however you can only use one id or name attribute, because these have to be unique within a web page.
-
-The following browsers map to the following active object element:
-  * Internet Explorer on Windows only sees the outer object, because the nested object is commented out by conditional comments
-  * Both Opera and Safari support the notation for the outer object (Reference: [ http://www.swffix.org/testsuite/ ], row: object ActiveX)
-  * Firefox, Mozilla and all other Gecko based browsers use the inner object 
-
-You can reference the active object element by:
-  # Add an id to the outer object element
-  # Use the following code to reference the active object element:
-
-{{{
-var obj = swfobject.getObjectById("myId");
-if (obj) {
-  obj.doSomething(); // e.g. an external interface call
-}
-}}}
-
-Sample page: [ http://www.swffix.org/swfobject/testsuite/test_com.html ]
-
-== How to use SWFObject to dynamically embed Flash content? (option 2) ==
+== How to embed Flash Player content using SWFObject 2.0 _dynamic publishing_ ==
 
 === STEP 1: Create alternative content using standards compliant markup ===
 
@@ -238,7 +227,7 @@ SWFObject's dynamic embed method follows the principle of progressive enhancemen
 
 === STEP 2: Include the SWFObject JavaScript library in the head of your HTML page ===
 
-The SWFObject library consists of one external JavaScript file (size: 8.7Kb, GZIPed: 3.4Kb). SWFObject will be executed as soon as it is read and will perform all DOM manipulations as soon as the DOM is loaded - for all browsers that support this, like IE, Firefox, Safari and Opera 9+ - or otherwise as soon as the onload event fires:
+The SWFObject library consists of one external JavaScript file. SWFObject will be executed as soon as it is read and will perform all DOM manipulations as soon as the DOM is loaded - for all browsers that support this, like IE, Firefox, Safari and Opera 9+ - or otherwise as soon as the onload event fires:
 	
 {{{
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -426,52 +415,12 @@ swfobject.embedSWF("myContent.swf", "myContent", "300", "120", "9.0.0","expressI
 </script>
 }}}
 
-*TIP:* Use the SWFObject 2.0 HTML and JavaScript generator to help you author your code: [ http://code.google.com/p/swfobject/wiki/SWFObject_2_0_generator ]
+=== TIPS ===
 
-== How to embed multiple SWF files into one HTML page (using option 2)? ==
+  * Use the SWFObject 2.0 HTML and JavaScript generator to help you author your code [ http://code.google.com/p/swfobject/wiki/SWFObject_2_0_generator ]
+  * Just repeat steps 1 and 3 to embed multiple SWF files into one HTML page
 
-Just repeat steps 1 and 3 (As mentioned under option 2: "How to use SWFObject to dynamically embed Flash content?") to add as many SWF files to your page as you like.
-		
-== How can you use SWFObject to retrieve Flash player related information with JavaScript? ==
-
-SWFObject contains a public API that enables you to retrieve Flash player related information with JavaScript.
-
-`swfobject.getFlashPlayerVersion()` returns a JavaScript object containing the major version (`major`:Number), minor version (`minor`:Number) and release version (`release`:Number) of an installed Flash player:
-
-{{{
-var playerVersion = swfobject.getFlashPlayerVersion(); // returns a JavaScript object
-var majorVersion = playerVersion.major; // access the major, minor and release version numbers via their respective properties
-}}}
-
-`swfobject.hasFlashPlayerVersion(versionNumbersString)` returns a Boolean to indicate whether or not a specific version of the Flash plugin is installed:
-
-{{{
-if (swfobject.hasFlashPlayerVersion("9.0.18")) {
-  // has Flash
-}
-else {
-  // no Flash
-}
-}}}
-
-Please note that while Flash version numbers normally consist of major.minor.release.build, SWFObject only looks at the first 3 numbers, so both "WIN 9,0,18,0" (IE) or "Shockwave Flash 9 r18" (all other browsers) will translate to "9.0.18".
-
-== How does SWFObject v2.0 differ from libraries like SWFObject v1.5 and UFO? ==
-
-Embed option 2 (as described under "How to use SWFObject?") works similar as SWFObject v1.5 and UFO, and uses JavaScript to dynamically replace marked up alternative content by Flash content.
-
-Embed option 1 departs from this conceptual principle by using standards compliant markup  to embed Flash content and use JavaScript to solve issues that cannot be solved by markup alone. The advantages of this new method are that:
-  # The actual authoring of standards compliant markup is promoted
-  # The mechanism of inserting Flash content doesn't rely on JavaScript anymore, so it degrades properly:
-    * If you have the Flash plug-in installed, but have JavaScript disabled or a use a browser that doesn't support JavaScript, you will still be able to see your Flash content
-    * Flash will now also run on a device like Sony PSP, which has very poor JavaScript support
-    * Automated tools like RSS readers are able to pick up Flash content 
-
-The advantages of the second method over the first are that:
-  # It is easier to author, because it is less verbose and it contains no redundant code
-  # It avoids the 'click-to-activate' mechanism to activate active content in Internet Explorer 6+ and Opera 9+
-
-== SWFObject v1.5 to SWFObject v2.0 migration tips ==
+== SWFObject 1.5 to SWFObject 2.0 migration tips ==
 
   # It is now preferred to insert all script blocks in the head of your HTML page
   # The library itself is now written in lowercase: `swfobject` instead of `SWFObject`
@@ -479,26 +428,12 @@ The advantages of the second method over the first are that:
   # The API is entirely different and more elaborate: [ http://code.google.com/p/swfobject/wiki/SWFObject_2_0_api_javascript_dev ]
   # SWFObject 2.0 replaces your entire alternative HTML content block, including the referenced HTML container element, for Flash content when enough JavaScript and Flash support is available, while SWFObject 1.5 only replaces the content inside the referenced HTML container. When you don't specify an `id` attribute, the `object` element will automatically inherit the `id` of the HTML container element of your alternative content.
 
-== UFO to SWFObject v2.0 migration tips ==
+== UFO to SWFObject 2.0 migration tips ==
   
   # SWFObject 2.0 replaces your entire alternative HTML content block, including the referenced HTML container element, for Flash content when enough JavaScript and Flash support is available, while UFO only replaces the content inside the referenced HTML container. When you don't specify an `id` attribute, the `object` element will automatically inherit the `id` of the HTML container element of your alternative content.
   # UFO's `setcontainercss` feature is has not been incorporated in SWFObject 2.0, however it can easily be replicated by using the SWFObject 2.0 API, see: `swfobject.createCSS(selStr, declStr)` in [ http://code.google.com/p/swfobject/wiki/SWFObject_2_0_api_javascript_dev ]
-  		
-== What are the risks of using SWFObject? ==
 
-When using embed option 1:
-  # 80% of all web users (the combined market share of IE6, IE7 and Opera, source: thecounter.com [ http://www.thecounter.com/stats/2008/January/browser.php ]) will have a somewhat degraded user experience because of a 'click-to-activate' mechanism
-  # Less than 1% of all web users may face broken Flash content:
-    * When you publish your Flash content for Flash player 9 and a user has Flash Player 6 installed, there is a 0.19% (around 3.1% Flash player version gap of 6% no JavaScript) chance on broken or no content at all
-    * When you publish your Flash content for Flash player 8 and a user has Flash Player 6 installed, there is a 0.03% (around 0.5% Flash player version gap of 6% no JavaScript) chance on broken or no content at all (source: thecounter.com [ http://www.thecounter.com/stats/2008/January/javas.php ] and Adobe [ http://www.adobe.com/products/player_census/flashplayer/version_penetration.html ])
-
-Please note that although this approach still has its risks, the odds will be equal or lower than any other Flash embed method available.
-
-When using embed option 2:
-
-  * 6% of all web users have JavaScript disabled, or have browsers that don't support JavaScript at all, or not well enough, and will never be able to see any Flash content at all (regardless whether the latest Flash player is installed or not), however they will see alternative content instead (source: thecounter.com [ http://www.thecounter.com/stats/2008/January/javas.php ])
-
-== Does SWFObject support MIME type application/xhtml+xml? ==
+== Does SWFObject 2.0 support MIME type application/xhtml+xml? ==
 
 SWFObject does NOT support XML MIME types, which is a design decision.
 
