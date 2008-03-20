@@ -11,11 +11,11 @@ SWFObject 2.0 contains a public API that allows JavaScript developers to reuse S
 
  Embed Flash content and alternative content using standards compliant markup (the nested-objects method with proprietary Internet Explorer conditional comments), and use JavaScript to resolve the issues that markup alone cannot solve (also called static publishing).
 
- This method is explained in "How to embed Flash content using standards compliant markup and use SWFFix to solve its issues? (option 1)" [ http://code.google.com/p/swfobject/wiki/SWFObject_2_0_documentation ]
+ This method is explained in "How to embed Flash Player content using SWFObject 2.0 static publishing" [ http://code.google.com/p/swfobject/wiki/SWFObject_2_0_documentation ]
 
 === `swfobject.getObjectById(objectIdStr)` ===
 
- NOTE: *For static publishing only*
+ NOTE: *For static publishing only* (or: using `swfobject.registerObject()` only)
 
  Returns the active object element. One of the side-effects of the nested-objects approach is that per SWF there are two object elements available in the HTML code, however you can only use one id or name attribute, because these have to be unique within a web page.
 
@@ -42,7 +42,7 @@ if (obj) {
 
  Insert alternative content using standards compliant markup and embed Flash content with unobtrusive JavaScript (also called dynamic publishing).
 
- This method is explained in "How to use SWFObject to dynamically embed Flash content? (option 2)" [ http://code.google.com/p/swfobject/wiki/SWFObject_2_0_documentation ]
+ This method is explained in "How to embed Flash Player content using SWFObject 2.0 dynamic publishing" [ http://code.google.com/p/swfobject/wiki/SWFObject_2_0_documentation ]
 
 === `swfobject.getFlashPlayerVersion()` ===
 
@@ -182,3 +182,13 @@ var params = {};
 var attributes = {};
 swfobject.embedSWF("myContent.swf", "altContent", "100%", "100%", "9.0.0","expressInstall.swf", flashvars, params, attributes);
 }}}
+
+== COMMENTS POLICY ==
+
+We will try to keep this page lean and mean, because it is used by many people. For this purpose we will periodically review all comments and remove all comments that are outdated or irrelevant to this documentation page itself. 
+
+If you have any questions/comments about SWFObject 2.0 or have problems with an implementation:
+  # Please make sure you have read our FAQ [ http://code.google.com/p/swfobject/wiki/SWFObject_2_0_faq_web_authors ]
+  # Use the SWFObject 2.0 discussion group [ http://groups.google.com/group/swfobject ]
+
+If you find any bugs or want to request a future enhancement, you can fill in an issue report on the SWFObject 2.0 issues page [ http://code.google.com/p/swfobject/issues/list ]
