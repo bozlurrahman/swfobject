@@ -15,7 +15,7 @@ SWFObject 2.0 contains a public API that allows JavaScript developers to reuse S
 
 === `swfobject.getObjectById(objectIdStr)` ===
 
- NOTE: *For static publishing only* (or: using `swfobject.registerObject()` only)
+ NOTE: *For static publishing only* (or: when using `swfobject.registerObject()` only)
 
  Returns the active object element. One of the side-effects of the nested-objects approach is that per SWF there are two object elements available in the HTML code, however you can only use one id or name attribute, because these have to be unique within a web page.
 
