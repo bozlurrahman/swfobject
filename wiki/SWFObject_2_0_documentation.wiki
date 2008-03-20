@@ -448,7 +448,7 @@ There are a number of reasons why we are not supporting this:
 We will try to keep this page lean and mean, because it is used by many people. For this purpose we will periodically review all comments and remove all comments that are outdated or irrelevant to this documentation page itself. 
 
 If you have any questions/comments about SWFObject 2.0 or have problems with an implementation:
-  # Please make sure you have read our FAQ: httpU://code.google.com/p/swfobject/wiki/SWFObject_2_0_faq_web_authors
+  # Please make sure you have read our FAQ: http://code.google.com/p/swfobject/wiki/SWFObject_2_0_faq_web_authors
   # Use the SWFObject 2.0 discussion group: http://groups.google.com/group/swfobject
 
 If you find any bugs or want to request a future enhancement, you can fill in an issue report on the SWFObject 2.0 issues page:
