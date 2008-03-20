@@ -5,7 +5,7 @@
 
 SWFObject 2.0:
   * Offers two optimized Flash Player embed methods; a markup based approach and a method that relies on JavaScript
-  * Offers a JavaScript API that aims to provide a complete tool set for dynamically embedding SWF files and retrieving Flash Player related information
+  * Offers a JavaScript API that aims to provide a complete tool set for embedding SWF files and retrieving Flash Player related information
   * Utilizes only one small JavaScript file (size: 8.7Kb, GZIPed: 3.4Kb)
   * Is the successor of SWFObject v1.5 [ http://blog.deconcept.com/swfobject/ ] and UFO [ http://www.bobbyvandersluis.com/ufo/ ]
   * Will eventually replace the Adobe Flash Player Detection Kit [ http://www.adobe.com/products/flashplayer/download/detection_kit/ ]
@@ -26,12 +26,12 @@ The A List Apart article Flash Embedding Cage Match [ http://www.alistapart.com/
 == Why does SWFObject 2.0 use JavaScript? ==
 
 SWFObject 2.0 primarily uses JavaScript to overcome issues that cannot be solved by markup alone; it:
-  * Detects the Flash Player version and tests whether Flash content or alternative content should be shown, to avoid that outdated Flash plug-ins break Flash content
-  * Offers functionality to revert to alternative content by means of a DOM manipulation (Note: if no Flash plug-in is installed the HTML `object` element automatically falls back to its nested alternative content) 
+  * Detects the Flash Player version and determines whether Flash content or alternative content should be shown, to avoid that outdated Flash plug-ins break Flash content
+  * Offers functionality to revert to alternative content in case of an outdated plug-in by means of a DOM manipulation (Note: if no Flash plug-in is installed the HTML `object` element automatically falls back to its nested alternative content) 
   * Offers the option to use Adobe Express Install to download the latest Flash Player
-  * Solves the issue that older Webkit engines ignore the `object` element�s nested `param` elements, by using proprietary `embed` element instead (Note: this is the only place where proprietary markup is used and will be phased out in a future version)
+  * Solves the issue that older Webkit engines ignore the `object` element's nested `param` elements by using the proprietary `embed` element instead (Note: this is the only place where proprietary markup is used and will be phased out in a future version)
   * Offers the option to publish Flash Player content with JavaScript and hereby avoid possible click-to-activate mechanisms
-  * Offers a complete JavaScript API to perform Flash Player and Flash Player content related tasks 
+  * Offers an elaborate JavaScript API to perform common Flash Player and Flash content related tasks 
 
 == Should I use the static or dynamic publishing method? ==
 
@@ -41,7 +41,7 @@ SWFObject 2.0 offers two distinct methods to embed Flash Player content:
 
 The advantages of the *static publishing method* are:
   # The actual authoring of standards compliant markup is promoted
-  # The mechanism of embedding Flash Player content does not rely on a scripting language, so your Flash content can reach a significant bigger audience:
+  # The mechanism of embedding Flash content does not rely on a scripting language, so your Flash content can reach a significant bigger audience:
     * If you have the Flash plug-in installed, but have JavaScript disabled or a use a browser that doesn't support JavaScript, you will still be able to see your Flash content
     * Flash will now also run on a device like Sony PSP, which has very poor JavaScript support
     * Automated tools like RSS readers are able to pick up Flash content 
@@ -422,6 +422,7 @@ swfobject.embedSWF("myContent.swf", "myContent", "300", "120", "9.0.0","expressI
 
 == SWFObject 1.5 to SWFObject 2.0 migration tips ==
 
+  # SWFObject 2.0 is NOT backwards compatible with SWFObject 1.5
   # It is now preferred to insert all script blocks in the head of your HTML page
   # The library itself is now written in lowercase: `swfobject` instead of `SWFObject`
   # Methods can only be accessed via the library (instead via a SWFObject instance in SWFObject 1.5)
@@ -441,3 +442,14 @@ There are a number of reasons why we are not supporting this:
   * Only a very small (non-significant) amount of web authors is using it
   * We are unsure if it is the direction to go. Internet Explorer does not support it and all other major browser vendors are aiming their arrows at a new standard way of HTML parsing (with HTML 5), which departs from the current W3C vision of parsing HTML as XML
   * We save a considerate amount of file size and effort (testing, issue resolving) by not supporting it
+
+== COMMENTS POLICY ==
+
+We will try to keep this page lean and mean, because it is used by many people. For this purpose we will periodically review all comments and remove all comments that are outdated or irrelevant to this documentation page itself. 
+
+If you have any questions/comments about SWFObject 2.0 or have problems with an implementation:
+  # Please make sure you have read our FAQ: httpU://code.google.com/p/swfobject/wiki/SWFObject_2_0_faq_web_authors
+  # Use the SWFObject 2.0 discussion group: http://groups.google.com/group/swfobject
+
+If you find any bugs or want to request a future enhancement, you can fill in an issue report on the SWFObject 2.0 issues page:
+  * http://code.google.com/p/swfobject/issues/list
