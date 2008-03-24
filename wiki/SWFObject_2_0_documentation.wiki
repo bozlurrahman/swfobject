@@ -260,6 +260,8 @@ The SWFObject library consists of one external JavaScript file. SWFObject will b
   # params (Object, optional) specifies your nested `object` element `params` with name:value pairs 
   # attributes (Object, optional) specifies your `object`'s attributes with name:value pairs 
 
+*NOTE:* You can omit the optional parameters, as long as you don't break the parameter order. If you don't want to use an optional parameter, but would like to use a following optional parameter, you can simply pass `false` as its value. For the `flashvars`, `params` and `attributes` JavaScript Objects, you can also pass an empty object instead: `{}`. 
+
 {{{
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
