@@ -120,7 +120,7 @@ You can avoid this error by using one of the following workarounds (note: which 
   
 == 9. How can I pass URIs or HTML code as a value using _flashvars_? ==
 
-The symbols `?`, `=` and `&` cannot directly be used inside flashvars values, because they are used to stack the flashvars themselves.
+Special characters and the symbols `=` and `&` cannot directly be used inside flashvars values (the latter because they are used to stack the flashvars themselves).
 
 You can workaround this issue by escaping these characters before passing them as flashvars values, and by unescaping them again in your SWF, an example:
 {{{
@@ -129,7 +129,6 @@ unescape("%26trade") will turn it back to &trade
 }}}
 
 You can also escape these characters manually by using:
-  * `?` can be escaped by using `%3F`
   * `=` can be escaped by using `%3D`
   * `&` can be escaped by using `%26`
   
