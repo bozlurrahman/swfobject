@@ -129,6 +129,6 @@ unescape("%26trade") will turn it back to &trade
 }}}
 
 You can also escape these characters manually by using:
-  * `=` can be escaped by using `%3D`
-  * `&` can be escaped by using `%26`
+  * `%3D` instead of `=` 
+  * `%26` instead of `&` 
   
