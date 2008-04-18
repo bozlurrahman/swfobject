@@ -99,3 +99,21 @@ window.attachEvent("onbeforeunload", fixOutOfMemoryError);
 == 7. How do I prevent Internet Explorer from showing an error message when using External Interface and SWF that is inside a `<form>` tag? ==
 
 This technote provides a solution: http://www.adobe.com/go/kb400730
+
+== 8. How can I avoid Active Server Pages error 'ASP 0139' when using _static publishing_ and Microsoft IIS? ==
+
+Microsoft IIS's ASP interpreter incorrectly doesn't allow a page with nested `<object>` tags, resulting in the following error message:
+{{{
+Active Server Pages error 'ASP 0139'
+
+Nested Object
+
+/yourWebpage.html, line XX 
+
+An object tag cannot be placed inside another object tag.
+}}}
+
+You can avoid this error by using one of the following workarounds (note: which workaround will be best will depend on your specific situation):
+  # Configure IIS not to serve .htm and .html files as ASP
+  # Use a server-side include, as explained here: http://seanys.com/2007/09/10/asp-flash-nested-objects/
+  # Create the object tags dynamically, using 'Update - The Dynamic Approach' from: http://juicystudio.com/article/object-paranoia.php
