@@ -122,7 +122,7 @@ You can avoid this error by using one of the following workarounds (note: which 
 
 Special characters and the symbols `=` and `&` cannot directly be used inside flashvars values (the latter because they are used to stack the flashvars themselves).
 
-You can workaround this issue by escaping these characters before passing them as flashvars values, and by unescaping them again in your SWF, an example:
+You can workaround this issue by escaping these characters before passing them as flashvar values. An example:
 {{{
 encodeURIComponent("&trade") will become %26trade
 }}}
