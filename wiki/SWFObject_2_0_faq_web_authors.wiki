@@ -130,5 +130,7 @@ unescape("%26trade") will turn it back to &trade
 
 You can also escape these characters manually by using:
   * `%3D` instead of `=` 
-  * `%26` instead of `&` 
+  * `%26` instead of `&`
+
+You can find more info about encoding characters in this technote: http://www.adobe.com/go/tn_14143
   
