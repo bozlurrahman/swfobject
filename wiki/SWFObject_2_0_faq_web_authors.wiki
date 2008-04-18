@@ -124,9 +124,12 @@ Special characters and the symbols `=` and `&` cannot directly be used inside fl
 
 You can workaround this issue by escaping these characters before passing them as flashvars values, and by unescaping them again in your SWF, an example:
 {{{
-escape("&trade") will become %26trade
-unescape("%26trade") will turn it back to &trade 
+encodeURIComponent("&trade") will become %26trade
 }}}
+
+The values will be available in your swf already unencoded, so no unescaping is needed inside your swf.
+
+Note that encodeURIComponent is not available in all browsers, but is available in all of the common modern versions. If you need full backwards compatibility, you can use escape() instead, but note that escape() does not work well with double-byte characters (like Chinese).
 
 You can also escape these characters manually by using:
   * `%3D` instead of `=` 
