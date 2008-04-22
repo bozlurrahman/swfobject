@@ -25,7 +25,7 @@
   # Full browser Flash test page including min-width, min-height and scrollbars: [ http://www.swffix.org/swfobject/testsuite/test_dynamic_fullbrowserflash_adv.html ]
   # Example of the different Object notation methods (to define your flashvars, params and object's attributes) [ http://www.swffix.org/swfobject/testsuite/test_dynamic_notations.html ]
   # Centered SWF (inline element) [ http://www.swffix.org/swfobject/testsuite/test_dynamic_centered_inline.html ]
-	# Centered SWF (block element) [ http://www.swffix.org/swfobject/testsuite/test_dynamic_centered_block.html ]
+  # Centered SWF (block element) [ http://www.swffix.org/swfobject/testsuite/test_dynamic_centered_block.html ]
  
 === Other API methods: ===
  
