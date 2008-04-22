@@ -24,6 +24,8 @@
   # Full browser Flash test page [ http://www.swffix.org/swfobject/testsuite/test_dynamic_fullbrowserflash.html ]
   # Full browser Flash test page including min-width, min-height and scrollbars: [ http://www.swffix.org/swfobject/testsuite/test_dynamic_fullbrowserflash_adv.html ]
   # Example of the different Object notation methods (to define your flashvars, params and object's attributes) [ http://www.swffix.org/swfobject/testsuite/test_dynamic_notations.html ]
+  # Centered SWF (inline element) [ http://www.swffix.org/swfobject/testsuite/test_dynamic_centered_inline.html ]
+	# Centered SWF (block element) [ http://www.swffix.org/swfobject/testsuite/test_dynamic_centered_block.html ]
  
 === Other API methods: ===
  
@@ -34,3 +36,11 @@
    # swfobject.createSWF(attObj, parObj, el) [ http://www.swffix.org/swfobject/testsuite/test_api_createswf.html ]
    # swfobject.createSWF and browser communication test page [ http://www.swffix.org/swfobject/testsuite/test_api_createswf_com.html ]
    # swfobject.createCSS(selStr, declStr) [ http://www.swffix.org/swfobject/testsuite/test_api_createcss.html ]
+   
+ === Source FLAs: ===
+ 
+   # test6.fla [ http://www.swffix.org/swfobject/testsuite/test6.fla ]
+   # test6_streaming.fla [ http://www.swffix.org/swfobject/testsuite/test6_streaming.fla ]
+   # test6_flashvars.fla [ http://www.swffix.org/swfobject/testsuite/test6_flashvars.fla ]
+   # test8_com.fla [ http://www.swffix.org/swfobject/testsuite/test8_com.fla ]
+   
