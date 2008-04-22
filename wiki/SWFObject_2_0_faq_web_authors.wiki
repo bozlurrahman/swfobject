@@ -3,7 +3,21 @@
 
 = SWFObject 2.0 FAQ for web authors =
 
-== 1. How can I create a SWF that will encompass 100% of the browser window  ==
+== OVERVIEW ==
+
+  # How can I create a SWF that will encompass 100% of the browser window? 
+  # Why don't I see Flash content in Internet Explorer on Windows while I do have the required minimal Flash Player version installed?
+  # How can I avoid an infinite express install loop in Firefox on Mac OS X?
+  # How do I prevent Internet Explorer from crashing when a `<base>` tag is defined?
+  # Why doesn't `fscommand` work in Internet Explorer with _dynamic publishing_ ?
+  # How do I fix a "Line 56: Out of Memory" error, when unloading a page in Internet Explorer using earlier versions of Flash Player 9 and multiple SWFs using ExternalInterface?
+  # How do I prevent Internet Explorer from showing an error message when using External Interface and SWF that is inside a `<form>` tag?
+  # How can I avoid Active Server Pages error 'ASP 0139' when using _static publishing_ and Microsoft IIS?
+  # How can I pass URIs or HTML code as a value using _flashvars_?
+  # How can I center a SWF?
+  # How can I avoid that extra whitespace is created underneath my SWF?
+
+== 1. How can I create a SWF that will encompass 100% of the browser window?  ==
 
 The following technique is also known as Full Browser Flash:
   # Set both the width and height of your SWF to 100% in your SWFObject definition
@@ -136,4 +150,67 @@ You can also escape these characters manually by using:
   * `%26` instead of `&`
 
 You can find more info about encoding characters in this technote: http://www.adobe.com/go/tn_14143
-  
+
+== 10. How can I center a SWF? ==
+
+You can use CSS to center your `object` element. Which styles to use depends on whether you use your `object` element as an inline element or a block level container. Below are examples for both scenarios: 
+
+{{{
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+	<head>
+		<title>Inline element centering example</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<style type="text/css" media="screen">
+			body { margin:0; text-align:center; }
+			div#content { text-align:left; }
+			object#content { display:inline; }
+		</style>	
+		<script type="text/javascript" src="swfobject.js"></script>
+		<script type="text/javascript">
+		swfobject.embedSWF("test6.swf", "content", "300", "120", "9.0.0", "expressInstall.swf");
+		</script>
+	</head>
+	<body>
+		<div id="content">Alternative content</div>
+	</body>
+</html>
+}}}
+
+or: http://www.swffix.org/swfobject/testsuite/test_dynamic_centered_inline.html
+
+{{{
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+	<head>
+		<title>Block level element centering example</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<style type="text/css" media="screen">
+			body { margin:0; text-align:center; }
+			div#content { text-align:left; }
+			object#content { display:block; margin:0 auto; }
+		</style>	
+		<script type="text/javascript" src="swfobject.js"></script>
+		<script type="text/javascript">
+		swfobject.embedSWF("test6.swf", "content", "300", "120", "9.0.0", "expressInstall.swf");
+		</script>
+	</head>
+	<body>
+		<div id="content">Alternative content</div>
+	</body>
+</html>
+}}}
+
+or: http://www.swffix.org/swfobject/testsuite/test_dynamic_centered_block.html
+
+== 11. How can I avoid that extra whitespace is created underneath my SWF? ==
+
+When using dynamic publishing and a strict HTML DOCTYPE Firefox, Safari and Opera may create a few pixels whitespace underneath your Flash movie.
+
+To avoid this make sure that your `object` element is set as a block level element, which can be achieved with the following CSS style rule:
+
+{{{
+<style type="text/css" media="screen">
+    object { display:block; }
+</style>
+}}}
