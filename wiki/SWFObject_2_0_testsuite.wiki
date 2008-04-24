@@ -37,7 +37,7 @@
    # swfobject.createSWF and browser communication test page [ http://www.swffix.org/swfobject/testsuite/test_api_createswf_com.html ]
    # swfobject.createCSS(selStr, declStr) [ http://www.swffix.org/swfobject/testsuite/test_api_createcss.html ]
    
- === Source FLAs: ===
+=== Source FLAs: ===
  
    # test6.fla [ http://www.swffix.org/swfobject/testsuite/test6.fla ]
    # test6_streaming.fla [ http://www.swffix.org/swfobject/testsuite/test6_streaming.fla ]
