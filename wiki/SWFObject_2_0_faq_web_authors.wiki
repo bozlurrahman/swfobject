@@ -220,4 +220,4 @@ To avoid this make sure that your `object` element is set as a block level eleme
 
 The Opera web browser on Nintendo Wii displays both Flash content embedded with static and dynamic publishing. Please note that the Wii currently only supports Flash Player 7 content and that Adobe Express Install is not supported.
 
-The Netfront browser on Sony PSP and PS3 will only display Flash content when using static publishing. The reason for this is that it's JavaScript support is extremely limited, so that the SWFObject 2.0 script will never be executed. Please also note that the it currently only supports Flash Player 6 content and that Adobe Express Install is not supported.
+The Netfront browser on Sony PSP and PS3 will only display Flash content when using static publishing. The reason for this is that it's JavaScript support is extremely limited, so that the SWFObject 2.0 script will never be executed. Please also note that it currently only supports Flash Player 6 content and that Adobe Express Install is not supported.
