@@ -7,7 +7,7 @@
 
   # How can I create a SWF that will encompass 100% of the browser window? 
   # Why don't I see Flash content in Internet Explorer on Windows while I do have the required minimal Flash Player version installed?
-  # Why does `swfobject.getFlashPlayerVersion()` sometimes incorrectly report the current Flash Player version?
+  # Why does `swfobject.getFlashPlayerVersion()` sometimes incorrectly report the installed Flash Player version?
   # How do I prevent Internet Explorer from crashing when a `<base>` tag is defined?
   # Why doesn't `fscommand` work in Internet Explorer with _dynamic publishing_ ?
   # How do I fix a "Line 56: Out of Memory" error, when unloading a page in Internet Explorer using earlier versions of Flash Player 9 and multiple SWFs using ExternalInterface?
@@ -54,7 +54,7 @@ When an install gets corrupted (very often caused by corrupt installers) it is i
 
 The only way to avoid this issue is by uninstalling the Flash Player using the Adobe uninstaller [ http://www.adobe.com/go/tn_14157 ] and by reinstalling the plug-in via the Adobe Flash Player installation page [ http://www.adobe.com/go/getflashplayer ].
 
-== 3. Why does `swfobject.getFlashPlayerVersion()` sometimes incorrectly report the current Flash Player version? ==
+== 3. Why does `swfobject.getFlashPlayerVersion()` sometimes incorrectly report the installed Flash Player version? ==
 
 In the past years there have been several occasions where a Flash Player didn't expose the right version number externally - as can be retrieved with JavaScript -, caused by corrupt Flash Player Mac OS X installers, affecting Firefox, Opera and Safari on Mac OS X, and also all JavaScript detection scripts, including SWFObject 2, SWFObject 1.5, UFO and the Adobe Flash Player Detection Kit. 
 
