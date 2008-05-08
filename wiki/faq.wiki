@@ -1,0 +1,226 @@
+#summary SWFObject FAQ
+#labels Featured
+
+= SWFObject FAQ =
+
+== OVERVIEW ==
+
+  # How can I create a SWF that will encompass 100% of the browser window? 
+  # Why don't I see Flash content in Internet Explorer on Windows while I do have the required minimal Flash Player version installed?
+  # Why does `swfobject.getFlashPlayerVersion()` sometimes incorrectly report the installed Flash Player version?
+  # How do I prevent Internet Explorer from crashing when a `<base>` tag is defined?
+  # Why doesn't `fscommand` work in Internet Explorer with _dynamic publishing_ ?
+  # How do I fix a "Line 56: Out of Memory" error, when unloading a page in Internet Explorer using earlier versions of Flash Player 9 and multiple SWFs using ExternalInterface?
+  # How do I prevent Internet Explorer from showing an error message when using External Interface and SWF that is inside a `<form>` tag?
+  # How can I avoid Active Server Pages error 'ASP 0139' when using _static publishing_ and Microsoft IIS?
+  # How can I pass URIs or HTML code as a value using _flashvars_?
+  # How can I center a SWF?
+  # How can I avoid that extra whitespace is created underneath my SWF?
+  # Do SWFs embedded with SWFObject 2 display in the Sony PS3 or Nintendo Wii web browsers?
+
+== 1. How can I create a SWF that will encompass 100% of the browser window?  ==
+
+The following technique is also known as Full Browser Flash:
+  # Set both the width and height of your SWF to 100% in your SWFObject definition
+  # Include CSS to get rid of any default margins/padding and set the height of the `html` element, the `body` element and the entire chain of block level HTML elements that your SWF will be nested in to 100%, because Firefox (or: any Gecko based browser) in standards compliant mode (or: using a valid DOCTYPE) interprets percentages in a very strict way (to be precise: the percentage of the height of its parent container, which has to be set explicitly):
+{{{
+<style type="text/css" media="screen">
+  html, body, #containerA, #containerB { height:100%; }
+  body { margin:0; padding:0; overflow:hidden; }
+</style>
+}}}
+  # Manage the scaling and alignment of your SWF and the positioning of your SWF's elements, within your ActionScript code, e.g.:
+{{{
+stage.scaleMode = StageScaleMode.NO_SCALE;
+stage.align = StageAlign.TOP_LEFT;
+
+stage.addEventListener(Event.RESIZE, resizeHandler);
+
+function resizeHandler(event:Event):void {
+  // center stuff
+}
+}}}
+
+*NOTE:* For positioning elements always define a resize handler, because a user can resize the browser window and in Internet Explorer (using the _dynamic publishing method_) the stage size is only available on first load. When reloading or revisiting a page it will initially be 0, causing the Flash player to keep on triggering the stage.resize event until it receives its current value
+
+Three code examples can be found in the SWFObject test suite:
+  * Static publishing: [ http://www.swffix.org/swfobject/testsuite/test_fullbrowserflash.html ]
+  * Dynamic publishing: [ http://www.swffix.org/swfobject/testsuite/test_dynamic_fullbrowserflash.html ]
+  * Dynamic publishing including min-width, min-height and scrollbars: [ http://www.swffix.org/swfobject/testsuite/test_dynamic_fullbrowserflash_adv.html ]
+
+== 2. Why don't I see Flash content in Internet Explorer on Windows while I do have the required minimal Flash Player version installed? ==
+
+When an install gets corrupted (very often caused by corrupt installers) it is impossible to read the Flash Player version number externally using scripting languages. When using dynamic publishing this results in the display of alternative content, with static publishing we let the object element do its job (it decides whether to show Flash content or alternative content based on its built-in MIME type mechanism) which results in the display of Flash content.
+
+The only way to avoid this issue is by uninstalling the Flash Player using the Adobe uninstaller [ http://www.adobe.com/go/tn_14157 ] and by reinstalling the plug-in via the Adobe Flash Player installation page [ http://www.adobe.com/go/getflashplayer ].
+
+== 3. Why does `swfobject.getFlashPlayerVersion()` sometimes incorrectly report the installed Flash Player version? ==
+
+In the past years there have been several occasions where a Flash Player didn't expose the right version number externally - as can be retrieved with JavaScript -, caused by corrupt Flash Player Mac OS X installers, affecting Firefox, Opera and Safari on Mac OS X, and also all JavaScript detection scripts, including SWFObject 2, SWFObject 1.5, UFO and the Adobe Flash Player Detection Kit. 
+
+Known erroneous versions are (major.minor.release version):
+  * 9.0.47 exposes 9.0.19
+  * 8.0.24 exposes 8.0.23
+  * 9.0.115 exposes either 9.0.47 or 9.0.64 (Note: only Adobe Express Install installers, affecting Firefox on Mac OS X only)
+  
+All corrupt installers have been replaced by correct installers. You can avoid this issue by getting the latest version of the Flash Player via the Adobe Flash Player installation page [ http://www.adobe.com/go/getflashplayer ] or via the Adobe Express Install mechanism.
+
+== 4. How do I prevent Internet Explorer from crashing when a `<base>` tag is defined? ==
+
+Including a closing `</base>` tag will prevent this bug in Internet Explorer being triggered. Because for HTML 4 compliant pages (a closing `base` tag is forbidden under HTML 4), you could use Internet Explorer conditional comments to keep your HTML valid and still include a closing `base` tag for HTML 4 documents:
+{{{
+<base href="http://www.yourdomain.com/"><!--[if IE]></base><![endif]-->
+}}}
+
+== 5. Why doesn't `fscommand` work in Internet Explorer with _dynamic publishing_ ? ==
+
+A In order to make `fscommand` work in Internet Explorer Adobe recommends to add a block of VBScript to capture and forward the FSCommand calls to JavaScript. However VBScript doesn't work anymore when a Flash movie is inserted using `innerHTML` or `outerHTML`,  as SWFObject's dynamic publishing method does.
+
+Fortunately you can also use JavaScript instead of VBScript to catch the `fscommand` calls. A small downside is that it uses proprietary attributes (which, again, wrapped in conditional comments will keep your code valid). E.g. the following block of VBScript code:
+{{{
+<SCRIPT LANGUAGE=VBScript>
+on error resume next
+Sub myCom_FSCommand(ByVal command, ByVal args)
+  call myCom_DoFSCommand(command, args)
+end sub
+</SCRIPT>
+}}}
+
+Can be replaced with:
+{{{
+<!--[if IE]>
+<script type="text/javascript" event="FSCommand(command,args)" for="myCom">
+  myCom_DoFSCommand(command, args);
+</script>
+<![endif]-->
+}}}
+
+*NOTE:* When publishing for Flash 8 or higher, the use of ExternalInterface is recommended for JavaScript-ActionScript communication over the use of fscommand()
+
+A code example can be found in the SWFObject test suite: [ http://www.swffix.org/swfobject/testsuite/test_dynamic_com.html ]
+
+== 6. How do I fix a "Line 56: Out of Memory" error, when unloading a page in Internet Explorer using earlier versions of Flash Player 9 and multiple SWFs using ExternalInterface? ==
+
+This issue was introduced with the release of Flash Player 9, and is fixed in recent versions of Flash Player 9. You can fix it for the earlier versions by adding the following JavaScript code in the head of your (X)HTML page:
+{{{
+<!--[if IE]>
+<script type="text/javascript">
+function fixOutOfMemoryError() {
+  __flash_unloadHandler = function() {};
+  __flash_savedUnloadHandler = function() {};
+}
+window.attachEvent("onbeforeunload", fixOutOfMemoryError);
+</script>
+<![endif]-->
+}}}
+
+== 7. How do I prevent Internet Explorer from showing an error message when using External Interface and SWF that is inside a `<form>` tag? ==
+
+This technote provides a solution: http://www.adobe.com/go/kb400730
+
+== 8. How can I avoid Active Server Pages error 'ASP 0139' when using _static publishing_ and Microsoft IIS? ==
+
+Microsoft IIS's ASP interpreter incorrectly doesn't allow a page with nested `<object>` tags, resulting in the following error message:
+{{{
+Active Server Pages error 'ASP 0139'
+
+Nested Object
+
+/yourWebpage.html, line XX 
+
+An object tag cannot be placed inside another object tag.
+}}}
+
+You can avoid this error by using one of the following workarounds (note: which workaround will be best will depend on your specific situation):
+  # Configure IIS not to serve .htm and .html files as ASP
+  # Use a server-side include, as explained here: http://seanys.com/2007/09/10/asp-flash-nested-objects/
+  # Create the object tags dynamically, using 'Update - The Dynamic Approach' from: http://juicystudio.com/article/object-paranoia.php
+  
+== 9. How can I pass URIs or HTML code as a value using _flashvars_? ==
+
+Special characters and the symbols `=` and `&` cannot directly be used inside flashvars values (the latter because they are used to stack the flashvars themselves).
+
+You can workaround this issue by escaping these characters before passing them as flashvar values. An example:
+{{{
+encodeURIComponent("&trade") will become %26trade
+}}}
+
+The values will be available in your swf already unencoded, so no unescaping is needed inside your swf.
+
+Note that encodeURIComponent is not available in all browsers, but is available in all of the common modern versions. If you need full backwards compatibility, you can use escape() instead, but note that escape() does not work well with double-byte characters (like Chinese).
+
+You can also escape these characters manually by using:
+  * `%3D` instead of `=` 
+  * `%26` instead of `&`
+
+You can find more info about encoding characters in this technote: http://www.adobe.com/go/tn_14143
+
+== 10. How can I center a SWF? ==
+
+You can use CSS to center your `object` element. Which styles to use depends on whether you use your `object` element as an inline element or a block level container. Below are examples for both scenarios: 
+
+{{{
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+	<head>
+		<title>Inline element centering example</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<style type="text/css" media="screen">
+			body { margin:0; text-align:center; }
+			div#content { text-align:left; }
+			object#content { display:inline; }
+		</style>	
+		<script type="text/javascript" src="swfobject.js"></script>
+		<script type="text/javascript">
+		swfobject.embedSWF("test6.swf", "content", "300", "120", "9.0.0", "expressInstall.swf");
+		</script>
+	</head>
+	<body>
+		<div id="content">Alternative content</div>
+	</body>
+</html>
+}}}
+
+or: http://www.swffix.org/swfobject/testsuite/test_dynamic_centered_inline.html
+
+{{{
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+	<head>
+		<title>Block level element centering example</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<style type="text/css" media="screen">
+			body { margin:0; text-align:center; }
+			div#content { text-align:left; }
+			object#content { display:block; margin:0 auto; }
+		</style>	
+		<script type="text/javascript" src="swfobject.js"></script>
+		<script type="text/javascript">
+		swfobject.embedSWF("test6.swf", "content", "300", "120", "9.0.0", "expressInstall.swf");
+		</script>
+	</head>
+	<body>
+		<div id="content">Alternative content</div>
+	</body>
+</html>
+}}}
+
+or: http://www.swffix.org/swfobject/testsuite/test_dynamic_centered_block.html
+
+== 11. How can I avoid that extra whitespace is created underneath my SWF? ==
+
+When using dynamic publishing and a strict HTML DOCTYPE Firefox, Safari and Opera may create a few pixels whitespace underneath your Flash movie.
+
+To avoid this make sure that your `object` element is set as a block level element, which can be achieved with the following CSS style rule:
+
+{{{
+<style type="text/css" media="screen">
+    object { display:block; }
+</style>
+}}}
+
+== 12. Do SWFs embedded with SWFObject 2 display in the Sony PS3 or Nintendo Wii web browsers? ==
+
+The Opera web browser on Nintendo Wii displays both Flash content embedded with static and dynamic publishing. Please note that the Wii currently only supports Flash Player 7 content and that Adobe Express Install is not supported.
+
+The Netfront browser on Sony PSP and PS3 will only display Flash content when using static publishing. The reason for this is that it's JavaScript support is extremely limited, so that the SWFObject 2.0 script will never be executed. Please also note that it currently only supports Flash Player 6 content and that Adobe Express Install is not supported.

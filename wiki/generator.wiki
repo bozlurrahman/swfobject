@@ -1,0 +1,28 @@
+#summary SWFObject HTML and JavaScript generator
+#labels Featured
+
+= SWFObject HTML and JavaScript generator =
+
+Download the ZIP file from the downloads page or use the online version: http://www.swffix.org/swfobject/generator/
+
+== version 1.1 (February 28th, 2008) ==
+
+  * Added the "sameDomain" value to the "allowScriptAccess" parameter. For more info, see Adobe technote [ http://www.adobe.com/go/kb402975 ]
+  * Updated the Adobe AIR version (now: Adobe AIR 1.0)
+  
+== version 1.0 (February 15th, 2008) ==
+
+  * Finalized version 0.3 beta to version 1.0
+  * Added Adobe AIR version (for Adobe AIR beta3) 
+
+== version 0.3 beta (December 3rd, 2007) ==
+
+  * Added option to choose HTML template (based on DOCTYPE)
+  * Added option to choose HTML character encoding
+  * Prefilled all required or important fields with a default (or dummy) value
+  * By default collapsed all optional SWF configuration fields
+  * Fixed a series of small bugs that caused the generated HTML to be invalid 
+
+== version 0.21 beta (November 21st, 2007) ==
+
+Initial release, blog entry: http://www.swffix.org/devblog/?p=21

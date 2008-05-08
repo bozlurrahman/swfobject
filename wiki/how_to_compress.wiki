@@ -1,0 +1,41 @@
+#summary How to compress the swfobject.js source file using YUI Compressor
+#labels Phase-Deploy
+
+== How to compress the swfobject.js source file using YUI Compressor? ==
+
+  # Download the latest version of the YUI Compressor from [ http://www.julienlecomte.net/yuicompressor/ ]
+  # Unzip the yuicompressor-x.x.x.zip file
+  # Open the uncompressed swfobject.js file in a text or code editor and remove the following conditional compiling directives and JavaScript code (line 85-92):
+{{{  
+   /*@cc_on
+     ie = true;
+     @if (@_win32)
+       windows = true;
+     @elif (@_mac)
+       mac = true;
+     @end
+   @*/
+}}}  
+  # Save your adjusted uncompressed swfobject.js file 
+  # Compress this file, e.g.:
+{{{
+   java -jar /yuicompressorpath/yuicompressor-2.3.5/build/yuicompressor-2.3.5.jar -o /swfobjectpath/swfobject.js /swfobjectpath/src/swfobject.js
+  
+   For more info, please read the YUI Compressor documentation [ http://developer.yahoo.com/yui/compressor/ ]
+}}}  
+  # Open the compressed swfobject.js file
+  # You have to re-add the Internet Explorer conditional compiling directives and the JavaScript code it embodies (this is a proprietary feature test to check e.g. whether a browser is Internet Explorer):
+{{{  
+   Paste the following code block:
+
+   /*@cc_on i=true;@if(@_win32)q=true;@elif(@_mac)m=true;@end@*/
+   
+   In between:
+   
+   ... i=false,q=j?/win/.test(j):/win/.test(v),m=j?/mac/.test(j):/mac/.test(v);
+   
+   And:  
+   
+   return{w3cdom:l,pv:t,webkit:r,ie:i,win:q,mac:m}}(); ...
+ }}}   
+  # Save your adjusted compressed swfobject.js file

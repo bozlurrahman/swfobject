@@ -1,0 +1,90 @@
+#summary SWFObject release notes
+#labels Featured
+
+== SWFObject release notes ==
+
+=== SWFObject v2.0 (March 14th, 2008) ===
+
+  * Added an extra check in the Internet Explorer object cleanup code to test if the object still exists before calls are made upon it (e.g. to avoid errors when an object gets deleted by scripting); issue report 49 [ http://code.google.com/p/swfobject/issues/detail?id=49 ] 
+  * Optimized the visibility mechanism a bit: now only dynamic style sheets are added when the DOM hasn't been loaded yet, otherwise the element.style.visibility property is set; issue report 51 [ http://code.google.com/p/swfobject/issues/detail?id=51 ] 
+  
+=== SWFObject v2.0 rc4 (February 28th, 2008) ===
+
+  * Includes a couple of file size optimizations
+  * A few code enhancements, e.g. consistent typing for internal version numbering
+  
+=== SWFObject v2.0 rc3 (February 19th, 2008) ===
+
+  * Includes file size optimizations resulting in a 19% smaller file size, by:
+    * Use of constants for recurrent Strings
+    * Use of only one `var` keyword per scope (where structure and readability wasn't hurt)
+    * Using YUI compressor [ http://developer.yahoo.com/yui/compressor/ ] instead of Dojo Shrinksafe
+
+=== SWFObject v2.0 rc2 (February 11th, 2008) ===
+
+  * IMPORTANT! API updates:
+    * `swfobject.createSWF(attObj, parObj, el)` has now become `swfobject.createSWF(attObj, parObj, replaceElemIdStr)`
+    * `swfobject.createSWF(attObj, parObj, replaceElemIdStr)` now returns the newly created object element, a request made by many JavaScript developers, e.g. Issue report 17 [ http://code.google.com/p/swfobject/issues/detail?id=17 ] 
+    * A dynamically embedded object element (using `swfobject.createSWF` or `swfobject.embedSWF`) now automatically inherits the `id` attribute from the alternative content container element if no `id` is defined for the object element in the `attObj` JavaScript Object, also a request made by many web authors, e.g. Issue reports 17 [ http://code.google.com/p/swfobject/issues/detail?id=17 ] and 19 [ http://code.google.com/p/swfobject/issues/detail?id=19 ]
+  * Fixed an express install related bug: percentages for width and height are not supported; Issue report 28 [ http://code.google.com/p/swfobject/issues/detail?id=28 ]
+  * Added workaround for potential Norton AV issue; Issue report 33 [ http://code.google.com/p/swfobject/issues/detail?id=33 ] 
+  * A series of code enhancements as described in Issue report 27 [ http://code.google.com/p/swfobject/issues/detail?id=27 ]
+
+=== SWFObject v2.0 rc1 (December 3rd, 2007) ===
+
+  * Fixed addDomLoadEvent issue for Internet Explorer: if embedSWF was called after the DOM was loaded (e.g. AJAX-loaded content), the resultant call to createSWF was incorrectly run (an old cached version was shown instead) [ http://code.google.com/p/swfobject/issues/detail?id=22 ]
+
+=== SWFObject v2.0 beta6 (November 2nd, 2007) ===
+
+  * Added the `swfobject.getObjectById(objectIdStr)` and `swfobject.getQueryParamValue(paramStr)` methods to the API [ http://code.google.com/p/swfobject/wiki/api ]
+  * Fixed an express install callback related bug [ http://code.google.com/p/swfobject/issues/detail?id=14 ]
+
+=== SWFObject v2.0 beta5 (October 16th, 2007) ===
+ 
+  * Extended the API to suit the needs of JavaScript developers [ http://code.google.com/p/swfobject/wiki/api ]
+  * Removed the `fixOutOfMemoryError` method, and added the solution of the issue to the FAQ for web authors [ http://code.google.com/p/swfobject/wiki/faq ] 
+
+=== SWFObject v2.0 beta4 (October 15th, 2007) ===
+
+  * Added extra checks to ensure safe object enumerations
+  * Fixed Safari bug: `class` is an ECMA4 reserved keyword, so for dynamic publishing `styleclass` should be used instead to specify the `class` attribute
+
+=== SWFObject v2.0 beta3 (October 9th, 2007) ===
+
+  * Added documentation to the uncompressed swfobject.js file
+  * Removed the 'click-to-activate' active content fix for the static publishing method, because the Opera fix appears to be unstable (it only works for some versions of Opera 9+) and in Internet Explorer 6+ the 'click-to-activate' mechanism is only removed after an entire page including all its assets are loaded (by replacing a SWF by itself), which has the major drawback that this SWF will be reinitialized and animations/sound/video will restart playing. For now the static publishing method does not offer a solution for the 'click-to-activate' active content problem. Those who by all means want to avoid this mechanism should use the dynamic publishing method instead. More info about this issue: [ http://code.google.com/p/swfobject/issues/detail?id=6 ]
+  * Fixed script crash in Internet Explorer when ActiveX is disabled [ http://code.google.com/p/swfobject/issues/detail?id=8 ]
+  * Added an additional test within the `callDomLoadFunctions` method for Internet Explorer on Windows (which tries to append and remove a childNode and catches a thrown error) to avoid that it executes the DOM dependent part of the script too early (in this case it degrades to unload)
+  * Made sure the script degrades properly in case no Flash plug-in is installed (we introduced a flow bug in beta1)
+  * Also applied the `fixOutOfMemoryError` method (occurs when unloading a web page in IE using fp9 and multiple SWFs using ExternalInterface) and `fixObjectLeaks` method (removes hanging audio/video threads when unloading a web page in IE using fp8+ and innerHTML/outerHTML) to the dynamic publishing method (flow bug)
+  * Fixed a broken-loading-file-reference bug in Internet Explorer (when the display of alternative content is forced, we now wait until the onload event fires to remove the hidden SWF)
+  * Did some file size optimization (e.g. removed some unnecessary feature tests)
+
+=== SWFObject v2.0 beta2 (October 3rd, 2007) ===
+
+  * We fixed a bug in the compressed version of the library, which caused that the active content fix was never applied to Internet Explorer 6+
+
+=== SWFObject v2.0 beta1 (October 1st, 2007) ===
+
+  * We changed both the project's and library's name from SWFFix to SWFObject
+  * For the static publishing method (option 1) the second argument (Flash player version string) is now required
+  * To make the library less dependent on user agent string detection, we now detect Internet Explorer's and Opera's features by using proprietary feature testing (conditional compilation for Internet Explorer and `window.opera` and `window.opera.version` for Opera). The user's operating system is now determined based on a cascading approach, with the following priority: Internet Explorer condtional compilation, `navigator.platform` based detection, `navigator.useragent` based detection 
+  * We added a `try`-`catch` block around the `document.write` statement (that inserts a deferred script to simulate a `DOMContentLoaded` event for Internet Explorer) to ensure it properly degrades to the `onload` event and to avoid an `Operation Aborted` error (which indicates that you try to access Internet Explorer's DOM, while it is locked and it is not ready for DOM manipulations yet)
+  * We added a lot of feature tests to ensure that every feature is tested before it is called upon. This to improve the library's overall stability and future proofness
+  * We fixed small flow bug in the `main()` function
+  * We merged the `fixActiveContent()` and `fixIEActiveContent()` methods
+  * We ran the library through the JSLint JavaScript verifier [ http://www.jslint.com/ ] and polished some code here and there to ensure the library's syntactical correctness
+
+=== SWFFix v0.3 public alpha (August 20th, 2007) ===
+
+  * The API got an overhaul to optimize the library's usability. It is more simplified and looks like:
+    * SWFFix.registerObject(objectIdStr, swfVersionStr, xiSwfUrlStr); [ We removed the object notation. ]
+    * SWFFix.embedSWF(swfUrlStr, replaceElemIdStr, widthStr, heightStr, swfVersionStr, xiSwfUrlStr, flashvarsObj, parObj, attObj); [ Is new and replaces the previous dynamic embed method. It now also supports express install and is closer to the SWFObject/UFO notation. ]
+    * SWFFix.getFlashPlayerVersion();
+    * SWFFix.hasFlashPlayerVersion(versionStr);
+  * We compressed the library (with Dojo Shrinksafe: [ http://alex.dojotoolkit.org/shrinksafe/ ]) for file size optimization, and created a SRC directory that includes the uncompressed library (for means of development) and express install source files
+  * We fixed an express install related bug and now check if a SWF's height is 137px (instead of the earlier 130px) or higher to avoid Download.Fail status calls to fire
+
+=== SWFFix v0.2 public alpha (July 25th, 2007) ===
+
+  * Initial release
