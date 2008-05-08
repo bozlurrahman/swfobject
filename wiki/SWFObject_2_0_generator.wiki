@@ -1,2 +1,4 @@
 #labels Deprecated
+#summary SWFObject v2.0 HTML and JavaScript generator v1.0
+
 This page has moved to: http://code.google.com/p/swfobject/wiki/generator
