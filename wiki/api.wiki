@@ -56,7 +56,7 @@ var majorVersion = playerVersion.major; // access the major, minor and release v
 
 === `swfobject.hasFlashPlayerVersion(versionStr)` ===
 
- Returns a Boolean to indicate whether or not a specific version of the Flash plugin is installed. Please note that while Flash version numbers normally consist of major.minor.release.build, SWFObject only looks at the first 3 numbers, so both "WIN 9,0,18,0" (IE) or "Shockwave Flash 9 r18" (all other browsers) will translate to "9.0.18".
+ Returns a Boolean to indicate whether or not a specific minimum version of the Flash plugin is installed. Please note that while Flash version numbers normally consist of major.minor.release.build, SWFObject only looks at the first 3 numbers, so both "WIN 9,0,18,0" (IE) or "Shockwave Flash 9 r18" (all other browsers) will translate to "9.0.18".
 
  An example:
 {{{
