@@ -32,13 +32,13 @@ Both history.js (the getPlayer function) and FABridge.js (the FABridge__bridgeIn
 
 To help the Adobe Flex team integrate with SWFObject 2 we have updated the history.js and FABridge.js in a way that they work with both the Adobe Flex publishing templates and with SWFObject 2.
 
-Because we are not the original authors of these libraries and we are by no means Flex authors ourselves, we would love to hear your feedback if these updated JavaScript files work fine for you, you can leave your comments at the bottom of this page.
+Because we are not the original authors of these libraries and we are by no means Flex authors ourselves, we would love to hear your feedback if these updated JavaScript files work fine for you (please use the comments at the bottom of this page).
 
 You can find the updated JavaScript files and sample pages here: http://www.swffix.org/swfobject/swfobject_flex3/
 
 == A more elegant solution? ==
 
-Our updated JavaScript files try to avoid browser sniffing (like originally used in FABridge.js) to select the object or embed element that is actually used by the browser (please note that there can be object or embed elements available in your mark-up that are not used), instead we the following feature test to see is an element can be referenced:
+Our updated JavaScript files try to avoid browser sniffing (like originally used in FABridge.js) to select the object or embed element that is actually used by the browser (please note that there can be object or embed elements available in your mark-up that are not used), instead we the following feature test to see if an element can be referenced:
 
 {{{
 if (typeof element.SetVariable != "undefined") { ... }
