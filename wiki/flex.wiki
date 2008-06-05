@@ -30,7 +30,7 @@ Both history.js (the getPlayer function) and FABridge.js (the FABridge__bridgeIn
 
 == What's the solution? ==
 
-To help the Adobe Flex team integrate with SWFObject 2 we have updated the history.js and FABridge.js in a way that they both work with Adobe Flex publishing templates and with SWFObject 2.
+To help the Adobe Flex team integrate with SWFObject 2 we have updated the history.js and FABridge.js in a way that they work with both the Adobe Flex publishing templates and with SWFObject 2.
 
 Because we are not the original authors of these libraries and we are by no means Flex authors ourselves, we would love to hear your feedback if these updated JavaScript files work fine for you, you can leave your comments at the bottom of this page.
 
