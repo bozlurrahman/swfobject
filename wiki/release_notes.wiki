@@ -6,15 +6,15 @@
 === SWFObject v2.1 beta7 (June 6th, 2008) ===
 
   * Fixes SWFObject 2.0 and External Interface related memory leaks [ http://code.google.com/p/swfobject/issues/detail?id=84 ]
-  * New explicit SWF removal code - especially needed to completely and safely remove a SWF in IE - via the new swfobject.removeSWF(objectIdString) method [ http://code.google.com/p/swfobject/issues/detail?id=76 ]
+  * New explicit SWF removal code - especially needed to completely and safely remove a SWF in IE - via the new `swfobject.removeSWF(objectIdString)` method [ http://code.google.com/p/swfobject/issues/detail?id=76 ]
   * Solves IE 5.0/5.5 support issues [ http://code.google.com/p/swfobject/issues/detail?id=77 ]
   * Fixes alternative content display issues for Safari 3+ with plug-ins disabled [ http://code.google.com/p/swfobject/issues/detail?id=74 ]
-  * Additional object detection tests to avoid script errors in IE tin case an object element is removed during a visit [ http://code.google.com/p/swfobject/issues/detail?id=86 ]
-  * Removal of isDomLoaded tests from various methods of the public API to enable that dynamically inserted scripts - including bookmarklets - can use these functions (e.g. the swfobject.createSWF and swfobject.removeSWF methods) [ http://code.google.com/p/swfobject/issues/detail?id=88 ]
+  * Additional object detection tests to avoid script errors in IE in case an object element is removed during a visit [ http://code.google.com/p/swfobject/issues/detail?id=86 ]
+  * Removal of `isDomLoaded` tests from various methods of the public API to enable that dynamically inserted scripts - including bookmarklets - can use these functions (e.g. the `swfobject.createSWF` and `swfobject.removeSWF` methods) [ http://code.google.com/p/swfobject/issues/detail?id=88 ]
   * Dynamic publishing could previously fire multiple instances of Adobe Express Install [ http://code.google.com/p/swfobject/issues/detail?id=87 ]
   * Shortened version strings can be used, so "9.0.0" can now be written as "9" [ http://code.google.com/p/swfobject/issues/detail?id=81 ]
-  * Fixed dynamic publishing reference issues when using a shared param or attributes JavaScript Object [ http://code.google.com/p/swfobject/issues/detail?id=90 and http://code.google.com/p/swfobject/issues/detail?id=91 ]
-  * Added a filter to the swfobject.getQueryParamValue method to secure the library from XSS attacks 
+  * Fixed dynamic publishing reference issues when using a shared `param` or `attributes` JavaScript Object [ http://code.google.com/p/swfobject/issues/detail?id=90 and http://code.google.com/p/swfobject/issues/detail?id=91 ]
+  * Added a filter to the `swfobject.getQueryParamValue` method to secure the library from XSS attacks 
 
 === SWFObject v2.0 (March 14th, 2008) ===
 
