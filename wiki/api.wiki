@@ -149,7 +149,7 @@ swfobject.addDomLoadEvent(sayHi);
  
 === `swfobject.removeSWF(objElemIdStr)` ===
 
- NOTE: This method has been added in *SWFObject 2.1* and is therefore available from SWFObject 2.1 onwards only
+ NOTE: This method has been added in *SWFObject 2.1* and is therefore only available from SWFObject 2.1 onwards
 
  Removes a SWF from your web page. Is especially built to safely (only remove a SWF after it has been loaded, to avoid broken references) and completely (nullify references to avoid memory leaks) remove a SWF in Internet Explorer.  
 
@@ -158,7 +158,7 @@ swfobject.addDomLoadEvent(sayHi);
 swfobject.removeSWF("myContent");
 }}}
 
- Sample page: [ http://www.swffix.org/swfobject/testsuite/test_api_createcss.html ]
+ Sample page: [ http://www.swffix.org/swfobject/testsuite_2_1/test_api_create_remove.html ]
 
 === `swfobject.createCSS(selStr, declStr)` ===
 
@@ -176,7 +176,7 @@ if (swfobject.hasFlashPlayerVersion("6.0.0")) {
 }
 }}}
 
- Sample page: [ http://www.swffix.org/swfobject/testsuite_2_1/test_api_create_remove.html ]
+ Sample page: [ http://www.swffix.org/swfobject/testsuite/test_api_createcss.html ]
 
 === `swfobject.getQueryParamValue(paramStr)` ===
 
