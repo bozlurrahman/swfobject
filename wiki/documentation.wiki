@@ -380,7 +380,7 @@ swfobject.embedSWF("myContent.swf", "myContent", "300", "120", "9.0.0","expressI
 </script>
 }}}
 
-If you don't want to use an argument you can define it as `false` or as an empty Object (NOTE: from *SWFObject 2.1* onwards you can also use `null` or `0`):
+If you don't want to use an optional argument you can define it as `false` or as an empty Object (NOTE: from *SWFObject 2.1* onwards you can also use `null` or `0`):
 
 {{{
 <script type="text/javascript">
