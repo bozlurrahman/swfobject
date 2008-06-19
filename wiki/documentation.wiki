@@ -6,7 +6,7 @@
 SWFObject 2:
   * Offers two optimized Flash Player embed methods; a markup based approach and a method that relies on JavaScript
   * Offers a JavaScript API that aims to provide a complete tool set for embedding SWF files and retrieving Flash Player related information [ http://code.google.com/p/swfobject/wiki/api ]
-  * Utilizes only one small JavaScript file (size: 8.7Kb, GZIPed: 3.4Kb)
+  * Utilizes only one small JavaScript file (SWFObject 2.0 size: 8.7Kb, GZIPed: 3.4Kb, SWFObject 2.1 size: 9.5Kb, ZIPed: 3.8Kb)
   * Is the successor of SWFObject 1.5 [ http://blog.deconcept.com/swfobject/ ] and UFO [ http://www.bobbyvandersluis.com/ufo/ ]
   * Will eventually replace the Adobe Flash Player Detection Kit [ http://www.adobe.com/products/flashplayer/download/detection_kit/ ]
   * Intends to unify all existing Flash Player embed methods and provide a new standard for embedding Adobe Flash Player content
