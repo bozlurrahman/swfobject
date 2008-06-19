@@ -48,4 +48,4 @@
 {{{  
    return{w3cdom:v,pv:AC,webkit:AA,ie:q,win:z,mac:w}}(); ...
 }}}   
- 8.  Save your adjusted compressed swfobject.js file
+  # Save your adjusted compressed swfobject.js file
