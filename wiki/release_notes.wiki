@@ -3,6 +3,10 @@
 
 == SWFObject release notes ==
 
+=== SWFObject v2.1 rc1 (June 19th, 2008) ===
+
+  * Added one additional try-catch block to avoid potential script crashes in Internet Explorer [ http://code.google.com/p/swfobject/issues/detail?id=76 ]
+
 === SWFObject v2.1 beta7 (June 6th, 2008) ===
 
   * Fixes SWFObject 2.0 and External Interface related memory leaks [ http://code.google.com/p/swfobject/issues/detail?id=84 ]
