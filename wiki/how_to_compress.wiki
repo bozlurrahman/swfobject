@@ -24,9 +24,7 @@
    For more info, please read the YUI Compressor documentation [ http://developer.yahoo.com/yui/compressor/ ]
 }}}  
   # Open the compressed swfobject.js file
-  # You have to re-add the Internet Explorer conditional compiling directives and the JavaScript code it embodies (this is a proprietary feature test to check e.g. whether a browser is Internet Explorer):
-
- For *SWFObject 2.0* paste the following code block:
+  # You have to re-add the Internet Explorer conditional compiling directives and the JavaScript code it embodies (this is a proprietary feature test to check e.g. whether a browser is Internet Explorer). For *SWFObject 2.0* paste the following code block:
 {{{  
 /*@cc_on i=true;@if(@_win32)q=true;@elif(@_mac)m=true;@end@*/
 }}}
