@@ -3,6 +3,10 @@
 
 == SWFObject release notes ==
 
+=== SWFObject v2.1 rc2 (June 24th, 2008) ===
+
+  * Fixed a bug in the getQueryParamValue method [ http://code.google.com/p/swfobject/issues/detail?id=115 ]
+
 === SWFObject v2.1 rc1 (June 19th, 2008) ===
 
   * Added one additional try-catch block to avoid potential script crashes in Internet Explorer [ http://code.google.com/p/swfobject/issues/detail?id=76 ]
