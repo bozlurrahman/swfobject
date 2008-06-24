@@ -19,7 +19,7 @@
   # Do SWFs embedded with SWFObject 2 display in the Sony PS3 or Nintendo Wii web browsers?
   # Why doesn't the `salign` `param` element work in Firefox or Safari?
   # Why can't I see Flash content in Firefox 3?
-  # Why do I see a dotted border around my content when using Firefox 3 on Windows and wmode transparent or opaque?
+  # Why do I see a dotted border around my SWF when using Firefox 3 on Windows and wmode transparent or opaque?
 
 == 1. How can I create a SWF that will encompass 100% of the browser window?  ==
 
@@ -240,7 +240,7 @@ Also the order of certain `param` elements are important, e.g. the `scale` param
   # Just make sure that you have the required minimum version of the Flash Player installed.
   # Ensure that you don't have a corrup Flash Player by uninstalling the Flash Player using the Adobe uninstaller [ http://www.adobe.com/go/tn_14157 ] and by reinstalling the plug-in via the Adobe Flash Player installation page [ http://www.adobe.com/go/getflashplayer ].
   
-== 15. Why do I see a dotted border around my content when using Firefox 3 on Windows and wmode transparent or opaque? ==
+== 15. Why do I see a dotted border around my SWF when using Firefox 3 on Windows and wmode transparent or opaque? ==
 
 Firefox 3 on Windows using wmode transparent or opaque introduces a new default style for the object element; it treats it like an active link.
 
