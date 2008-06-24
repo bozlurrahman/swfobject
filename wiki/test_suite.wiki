@@ -1,9 +1,11 @@
 #summary SWFObject test suite (or just study/reuse the source code)
 #labels Featured
 
-= SWFObject 2.1 test suite [ http://www.swffix.org/swfobject/testsuite_2_1/ ] =
+= SWFObject 2.1 test suite =
 
-== Static embed method (using option 1): ==
+[ http://www.swffix.org/swfobject/testsuite_2_1/ ]
+
+=== Static embed method (using option 1): ===
 
   # Basic example [ http://www.swffix.org/swfobject/testsuite_2_1/test.html ]
   # Parameters test page [ http://www.swffix.org/swfobject/testsuite_2_1/test_params.html ]
@@ -14,7 +16,7 @@
   # Full browser Flash test page [ http://www.swffix.org/swfobject/testsuite_2_1/test_fullbrowserflash.html ]
   # SWFObject 2.1 removing statically embedded SWFs [ http://www.swffix.org/swfobject/testsuite_2_1/test_remove.html ]
 
-== Dynamic embed method (using option 2): ==
+=== Dynamic embed method (using option 2): ===
 
   # Basic example [ http://www.swffix.org/swfobject/testsuite_2_1/test_dynamic.html ]
   # Parameters test page [ http://www.swffix.org/swfobject/testsuite_2_1/test_dynamic_params.html ]
@@ -29,7 +31,7 @@
   # Centered SWF (block element) [ http://www.swffix.org/swfobject/testsuite_2_1/test_dynamic_centered_block.html ]
   # SWFObject 2.1 removing dynamically embedded SWFs [ http://www.swffix.org/swfobject/testsuite_2_1/test_dynamic_remove.html ]
  
-== Other API methods: ==
+=== Other API methods: ===
  
    # swfobject.getFlashPlayerVersion() [ http://www.swffix.org/swfobject/testsuite_2_1/test_api_getflashplayerversion.html ]
    # swfobject.hasFlashPlayerVersion(versionStr) [ http://www.swffix.org/swfobject/testsuite_2_1/test_api_hasflashplayerversion.html ]
@@ -42,9 +44,11 @@
    # SWFObject 2.1 bookmarklet example [ http://www.swffix.org/swfobject/testsuite_2_1/test_api_bookmarklet.html ]
    # SWFObject 2.1 create and remove SWF example [ http://www.swffix.org/swfobject/testsuite_2_1/test_api_create_remove.html ]
 
-= SWFObject 2.0 test suite [ http://www.swffix.org/swfobject/testsuite/ ] =
+= SWFObject 2.0 test suite =
 
-== Static embed method (using option 1): ==
+[ http://www.swffix.org/swfobject/testsuite/ ]
+
+=== Static embed method (using option 1): ===
 
   # Basic example [ http://www.swffix.org/swfobject/testsuite/test.html ]
   # Parameters test page [ http://www.swffix.org/swfobject/testsuite/test_params.html ]
@@ -54,7 +58,7 @@
   # DomLoad test page [ http://www.swffix.org/swfobject/testsuite/test_domload.html ]
   # Full browser Flash test page [ http://www.swffix.org/swfobject/testsuite/test_fullbrowserflash.html ]
 
-== Dynamic embed method (using option 2): ==
+=== Dynamic embed method (using option 2): ===
 
   # Basic example [ http://www.swffix.org/swfobject/testsuite/test_dynamic.html ]
   # Parameters test page [ http://www.swffix.org/swfobject/testsuite/test_dynamic_params.html ]
@@ -68,7 +72,7 @@
   # Centered SWF (inline element) [ http://www.swffix.org/swfobject/testsuite/test_dynamic_centered_inline.html ]
   # Centered SWF (block element) [ http://www.swffix.org/swfobject/testsuite/test_dynamic_centered_block.html ]
  
-== Other API methods: ==
+=== Other API methods: ===
  
    # swfobject.getFlashPlayerVersion() [ http://www.swffix.org/swfobject/testsuite/test_api_getflashplayerversion.html ]
    # swfobject.hasFlashPlayerVersion(versionStr) [ http://www.swffix.org/swfobject/testsuite/test_api_hasflashplayerversion.html ]
