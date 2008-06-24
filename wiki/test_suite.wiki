@@ -1,9 +1,50 @@
 #summary SWFObject test suite (or just study/reuse the source code)
 #labels Featured
 
-== SWFObject test suite ==
+= SWFObject 2.1 test suite [ http://www.swffix.org/swfobject/testsuite_2_1/ ] =
 
-=== Static embed method (using option 1): ===
+== Static embed method (using option 1): ==
+
+  # Basic example [ http://www.swffix.org/swfobject/testsuite_2_1/test.html ]
+  # Parameters test page [ http://www.swffix.org/swfobject/testsuite_2_1/test_params.html ]
+  # Streaming Flash content test page [ http://www.swffix.org/swfobject/testsuite_2_1/test_streaming.html ]
+  # Browser communication test page [ http://www.swffix.org/swfobject/testsuite_2_1/test_com.html ]
+  # Embedding multiple SWFs [ http://www.swffix.org/swfobject/testsuite_2_1/test_multiple.html ]
+  # DomLoad test page [ http://www.swffix.org/swfobject/testsuite_2_1/test_domload.html ]
+  # Full browser Flash test page [ http://www.swffix.org/swfobject/testsuite_2_1/test_fullbrowserflash.html ]
+  # SWFObject 2.1 removing statically embedded SWFs [ http://www.swffix.org/swfobject/testsuite_2_1/test_remove.html ]
+
+== Dynamic embed method (using option 2): ==
+
+  # Basic example [ http://www.swffix.org/swfobject/testsuite_2_1/test_dynamic.html ]
+  # Parameters test page [ http://www.swffix.org/swfobject/testsuite_2_1/test_dynamic_params.html ]
+  # Streaming Flash content test page [ http://www.swffix.org/swfobject/testsuite_2_1/test_dynamic_streaming.html ]
+  # Browser communication test page [ http://www.swffix.org/swfobject/testsuite_2_1/test_dynamic_com.html ]
+  # Embedding multiple SWFs [ http://www.swffix.org/swfobject/testsuite_2_1/test_dynamic_multiple.html ]
+  # DomLoad test page [ http://www.swffix.org/swfobject/testsuite_2_1/test_dynamic_domload.html ]
+  # Full browser Flash test page [ http://www.swffix.org/swfobject/testsuite_2_1/test_dynamic_fullbrowserflash.html ]
+  # Full browser Flash test page including min-width, min-height and scrollbars: [ http://www.swffix.org/swfobject/testsuite_2_1/test_dynamic_fullbrowserflash_adv.html ]
+  # Example of the different Object notation methods (to define your flashvars, params and object's attributes) [ http://www.swffix.org/swfobject/testsuite_2_1/test_dynamic_notations.html ]
+  # Centered SWF (inline element) [ http://www.swffix.org/swfobject/testsuite_2_1/test_dynamic_centered_inline.html ]
+  # Centered SWF (block element) [ http://www.swffix.org/swfobject/testsuite_2_1/test_dynamic_centered_block.html ]
+  # SWFObject 2.1 removing dynamically embedded SWFs [ http://www.swffix.org/swfobject/testsuite_2_1/test_dynamic_remove.html ]
+ 
+== Other API methods: ==
+ 
+   # swfobject.getFlashPlayerVersion() [ http://www.swffix.org/swfobject/testsuite_2_1/test_api_getflashplayerversion.html ]
+   # swfobject.hasFlashPlayerVersion(versionStr) [ http://www.swffix.org/swfobject/testsuite_2_1/test_api_hasflashplayerversion.html ]
+   # swfobject.addLoadEvent(fn) [ http://www.swffix.org/swfobject/testsuite_2_1/test_api_addloadevent.html ]
+   # swfobject.addDomLoadEvent(fn) [ http://www.swffix.org/swfobject/testsuite_2_1/test_api_adddomloadevent.html ]
+   # swfobject.createSWF(attObj, parObj, el) [ http://www.swffix.org/swfobject/testsuite_2_1/test_api_createswf.html ]
+   # swfobject.createSWF and browser communication test page [ http://www.swffix.org/swfobject/testsuite_2_1/test_api_createswf_com.html ]
+   # swfobject.createCSS(selStr, declStr) [ http://www.swffix.org/swfobject/testsuite_2_1/test_api_createcss.html ]
+   # SWFObject getQueryParamValue example [ http://www.swffix.org/swfobject/testsuite_2_1/test_api_getqueryparamvalue.html?abc=123&foo=bar ]
+   # SWFObject 2.1 bookmarklet example [ http://www.swffix.org/swfobject/testsuite_2_1/test_api_bookmarklet.html ]
+   # SWFObject 2.1 create and remove SWF example [ http://www.swffix.org/swfobject/testsuite_2_1/test_api_create_remove.html ]
+
+= SWFObject 2.0 test suite [ http://www.swffix.org/swfobject/testsuite/ ] =
+
+== Static embed method (using option 1): ==
 
   # Basic example [ http://www.swffix.org/swfobject/testsuite/test.html ]
   # Parameters test page [ http://www.swffix.org/swfobject/testsuite/test_params.html ]
@@ -13,7 +54,7 @@
   # DomLoad test page [ http://www.swffix.org/swfobject/testsuite/test_domload.html ]
   # Full browser Flash test page [ http://www.swffix.org/swfobject/testsuite/test_fullbrowserflash.html ]
 
-=== Dynamic embed method (using option 2): ===
+== Dynamic embed method (using option 2): ==
 
   # Basic example [ http://www.swffix.org/swfobject/testsuite/test_dynamic.html ]
   # Parameters test page [ http://www.swffix.org/swfobject/testsuite/test_dynamic_params.html ]
@@ -27,7 +68,7 @@
   # Centered SWF (inline element) [ http://www.swffix.org/swfobject/testsuite/test_dynamic_centered_inline.html ]
   # Centered SWF (block element) [ http://www.swffix.org/swfobject/testsuite/test_dynamic_centered_block.html ]
  
-=== Other API methods: ===
+== Other API methods: ==
  
    # swfobject.getFlashPlayerVersion() [ http://www.swffix.org/swfobject/testsuite/test_api_getflashplayerversion.html ]
    # swfobject.hasFlashPlayerVersion(versionStr) [ http://www.swffix.org/swfobject/testsuite/test_api_hasflashplayerversion.html ]
@@ -37,10 +78,12 @@
    # swfobject.createSWF and browser communication test page [ http://www.swffix.org/swfobject/testsuite/test_api_createswf_com.html ]
    # swfobject.createCSS(selStr, declStr) [ http://www.swffix.org/swfobject/testsuite/test_api_createcss.html ]
    
-=== Source FLAs: ===
+= Source FLAs: =
  
    # test6.fla [ http://www.swffix.org/swfobject/testsuite/test6.fla ]
    # test6_streaming.fla [ http://www.swffix.org/swfobject/testsuite/test6_streaming.fla ]
    # test6_flashvars.fla [ http://www.swffix.org/swfobject/testsuite/test6_flashvars.fla ]
    # test8_com.fla [ http://www.swffix.org/swfobject/testsuite/test8_com.fla ]
-   
+   # test6A.fla [ http://www.swffix.org/swfobject/testsuite_2_1/test6A.fla ]
+   # test6B.fla [ http://www.swffix.org/swfobject/testsuite_2_1/test6B.fla ]
+   # test6C.fla [ http://www.swffix.org/swfobject/testsuite_2_1/test6C.fla ]
