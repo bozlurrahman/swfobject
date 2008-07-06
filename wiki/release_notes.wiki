@@ -3,6 +3,10 @@
 
 == SWFObject release notes ==
 
+=== SWFObject v2.0 (July 6th, 2008) ===
+
+  * Updated years in copyright notice
+
 === SWFObject v2.1 rc2 (June 24th, 2008) ===
 
   * Fixed a bug in the getQueryParamValue method [ http://code.google.com/p/swfobject/issues/detail?id=115 ]
