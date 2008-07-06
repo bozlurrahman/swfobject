@@ -3,7 +3,7 @@
 
 == SWFObject release notes ==
 
-=== SWFObject v2.0 (July 6th, 2008) ===
+=== SWFObject v2.1 (July 6th, 2008) ===
 
   * Updated years in copyright notice
 
