@@ -184,7 +184,7 @@ if (swfobject.hasFlashPlayerVersion("6.0.0")) {
 
  To secure the method from possible XSS abuse SWFObject 2.1 will encode the returned value - using the JavaScript `encodeURIComponent()` function - if the query string includes one of the following characters:
 {{{
-[ \ " < >. ; ]
+[ \ " < > . ; ]
 }}}
 
  An example that uses the fictive URL "http://www.yoururl.com?foo=bar&abc=123" and passes the parameters from the URL query string to the SWF via flashvars:
