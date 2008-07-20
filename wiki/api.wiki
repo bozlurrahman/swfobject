@@ -182,6 +182,11 @@ if (swfobject.hasFlashPlayerVersion("6.0.0")) {
 
  Utility function that returns the value of the `paramStr` parameter in the URL query string or hash string. Similar functionality was already available in SWFObject 1.5 and lower.
 
+ To secure the method from possible XSS abuse SWFObject 2.1 will encode the returned value - using the JavaScript `encodeURIComponent()` function - if the query string includes one of the following characters:
+{{{
+[ \ " < >. ; ]
+}}}
+
  An example that uses the fictive URL "http://www.yoururl.com?foo=bar&abc=123" and passes the parameters from the URL query string to the SWF via flashvars:
 {{{
 var flashvars = {};
