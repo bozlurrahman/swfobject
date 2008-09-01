@@ -257,4 +257,9 @@ The following style rule in the head of your web page should solve this issue:
 
 == 16. Why does Firefox load my SWF twice? ==
 
-If you have "Disable cache" selected in your Firefox Web Developer Toolbar extension a double load will occur.
+Firefox 3 has a known issue that sometimes causes a swf to be 'double initialized'. The problem appears to be fixed in their codebase, but has not been released yet. See the following bugs for more details:
+https://bugzilla.mozilla.org/show_bug.cgi?id=438830
+and
+https://bugzilla.mozilla.org/show_bug.cgi?id=445599
+
+Or, if you have "Disable cache" selected in your Firefox Web Developer Toolbar extension a double load will occur.
