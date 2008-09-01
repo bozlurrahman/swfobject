@@ -20,6 +20,7 @@
   # Why doesn't the `salign` `param` element work in Firefox or Safari?
   # Why can't I see Flash content in Firefox 3?
   # Why do I see a dotted border around my SWF when using Firefox 3 on Windows and wmode transparent or opaque?
+  # Why does Firefox load my SWF twice?
 
 == 1. How can I create a SWF that will encompass 100% of the browser window?  ==
 
@@ -253,3 +254,7 @@ The following style rule in the head of your web page should solve this issue:
     object { outline:none; }
 </style>
 }}}
+
+== 16. Why does Firefox load my SWF twice? ==
+
+If you have "Disable cache" selected in your Firefox Web Developer Toolbar extension a double load will occur.
