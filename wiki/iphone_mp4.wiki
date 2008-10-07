@@ -14,13 +14,11 @@ You can view a demo of this concept here: [ http://www.bobbyvandersluis.com/play
 
 The markup (videoplayer.fla is included in the demo’s directory [ http://www.bobbyvandersluis.com/playground/swfobject/iphone/videoplayer.fla ]):
 {{{
-<object id="videoContent" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
-width="320" height="240">
+<object id="videoContent" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="320" height="240">
   <param name="movie" value="videoplayer.swf" />
   <param name="flashvars" value="movie=mario.mp4" />
 <!--[if !IE]>-->
-  <object type="application/x-shockwave-flash" data="videoplayer.swf" width="320"
-  height="240">
+  <object type="application/x-shockwave-flash" data="videoplayer.swf" width="320"  height="240">
     <param name="flashvars" value="movie=mario.mp4" />
     <object type="video/mp4" data="mario_click.jpg" width="320" height="256">
       <param name="controller" value="false" />
