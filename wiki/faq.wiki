@@ -241,7 +241,7 @@ Also the order of certain `param` elements are important, e.g. the `scale` param
 
 == 14. Why can't I see Flash content in Firefox 3? ==
 
-Do you have the Adblock extension [ https://addons.mozilla.org/en-US/firefox/addon/10 ] installed? In Firefox 3 Adblock incorrectly blocks Flash content (the `object` tag only, so that's why content embedded with SWFObject 1.5 does works, because it uses the `embed` tag), even if your entire page is whitelisted. In this case just disable Flash block (by disbling the extension, don't use Adblock's disable feature, because then it still won't show Flash content). The latest version of Adblock Plus [ https://addons.mozilla.org/nl/firefox/addon/1865 ] should also work fine.
+Do you have the Adblock extension [ https://addons.mozilla.org/en-US/firefox/addon/10 ] installed? In Firefox 3 Adblock incorrectly blocks Flash content (the `object` tag only, so that's why content embedded with SWFObject 1.5 does work, because it uses the `embed` tag), even if your entire page is whitelisted. In this case just disable Flash block (by disbling the extension, don't use Adblock's disable feature, because then it still won't show Flash content). The latest version of Adblock Plus [ https://addons.mozilla.org/nl/firefox/addon/1865 ] should also work fine.
   
 == 15. Why do I see a dotted border around my SWF when using Firefox 3 on Windows and wmode transparent or opaque? ==
 
