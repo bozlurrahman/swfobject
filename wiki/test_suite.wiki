@@ -1,5 +1,4 @@
 #summary SWFObject test suite (or just study/reuse the source code)
-#labels Featured
 
 = SWFObject 2.1 test suite =
 
