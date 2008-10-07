@@ -18,7 +18,7 @@ The markup (videoplayer.fla is included in the demo’s directory [ http://www.b
   <param name="movie" value="videoplayer.swf" />
   <param name="flashvars" value="movie=mario.mp4" />
 <!--[if !IE]>-->
-  <object type="application/x-shockwave-flash" data="videoplayer.swf" width="320"  height="240">
+  <object type="application/x-shockwave-flash" data="videoplayer.swf" width="320" height="240">
     <param name="flashvars" value="movie=mario.mp4" />
     <object type="video/mp4" data="mario_click.jpg" width="320" height="256">
       <param name="controller" value="false" />
