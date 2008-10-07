@@ -1,5 +1,4 @@
 #summary SWFObject release notes
-#labels Featured
 
 == SWFObject release notes ==
 
