@@ -1,5 +1,4 @@
 #summary SWFObject HTML and JavaScript generator
-#labels Featured
 
 = SWFObject HTML and JavaScript generator =
 
