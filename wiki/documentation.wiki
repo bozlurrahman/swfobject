@@ -47,14 +47,14 @@ The advantages of the *static publishing method* are:
     * Automated tools like RSS readers are able to pick up Flash content 
 
 The advantages of the *dynamic publishing method* are:
-  # It avoids _click-to-activate mechanisms_ to activate _active content_ in Internet Explorer 6/7 and Opera 9+. Please note that Microsoft is currently phasing out all active content from its Internet Explorer browsers [ http://www.swffix.org/devblog/?p=19 ]
+  # It avoids _click-to-activate mechanisms_ to activate _active content_ in Internet Explorer 6/7 and Opera 9+. Please note that Microsoft is currently phasing out all active content from its Internet Explorer browsers [ http://blogs.msdn.com/ie/archive/2007/11/08/ie-automatic-component-activation-changes-to-ie-activex-update.aspx ]
   # It integrates very well with scripted applications  
  
 == How to embed Flash Player content using SWFObject _static publishing_ ==
 
 === STEP 1: Embed both Flash content and alternative content using standards compliant markup ===
 
-SWFObject's base markup uses the nested-objects method (with proprietary Internet Explorer conditional comments) [ http://www.alistapart.com/articles/flashembedcagematch/ ] to ensure the most optimal cross-browser support by means of markup only, while being standards compliant and supporting alternative content [ http://www.swffix.org/testsuite/ ]:
+SWFObject's base markup uses the nested-objects method (with proprietary Internet Explorer conditional comments) [ http://www.alistapart.com/articles/flashembedcagematch/ ] to ensure the most optimal cross-browser support by means of markup only, while being standards compliant and supporting alternative content [ http://www.bobbyvandersluis.com/flashembed/testsuite/ ]:
 
 {{{
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
