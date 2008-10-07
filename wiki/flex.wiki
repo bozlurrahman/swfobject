@@ -1,5 +1,4 @@
 #summary SWFObject 2 and Adobe Flex integration
-#labels Featured
 
 = SWFObject 2 and Adobe Flex integration =
 
