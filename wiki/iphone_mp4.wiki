@@ -6,9 +6,7 @@ http://www.bobbyvandersluis.com/swfobject/img/nullplugin.jpg
 
 What a pollution.
 
-The solution is rather simple: avoid the use of the HTML embed element and don’t use any twice-cooked markup [ http://alistapart.com/articles/flashembedcagematch ] (that means that you should ignore the large heap of outdated vendor documentation out there [ http://www.apple.com/quicktime/tutorials/embed2.html ] [ http://www.adobe.com/go/tn_4150 ]), because this doesn’t enable you to use fallback content. Use an HTML object element based approach instead: use SWFObject 2 to embed Adobe Flash content and for other types of plugin content it is best to use the nested objects method [ http://alistapart.com/articles/byebyeembed ], which enables the use of alternative content*. Just make the web a better place.
-
-(* means that it is a best practice)
+The solution is rather simple: avoid the use of the HTML embed element and don’t use any twice-cooked markup [ http://alistapart.com/articles/flashembedcagematch ] (that means that you should ignore the large heap of outdated vendor documentation out there [ http://www.apple.com/quicktime/tutorials/embed2.html ] [ http://www.adobe.com/go/tn_4150 ]), because this doesn’t enable you to use fallback content. Use an HTML object element based approach instead: use SWFObject 2 to embed Adobe Flash content and for other types of plugin content it is best to use the nested objects method [ http://alistapart.com/articles/byebyeembed ], which enables the use of alternative content, which is a best practice. Just make the web a better place.
 
 Because Flash and QuickTime (which is supported by the iPhone) both support MP4 video, you could even use this approach to offer video content in a cascaded manner. Just make sure to encode your video with the right encoding settings [ http://developer.apple.com/documentation/AppleApplications/Reference/SafariWebContent/CreatingVideoforSafarioniPhone/chapter_9_section_4.html#//apple_ref/doc/uid/TP40006514-SW9 ] [ http://www.adobe.com/devnet/flashplayer/articles/hd_video_flash_player.html ]. 
 
