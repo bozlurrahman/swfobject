@@ -37,3 +37,15 @@ The markup (videoplayer.fla is included in the demo’s directory [ http://www.b
 I used SWFObject 2 static publishing with alternative content (a JPG) and nested an additional object element to target any plugin that has registered itself with media type video/mp4. Et voila, we have video content on the desktop and on the iPhone while using only one media file.
 
 The video was taken on the Flash on the Beach [ http://www.flashonthebeach.com ] 2007 conference in Brighton, UK, and shows a snippet of Mario Klingemann’s [ http://www.quasimondo.com ] brilliant and incredibly funny presentation.
+
+Note: 
+If you use QuickTime to export a mov as an mpeg4 file:
+  * click options
+  * under the video tab make sure that H.264 is your fomat
+  * press video options on the same page
+  * make sure that Baseline proile is ticked only
+  * press ok
+  * press ok
+  * press save
+
+And you should have one mp4 file that works both in Flash and on the iPhone. Use the markup from the example, upload your files, and you should be ready to roll.
