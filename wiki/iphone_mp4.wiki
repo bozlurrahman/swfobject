@@ -1,6 +1,6 @@
 #summary Flash + iPhone: SWFObject 2 + MP4
 
-For the past months I have been browsing the web with Safari on the iPhone and it made me realize how many web authors still use outdated methods to embed plugin content. Unfortunately iPhone doesn’t support Adobe Flash content and many other plugins, and the result is millions of Lego-like blocks - like the good old Netscape puzzle piece - to indicate missing plugin content [ http://www.bobbyvandersluis.com/swfobject/img/nullplugin.jpg ]
+For the past months I have been browsing the web with Safari on the iPhone and it made me realize how many web authors still use outdated methods to embed plugin content. Unfortunately iPhone doesn’t support Adobe Flash content and many other plugins, and the result is millions of Lego-like blocks - like the good old Netscape puzzle piece - to indicate missing plugin content: http://www.bobbyvandersluis.com/swfobject/img/nullplugin.jpg
 
 What a pollution.
 
