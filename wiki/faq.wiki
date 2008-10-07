@@ -48,13 +48,15 @@ function resizeHandler(event:Event):void {
 *NOTE:* For positioning elements always define a resize handler, because a user can resize the browser window and in Internet Explorer (using the _dynamic publishing method_) the stage size is only available on first load. When reloading or revisiting a page it will initially be 0, causing the Flash player to keep on triggering the stage.resize event until it receives its current value
 
 Three code examples can be found in the SWFObject test suite:
-  * Static publishing: [ http://www.swffix.org/swfobject/testsuite/test_fullbrowserflash.html ]
-  * Dynamic publishing: [ http://www.swffix.org/swfobject/testsuite/test_dynamic_fullbrowserflash.html ]
-  * Dynamic publishing including min-width, min-height and scrollbars: [ http://www.swffix.org/swfobject/testsuite/test_dynamic_fullbrowserflash_adv.html ]
+  * Static publishing: [ http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_fullbrowserflash.html ]
+  * Dynamic publishing: [ http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_dynamic_fullbrowserflash.html ]
+  * Dynamic publishing including min-width, min-height and scrollbars: [ http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_dynamic_fullbrowserflash_adv.html ]
 
 == 2. Why don't I see Flash content in Internet Explorer on Windows while I do have the required minimal Flash Player version installed? ==
 
 When an install gets corrupted (very often caused by corrupt installers) it is impossible to read the Flash Player version number externally using scripting languages. When using dynamic publishing this results in the display of alternative content, with static publishing we let the object element do its job (it decides whether to show Flash content or alternative content based on its built-in MIME type mechanism) which results in the display of Flash content.
+
+You can test the by SWFObject detected Flash Player version here: [ http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_api_getflashplayerversion.html ]
 
 The only way to avoid this issue is by uninstalling the Flash Player using the Adobe uninstaller [ http://www.adobe.com/go/tn_14157 ] and by reinstalling the plug-in via the Adobe Flash Player installation page [ http://www.adobe.com/go/getflashplayer ].
 
@@ -69,7 +71,9 @@ Known erroneous versions are (major.minor.release version):
   
 All corrupt installers have been replaced by correct installers. You can avoid this issue by getting the latest version of the Flash Player via the Adobe Flash Player installation page [ http://www.adobe.com/go/getflashplayer ] or via the Adobe Express Install mechanism.
 
-== 4. How do I prevent Internet Explorer from crashing when a `<base>` tag is defined? ==
+You can test the by SWFObject detected Flash Player version here: [ http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_api_getflashplayerversion.html ] versus the real Flash Player version: [ http://www.bobbyvandersluis.com/flashembed/testsuite/15_nested_iecc.html ].
+
+== 4. How do I prevent Internet Explorer from crashing and showing an "Operation Aborted" error when a `<base>` tag is defined? ==
 
 Including a closing `</base>` tag will prevent this bug in Internet Explorer being triggered. Because for HTML 4 compliant pages (a closing `base` tag is forbidden under HTML 4), you could use Internet Explorer conditional comments to keep your HTML valid and still include a closing `base` tag for HTML 4 documents:
 {{{
@@ -101,7 +105,7 @@ Can be replaced with:
 
 *NOTE:* When publishing for Flash 8 or higher, the use of ExternalInterface is recommended for JavaScript-ActionScript communication over the use of fscommand()
 
-A code example can be found in the SWFObject test suite: [ http://www.swffix.org/swfobject/testsuite/test_dynamic_com.html ]
+A code example can be found in the SWFObject test suite: [ http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_dynamic_com.html ]
 
 == 6. How do I fix a "Line 56: Out of Memory" error, when unloading a page in Internet Explorer using earlier versions of Flash Player 9 and multiple SWFs using ExternalInterface? ==
 
@@ -185,7 +189,7 @@ You can use CSS to center your `object` element. Which styles to use depends on 
 </html>
 }}}
 
-or: http://www.swffix.org/swfobject/testsuite/test_dynamic_centered_inline.html
+or: [ http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_dynamic_centered_inline.html ]
 
 {{{
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -209,7 +213,7 @@ or: http://www.swffix.org/swfobject/testsuite/test_dynamic_centered_inline.html
 </html>
 }}}
 
-or: http://www.swffix.org/swfobject/testsuite/test_dynamic_centered_block.html
+or: [ http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_dynamic_centered_block.html ]
 
 == 11. How can I avoid that extra whitespace is created underneath my SWF? ==
 
@@ -237,9 +241,7 @@ Also the order of certain `param` elements are important, e.g. the `scale` param
 
 == 14. Why can't I see Flash content in Firefox 3? ==
 
-  # Do you have the Adblock extension [ https://addons.mozilla.org/en-US/firefox/addon/10 ] installed? In Firefox 3 Adblock incorrectly blocks Flash content, even if your entire page is whitelisted. In this case just disable Flash block.
-  # Just make sure that you have the required minimum version of the Flash Player installed.
-  # Ensure that you don't have a corrup Flash Player by uninstalling the Flash Player using the Adobe uninstaller [ http://www.adobe.com/go/tn_14157 ] and by reinstalling the plug-in via the Adobe Flash Player installation page [ http://www.adobe.com/go/getflashplayer ].
+Do you have the Adblock extension [ https://addons.mozilla.org/en-US/firefox/addon/10 ] installed? In Firefox 3 Adblock incorrectly blocks Flash content (the `object` tag only, so that's why content embedded with SWFObject 1.5 does works, because it uses the `embed` tag), even if your entire page is whitelisted. In this case just disable Flash block (by disbling the extension, don't use Adblock's disable feature, because then it still won't show Flash content). The latest version of Adblock Plus [ https://addons.mozilla.org/nl/firefox/addon/1865 ] should also work fine.
   
 == 15. Why do I see a dotted border around my SWF when using Firefox 3 on Windows and wmode transparent or opaque? ==
 
