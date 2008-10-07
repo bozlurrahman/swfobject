@@ -19,7 +19,7 @@ SWFObject 2 contains an API that allows JavaScript developers to reuse SWFObject
 
  The following browsers map to the following active object element:
   * Internet Explorer on Windows only sees the outer object, because the nested object is commented out by conditional comments
-  * Both Opera and Safari support the notation for the outer object (Reference: [ http://www.swffix.org/testsuite/ ], row: object ActiveX)
+  * Both Opera and Safari support the notation for the outer object (Reference: [ http://www.bobbyvandersluis.com/flashembed/testsuite/ ], row: object ActiveX)
   * Firefox, Mozilla and all other Gecko based browsers use the inner object 
 
  You can reference the active object element by:
@@ -34,7 +34,7 @@ if (obj) {
 }
 }}}
 
- Sample page: [ http://www.swffix.org/swfobject/testsuite/test_com.html ]
+ Sample page: [ http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_com.html ]
 
 === `swfobject.embedSWF(swfUrlStr, replaceElemIdStr, widthStr, heightStr, swfVersionStr, xiSwfUrlStr, flashvarsObj, parObj, attObj)` ===
 
@@ -52,7 +52,7 @@ var playerVersion = swfobject.getFlashPlayerVersion(); // returns a JavaScript o
 var majorVersion = playerVersion.major; // access the major, minor and release version numbers via their respective properties
 }}}
 
- Sample page: [ http://www.swffix.org/swfobject/testsuite/test_api_getflashplayerversion.html ]
+ Sample page: [ http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_api_getflashplayerversion.html ]
 
 === `swfobject.hasFlashPlayerVersion(versionStr)` ===
 
@@ -68,7 +68,7 @@ else {
 }
 }}}
 
- Sample page: [ http://www.swffix.org/swfobject/testsuite/test_api_hasflashplayerversion.html ]
+ Sample page: [ http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_api_hasflashplayerversion.html ]
 
 === `swfobject.addLoadEvent(fn)` ===
 
@@ -82,7 +82,7 @@ function sayHi() {
 swfobject.addLoadEvent(sayHi);
 }}}
 
- Sample page: [ http://www.swffix.org/swfobject/testsuite/test_api_addloadevent.html ]
+ Sample page: [ http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_api_addloadevent.html ]
 
 === `swfobject.addDomLoadEvent(fn)` ===
 
@@ -96,7 +96,7 @@ function sayHi() {
 swfobject.addDomLoadEvent(sayHi);
 }}}
 
- Sample page: [ http://www.swffix.org/swfobject/testsuite/test_api_adddomloadevent.html ]
+ Sample page: [ http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_api_adddomloadevent.html ]
 
 === `swfobject.createSWF(attObj, parObj, replaceElemIdStr)` ===
 
@@ -143,9 +143,9 @@ swfobject.addDomLoadEvent(sayHi);
 </html>
 }}}
 
- Sample page: [ http://www.swffix.org/swfobject/testsuite/test_api_createswf.html ]
+ Sample page: [ http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_api_createswf.html ]
  
- Sample page that uses the returned `object` element for browser communication: [ http://www.swffix.org/swfobject/testsuite/test_api_createswf_com.html ]
+ Sample page that uses the returned `object` element for browser communication: [ http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_api_createswf_com.html ]
  
 === `swfobject.removeSWF(objElemIdStr)` ===
 
@@ -158,7 +158,7 @@ swfobject.addDomLoadEvent(sayHi);
 swfobject.removeSWF("myContent");
 }}}
 
- Sample page: [ http://www.swffix.org/swfobject/testsuite_2_1/test_api_create_remove.html ]
+ Sample page: [ http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_api_create_remove.html ]
 
 === `swfobject.createCSS(selStr, declStr)` ===
 
@@ -176,7 +176,7 @@ if (swfobject.hasFlashPlayerVersion("6.0.0")) {
 }
 }}}
 
- Sample page: [ http://www.swffix.org/swfobject/testsuite/test_api_createcss.html ]
+ Sample page: [ http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_api_createcss.html ]
 
 === `swfobject.getQueryParamValue(paramStr)` ===
 
