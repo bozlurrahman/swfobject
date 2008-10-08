@@ -21,6 +21,9 @@
   # Why can't I see Flash content in Firefox 3?
   # Why do I see a dotted border around my SWF when using Firefox 3 on Windows and wmode transparent or opaque?
   # Why does Firefox load my SWF twice?
+  # How to disable Flash Player or JavaScript, e.g. to test alternative content?
+  # Where can I find older Flash Player versions, e.g. to test Adobe Express Install?
+  # How do I know which Flash Player version is installed and which version is detected by SWFObject?
 
 == 1. How can I create a SWF that will encompass 100% of the browser window?  ==
 
@@ -265,3 +268,34 @@ and
 https://bugzilla.mozilla.org/show_bug.cgi?id=445599
 
 Or, if you have "Disable cache" selected in your Firefox Web Developer Toolbar extension a double load will occur.
+
+== 17. How to disable Flash Player or JavaScript, e.g. to test alternative content? ==
+
+For `static publishing` and `dynamic publishing` you can enable/disable your Flash Player by:
+  * Internet Explorer 7: Menu: Tools > Internet Options, Program Tab, click button: Manage add-on, Filters, Add-ons that run without requiring permission, select Shockwave Object, click Enable/Disable button at bottom, close and restart browser
+  * Firefox 3: Menu: Tools > Add-ons, Plugins tab, Select Shockwave Flash, enable/disable
+  * Safari 3: Menu: Safari > Preferences, Security tab, Web content: check Enable plug-ins
+  * Opera 9.5: Menu: Opera > Quick Preferences > Enable Plug-Ins
+
+For `dynamic publishing` you can enable/disable JavaScript by:
+  * Internet Explorer 7: Menu: Tools > Internet Options, Security tab, click icon: Internet, click button: Custom Level, scroll to the "Scripting" section of the list, click radio button Disable under Active scripting, close and restart browser
+  * Firefox 3: Menu: Firefox > Preferences, Content tab, Check Enable JavaScript
+  * Safari 3: Menu: Safari > Preferences, Security tab, Web content: check Enable JavaScript
+  * Opera 9.5: Menu: Opera > Quick Preferences > Enable JavaScript
+ 
+== 18. Where can I find older Flash Player versions, e.g. to test Adobe Express Install? ==
+  
+  * Flash Player uninstaller: http://www.adobe.com/go/tn_14157
+  * Archived Flash Player versions for testing purposes: http://www.adobe.com/go/tn_14266
+  * The latest released version of Flash Player: http://www.adobe.com/go/getflashplayer 
+
+== 19. How do I know which Flash Player version is installed and which version is detected by SWFObject? ==
+
+The Flash Player version as installed by:
+  * Firefox 3: Type "about:plugins" in the location/address bar and look for the "Shockwave Flash" entry
+  * Safari 3: Click "Help > Installed Plug-ins" in the main menu and look for the "Shockwave Flash" entry
+
+The Flash Player version as detected by:
+  * SWFObject 2: http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_api_getflashplayerversion.html
+  * Flash (using HTML `object` element only): http://www.bobbyvandersluis.com/flashembed/testsuite/15_nested_iecc.html
+  * Flash (using HTML `embed` element only): http://www.bobbyvandersluis.com/flashembed/testsuite/21_embed.html
