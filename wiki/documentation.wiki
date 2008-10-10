@@ -1,7 +1,7 @@
 #summary Embedding Adobe Flash Player content using SWFObject 2
 #labels Featured
 
-== What is SWFObject? ==
+== What is SWFObject? == 
 
 SWFObject 2:
   * Offers two optimized Flash Player embed methods; a markup based approach and a method that relies on JavaScript
