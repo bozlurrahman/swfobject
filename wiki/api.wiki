@@ -199,11 +199,11 @@ var attributes = {};
 swfobject.embedSWF("myContent.swf", "altContent", "100%", "100%", "9.0.0","expressInstall.swf", flashvars, params, attributes);
 }}}
 
-== COMMENTS POLICY ==
+== COMMENTS ==
 
-We will try to keep this page lean and mean, because it is used by many people. For this purpose we will periodically review all comments and remove all comments that are outdated or irrelevant to this documentation page itself. 
+The comments functionality on this wiki has been switched off to avoid spam and abuse.
 
-If you have any questions/comments about SWFObject or have problems with an implementation:
+If you have any questions/comments about SWFObject or its documentation, or have problems with an implementation:
   # Please make sure you have read our FAQ [ http://code.google.com/p/swfobject/wiki/faq ]
   # Use the SWFObject discussion group [ http://groups.google.com/group/swfobject ]
 
