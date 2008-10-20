@@ -1,0 +1,45 @@
+#summary Tutorials, examples and compatible libraries
+
+= Tutorials, examples and compatible libraries =
+
+== Tutorials ==
+
+_Detecting Flash Player versions and embedding SWF files with SWFObject 2_ (beginners tutorial) by Bobby van der Sluis: http://www.adobe.com/devnet/flashplayer/articles/swfobject.html
+
+_Embedding Flash with SWFObject 2.0_ (beginners video tutorial) by Lee Brimelow on gotoandlearn.com: http://www.gotoandlearn.com
+
+_SWFObject 2 and Adobe Flex integration_: http://code.google.com/p/swfobject/wiki/flex
+
+_YouTube JavaScript Player API Reference_ recommends using SWFObject to embed YouTube players that will be accessed using the JavaScript API: http://code.google.com/apis/youtube/js_api_reference.html
+
+_Improved Flash indexing_ on Google Webmaster Central Blog: http://googlewebmastercentral.blogspot.com/2008/06/improved-flash-indexing.html
+
+_How to SEO Flash_ by Jonathan Hochman: http://www.hochmanconsultants.com/articles/seo-friendly-flash.shtml
+
+== Examples ==
+
+_SWFObject 2 test suite_: http://code.google.com/p/swfobject/wiki/test_suite
+
+_Lab: SWFObject_ by Philip Hutchison: http://pipwerks.com/lab/swfobject/
+
+_SWFAddress 2.1 + SWFObject 2.1 + Flash CS3 (AS3) Example_ by Adrian Parr: http://www.adrianparr.com/?p=84
+
+_Flash + iPhone: SWFObject 2 + MP4_: http://code.google.com/p/swfobject/wiki/iphone_mp4
+
+== Compatible libraries ==
+
+_SWFAddress 2.1_ for deeplinking by Asual: http://www.asual.com/swfaddress/
+
+_AS3.0 MouseWheel on Mac OS X_ by pixelbreaker: http://blog.pixelbreaker.com/flash/as30-mousewheel-on-mac-os-x/
+
+_swffit_ by Miller Medeiros for Flash resizing: http://swffit.millermedeiros.com
+
+_flensed_ by Getify Solutions is a set of javascript+swf tools to spice up your websites with flash goodness: http://www.flensed.com
+
+_Gaia_ Framework for Adobe Flash: http://www.gaiaflashframework.com
+
+_BrowserCanvas_ by doesnotcompute for dynamic Flash resizing: http://www.dncompute.com/blog/2008/06/23/browsercanvas-the-worlds-easiest-way-to-dynamically-resize-flash.html
+
+_jQuery SWFObject plugin_ by Jonathan Neal: http://jquery.thewikies.com/swfobject/
+
+_swfobject.net_ .NET Webcontrol by Gustavo Arjones: http://www.arjones.net/opensource/swfobject.net/
