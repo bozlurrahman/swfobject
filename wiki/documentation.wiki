@@ -445,11 +445,11 @@ There are a number of reasons why we are not supporting this:
   * We are unsure if it is the direction to go. Internet Explorer does not support it and all other major browser vendors are aiming their arrows at a new standard way of HTML parsing (with HTML 5), which departs from the current W3C vision of parsing HTML as XML
   * We save a considerate amount of file size and effort (testing, issue resolving) by not supporting it
 
-== COMMENTS POLICY ==
+== COMMENTS ==
 
-We will try to keep this page lean and mean, because it is used by many people. For this purpose we will periodically review all comments and remove all comments that are outdated or irrelevant to this documentation page itself. 
+The comments functionality on this wiki has been switched off to avoid spam and abuse.
 
-If you have any questions/comments about SWFObject or have problems with an implementation:
+If you have any questions/comments about SWFObject or its documentation, or have problems with an implementation:
   # Please make sure you have read our FAQ [ http://code.google.com/p/swfobject/wiki/faq ]
   # Use the SWFObject discussion group [ http://groups.google.com/group/swfobject ]
 
