@@ -433,7 +433,7 @@ swfobject.embedSWF("myContent.swf", "myContent", "300", "120", "9.0.0","expressI
 == SWFObject 1.5 to SWFObject 2 migration tips ==
 
   # SWFObject 2 is NOT backwards compatible with SWFObject 1.5
-  # It is now preferred to insert all script blocks in the head of your HTML page
+  # It is now preferred to insert all script blocks in the head of your HTML page. Adding your scripts in the body of your page may have visual impact (e.g. flashes of replaced alternative content), because your JavaScript code will be executed in a later stage (the exact impact depends on your implementation)
   # The library itself is now written in lowercase: `swfobject` instead of `SWFObject`
   # Methods can only be accessed via the library (instead via a SWFObject instance in SWFObject 1.5)
   # The API is entirely different and more elaborate: [ http://code.google.com/p/swfobject/wiki/api ]
