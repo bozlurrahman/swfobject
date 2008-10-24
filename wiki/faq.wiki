@@ -305,7 +305,6 @@ The Flash Player version as detected by:
 
 The comments functionality on this wiki has been switched off to avoid spam and abuse.
 
-If you have any questions/comments about SWFObject or its documentation, or have problems with an implementation:
-  # Use the SWFObject discussion group [ http://groups.google.com/group/swfobject ]
+If you have any questions/comments about SWFObject or its documentation, or have problems with an implementation, please use the SWFObject discussion group [ http://groups.google.com/group/swfobject ]
 
 If you find any bugs or want to request a future enhancement, you can fill in an issue report on the SWFObject issues page [ http://code.google.com/p/swfobject/issues/list ]
