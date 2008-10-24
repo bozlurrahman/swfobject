@@ -1,6 +1,14 @@
 #summary Embedding Adobe Flash Player content using SWFObject 2
 #labels Featured
 
+Translations:
+  * Chinese by FarThinker [ http://farthinker.cn/2007/12/27/swfobject-2_0-doc-translation/ ]
+  * German by Powerflasher [ http://blog.powerflasher.de/swfobject2/ ]
+  * Italian by Luka M. [ http://www.magnificaweb.it/swfobject-2/ ]
+  * Japanese by Shuhei Terai [ http://mtl.recruit.co.jp/blog/2007/10/swfobject_v20.html ]
+  * Russian by Denis Kuznetsov [ http://designformasters.info/posts/flash-embed-with-swfobject-2/ ]
+  * Swedish by Seoserver [ http://www.seoserver.se/artiklar/swfobject-2/ ]
+
 == What is SWFObject? == 
 
 SWFObject 2:
@@ -445,7 +453,12 @@ There are a number of reasons why we are not supporting this:
   * We are unsure if it is the direction to go. Internet Explorer does not support it and all other major browser vendors are aiming their arrows at a new standard way of HTML parsing (with HTML 5), which departs from the current W3C vision of parsing HTML as XML
   * We save a considerate amount of file size and effort (testing, issue resolving) by not supporting it
 
-== COMMENTS ==
+== Tutorials (beginner level) ==
+
+  * Detecting Flash Player versions and embedding SWF files with SWFObject 2 [ http://www.adobe.com/devnet/flashplayer/articles/swfobject.html ]
+  * Embedding Flash with SWFObject 2.0 (video tutorial) by Lee Brimelow [ http://www.gotoandlearn.com ]
+
+== Comments ==
 
 The comments functionality on this wiki has been switched off to avoid spam and abuse.
 
