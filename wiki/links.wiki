@@ -14,6 +14,8 @@ _YouTube JavaScript Player API Reference_ recommends using SWFObject to embed Yo
 
 _Improved Flash indexing_ on Google Webmaster Central Blog: http://googlewebmastercentral.blogspot.com/2008/06/improved-flash-indexing.html
 
+_Video tutorial:Google for webmasters_: http://googlewebmastercentral.blogspot.com/2008/10/video-tutorial-google-for-webmasters.html
+
 _How to SEO Flash_ by Jonathan Hochman: http://www.hochmanconsultants.com/articles/seo-friendly-flash.shtml
 
 == Examples ==
@@ -21,6 +23,8 @@ _How to SEO Flash_ by Jonathan Hochman: http://www.hochmanconsultants.com/articl
 _SWFObject 2 test suite_: http://code.google.com/p/swfobject/wiki/test_suite
 
 _Lab: SWFObject_ by Philip Hutchison: http://pipwerks.com/lab/swfobject/
+
+_Fullscreen flash with browser scrollbar_: http://blog.wezside.co.za/2008/10/fullscreen-flas.html
 
 _SWFAddress 2.1 + SWFObject 2.1 + Flash CS3 (AS3) Example_ by Adrian Parr: http://www.adrianparr.com/?p=84
 
