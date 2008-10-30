@@ -234,7 +234,10 @@ To avoid this make sure that your `object` element is set as a block level eleme
 
 The Opera web browser on Nintendo Wii displays both Flash content embedded with static and dynamic publishing. Please note that the Wii currently only supports Flash Player 7 content and that Adobe Express Install is not supported.
 
-The Netfront browser on Sony PSP and PS3 will only display Flash content when using static publishing. The reason for this is that it's JavaScript support is extremely limited, so that the SWFObject 2.0 script will never be executed. Please also note that it currently only supports Flash Player 6 content and that Adobe Express Install is not supported.
+The Netfront browser on Sony PSP and older versions of PS3 will only display Flash content when using static publishing. The reason for this is that it's JavaScript support is extremely limited, so that the SWFObject 2 script will never be executed. Please also note that it currently only supports Flash Player 6 content and that Adobe Express Install is not supported.
+
+Sony recently updated the Playstation 3 browser. Now it supports Flash 9 and has improved JavaScript support so it now supports SWFObject 2. For more info: [ 
+http://www.us.playstation.com/PS3/About/SystemUpdate ]
 
 == 13. Why doesn't the `salign` `param` element work in Firefox or Safari? ==
 
