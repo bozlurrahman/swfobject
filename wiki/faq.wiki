@@ -129,7 +129,7 @@ window.attachEvent("onbeforeunload", fixOutOfMemoryError);
 
 This technote provides additional info and two solutions: http://www.adobe.com/go/kb400730
 
-It is preferred to use the second solution that applied to SWFObject 2 embedding looks like the following:
+It is preferred to use the first solution that applied to SWFObject 2 embedding looks like the following:
 {{{
 function fixReference() {
     window["mySwfId"] = document.forms[0]["mySwfId"];
