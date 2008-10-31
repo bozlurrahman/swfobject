@@ -127,7 +127,15 @@ window.attachEvent("onbeforeunload", fixOutOfMemoryError);
 
 == 7. How do I prevent Internet Explorer from showing an error message when using External Interface and SWF that is inside a `<form>` tag? ==
 
-This technote provides a solution: http://www.adobe.com/go/kb400730
+This technote provides additional info and two solutions: http://www.adobe.com/go/kb400730
+
+It is preferred to use the second solution that applied to SWFObject 2 embedding looks like the following:
+{{{
+function fixReference() {
+    window["mySwfId"] = document.forms[0]["mySwfId"];
+}
+swfobject.addDomLoadEvent(fixReference);
+}}}
 
 == 8. How can I avoid Active Server Pages error 'ASP 0139' when using _static publishing_ and Microsoft IIS? ==
 
