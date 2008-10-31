@@ -199,6 +199,13 @@ var attributes = {};
 swfobject.embedSWF("myContent.swf", "altContent", "100%", "100%", "9.0.0","expressInstall.swf", flashvars, params, attributes);
 }}}
 
+== SWF native methods and properties  ==
+
+SWF content also includes native methods and properties that can be accessed via JavaScript:
+  * http://www.adobe.com/support/flash/publishexport/scriptingwithflash/scriptingwithflash_03.html
+  * http://www.adobe.com/support/flash/publishexport/scriptingwithflash/scriptingwithflash_04.html
+  * http://www.adobe.com/support/flash/publishexport/scriptingwithflash/scriptingwithflash_08.html
+
 == Comments ==
 
 The comments functionality on this wiki has been switched off to avoid spam and abuse.
