@@ -2,9 +2,9 @@
 
 == SWFObject 2.2 development notes ==
 
-We have started with the development of SWFObject 2.2, which will address all items with the status `OnHold` or `FixedIn2.2AlhaX` in the SWFObject 2 Issues list [ http://code.google.com/p/swfobject/issues/list ].
+We have started with the development of SWFObject 2.2, which will address all items with the status `OnHold` or `FixedIn2.2AlphaX` in the SWFObject 2 Issues list [ http://code.google.com/p/swfobject/issues/list ].
 
-You can preview or get the latest alpha releases (uncompressed version only) via the SWFObject 2 SVN repository [ http://code.google.com/p/swfobject/source/checkout ]. Please note that these alpha releases are solely intended for testing purposes and to give you a sneak peak of what is coming. They may still contain bugs, defects and should not be used for production purposes.
+You can preview or get the latest alpha releases (uncompressed library only) via the SWFObject 2 SVN repository [ http://code.google.com/p/swfobject/source/checkout ]. Please note that these alpha releases are solely intended for testing and to give you a sneak peak of what is coming. They may still contain bugs or defects and should not be used for production purposes.
 
 If you would like to discuss a new alpha release, please use the SWFObject discussion group [ http://groups.google.com/group/swfobject ].
 
