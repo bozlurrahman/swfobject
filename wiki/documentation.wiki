@@ -456,6 +456,7 @@ There are a number of reasons why we are not supporting this:
 == Tutorials (beginner level) ==
 
   * Detecting Flash Player versions and embedding SWF files with SWFObject 2 [ http://www.adobe.com/devnet/flashplayer/articles/swfobject.html ]
+  * Providing alternative content for SWF files [ http://www.adobe.com/devnet/flashplayer/articles/alternative_content.html ]
   * Embedding Flash with SWFObject 2.0 (video tutorial) by Lee Brimelow [ http://www.gotoandlearn.com ]
 
 == Comments ==
