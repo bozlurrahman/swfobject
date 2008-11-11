@@ -6,6 +6,8 @@
 
 _Detecting Flash Player versions and embedding SWF files with SWFObject 2_ (beginners tutorial) by Bobby van der Sluis: http://www.adobe.com/devnet/flashplayer/articles/swfobject.html
 
+_Providing alternative content for SWF files_ (beginners tutorial) by Bobby van der Sluis: http://www.adobe.com/devnet/flashplayer/articles/alternative_content.html 
+
 _Embedding Flash with SWFObject 2.0_ (beginners video tutorial) by Lee Brimelow on gotoandlearn.com: http://www.gotoandlearn.com
 
 _SWFObject 2 and Adobe Flex integration_: http://code.google.com/p/swfobject/wiki/flex
