@@ -1,4 +1,4 @@
-#summary SWFObject 2.1 is hosted on Google AJAX Libraries API
+#summary SWFObject 2 is hosted on Google AJAX Libraries API
 #labels Featured
 
 = Introduction =
