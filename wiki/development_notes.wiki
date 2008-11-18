@@ -10,6 +10,11 @@ If you would like to discuss a new alpha release, please use the SWFObject discu
 
 If you find a new bug caused by newly developed code, please use the corresponding issue report on the SWFObject issues page [ http://code.google.com/p/swfobject/issues/list ].
 
-=== SWFObject v2.2 alpha1 (November xth, 2008) ===
+You can test the latest SWFObject 2.2 alpha version with the SWFObject 2.2 test suite [ http://www.bobbyvandersluis.com/swfobject/testsuite_2_2/ ].
 
-  * Coming soon...
+=== SWFObject v2.2 alpha1 (November 18th, 2008) ===
+
+Addresses the following issues:
+  * Issue 156: Removal of code for old browsers and Flash Player versions [ http://code.google.com/p/swfobject/issues/detail?id=156 ]
+  * Issue 162: New test for the availability of the DOM when the script is executed [ http://code.google.com/p/swfobject/issues/detail?id=162 ]
+  * Issue 165: New DomContentLoaded emulation for Internet Explorer [ http://code.google.com/p/swfobject/issues/detail?id=165 ]
