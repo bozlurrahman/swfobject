@@ -18,3 +18,8 @@ Addresses the following issues:
   * Issue 156: Removal of code for old browsers and Flash Player versions [ http://code.google.com/p/swfobject/issues/detail?id=156 ]
   * Issue 162: New test for the availability of the DOM when the script is executed [ http://code.google.com/p/swfobject/issues/detail?id=162 ]
   * Issue 165: New DomContentLoaded emulation for Internet Explorer [ http://code.google.com/p/swfobject/issues/detail?id=165 ]
+
+=== SWFObject v2.2 alpha2 (November 21th, 2008) ===
+
+Addresses the following issue:
+  * Issue 197: Filtering properties in Object.prototype then storing back to an object defeats the purpose [ http://code.google.com/p/swfobject/issues/detail?id=197 ]
