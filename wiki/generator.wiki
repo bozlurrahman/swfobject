@@ -1,8 +1,15 @@
 #summary SWFObject HTML and JavaScript generator
 
-= SWFObject HTML and JavaScript generator =
+= SWFObject 2 HTML and JavaScript generator =
 
-Download the ZIP file from the downloads page or use the online version: http://www.swffix.org/swfobject/generator/
+The *online* version: [ http://www.bobbyvandersluis.com/swfobject/generator/index.html ]
+
+Or *download* one of the the ZIP files from the downloads page: [ http://code.google.com/p/swfobject/downloads/list ]
+
+== version 1.2 (November 28th, 2008) ==
+
+  * Added two new by Flash Player 10 introduced `wmode` param element values: `direct` and `gpu`, see [ http://www.kaourantin.net/2008/05/what-does-gpu-acceleration-mean.html ]
+  * Updated version numbering
 
 == version 1.1 (February 28th, 2008) ==
 
@@ -24,4 +31,4 @@ Download the ZIP file from the downloads page or use the online version: http://
 
 == version 0.21 beta (November 21st, 2007) ==
 
-Initial release, blog entry: http://www.swffix.org/devblog/?p=21
+Initial release
