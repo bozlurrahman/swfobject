@@ -36,7 +36,7 @@ Addresses the following issues:
   * Issue 165: An update to the new DomContentLoaded emulation for Internet Explorer [ http://code.google.com/p/swfobject/issues/detail?id=165 ]
   * Issue 201: An update of the createCSS method, adding two new optional parameters (mediaStr and newStyleBoolean) [ http://code.google.com/p/swfobject/issues/detail?id=201 ]
   
-  === SWFObject v2.2 alpha5 (November 28th, 2008) ===
+=== SWFObject v2.2 alpha5 (November 28th, 2008) ===
 
 Addresses the following issue:
   * Issue 222: Now also supports Safari + badly authored HTML pages without a `head` element [ http://code.google.com/p/swfobject/issues/detail?id=222 ]
