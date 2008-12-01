@@ -48,14 +48,12 @@ Includes an improved method for Flash Player version detection for non-Internet 
   * Issue 155: Some installers provided by Adobe include an incorrect plugins collection item's description [ http://code.google.com/p/swfobject/issues/detail?id=155 ]
   * Issue 198: Incorrect browser imports can result in multiple Flash Player entries in the plugin collection [ http://code.google.com/p/swfobject/issues/detail?id=198 ]
   
-For non-Internet Explorer browser the following version detection takes place:
+For non-Internet Explorer browsers the following version detection takes place:
   # Direct detection by using the plugins collection
-  # As soon as the DOM is available SWFObject dynamically creates an HTML element with the application/x-shockwave-flash MIME type to detect the version number of the instantiated Flash Player
+  # As soon as the DOM is available SWFObject dynamically creates an HTML `object` element with MIME type `application/x-shockwave-flash` to detect the version number of the instantiated Flash Player
   # Flash Player and SWF version matching only takes place after steps 1 and 2
   
-Version detection as detected in step 1 is available directly and will be correct in 99.9% of all cases. The version detection in step 2 is only available after the DOM of a Web page is available and overwrites (and possibly corrects) the version detection of step 1.
-
-Because there could be a potential gap between the 2 steps avoid the following code when using the swfobject.getFlashPlayerVersion() method:
+Version detection as detected in step 1 is directly available and will be correct in 99.9% of all cases. The version detection in step 2 is only available after the DOM of a Web page is ready and overwrites (and possibly corrects) the version detection of step 1. Because there could be a potential gap between the two steps, please avoid the following code when using the swfobject.getFlashPlayerVersion() method:
 {{{
 var playerVersion = swfobject.getFlashPlayerVersion();
 var output = "You have Flash player " + playerVersion.major + "." + playerVersion.minor + "." + playerVersion.release + " installed";
