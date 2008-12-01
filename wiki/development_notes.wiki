@@ -51,7 +51,7 @@ Includes an improved method for Flash Player version detection for non-Internet 
 For non-Internet Explorer browsers the following version detection takes place:
   # Direct detection by using the plugins collection
   # As soon as the DOM is available SWFObject dynamically creates an HTML `object` element with MIME type `application/x-shockwave-flash` to detect the version number of the instantiated Flash Player
-  # Flash Player and SWF version matching only takes place after steps 1 and 2
+  # Flash Player and SWF version matching only takes place after step 2
   
 Version detection as detected in step 1 is directly available and will be correct in 99.9% of all cases. The version detection in step 2 is only available after the DOM of a Web page is ready and overwrites (and possibly corrects) the version detection of step 1. Because there could be a potential gap between the two steps, please avoid the following code when using the swfobject.getFlashPlayerVersion() method:
 {{{
