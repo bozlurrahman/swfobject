@@ -3,6 +3,7 @@
 
 Translations:
   * Chinese by FarThinker [ http://farthinker.cn/2007/12/27/swfobject-2_0-doc-translation/ ]
+  * French by Jonathan Blois [ http://egypte.olympe-network.com/swfobject-francais.html ]
   * German by Powerflasher [ http://blog.powerflasher.de/swfobject2/ ]
   * Italian by Luka M. [ http://www.magnificaweb.it/swfobject-2/ ]
   * Japanese by Shuhei Terai [ http://mtl.recruit.co.jp/blog/2007/10/swfobject_v20.html ]
