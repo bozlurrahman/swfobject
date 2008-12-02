@@ -69,3 +69,8 @@ function outputPlayerversion() {
 }
 swfobject.addDomLoadEvent(outputPlayerversion);
 }}}
+
+=== SWFObject v2.2 alpha7 (December 2nd, 2008) ===
+
+Addresses the following issue:
+  * Issue 124: swfobject.removeSWF method can be improved for Internet Explorer [ http://code.google.com/p/swfobject/issues/detail?id=124 ]
