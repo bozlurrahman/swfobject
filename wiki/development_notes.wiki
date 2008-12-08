@@ -93,7 +93,7 @@ Extends the following API methods with the optional callbackFn parameter:
 {{{  
 swfobject.registerObject(objectIdStr, swfVersionStr, xiSwfUrlStr, callbackFn)
 swfobject.embedSWF(swfUrlStr, replaceElemIdStr, widthStr, heightStr, swfVersionStr, xiSwfUrlStr, flashvarsObj, parObj, attObj, callbackFn)
-}}
+}}}
 
 Where callbackFn is a JavaScript function that has an event object as a parameter:
 {{{
