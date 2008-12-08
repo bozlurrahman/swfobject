@@ -30,6 +30,15 @@ Addresses the following issues:
   * Issue 165: An update to the new DomContentLoaded emulation for Internet Explorer [ http://code.google.com/p/swfobject/issues/detail?id=165 ]
   * Issue 201: When using the createCSS method, only create 1 dynamic stylesheet in total instead of 1 stylesheet per call [ http://code.google.com/p/swfobject/issues/detail?id=201 ]
 
+Extends the following API method with 2 new optional parameters:
+{{{
+swfobject.createCSS(selStr, declStr, mediaStr, newStyleBoolean)
+}}}
+
+Where:
+  * mediaStr, String to indicate the CSS media type
+  * newStyleBoolean, Boolean to indicate whether a new dynamic `style` element should be appended to the `head` of the HTML document, or that SWFObject should reuse a possible earlier created dynamic `style` element (default)
+
 === SWFObject v2.2 alpha4 (November 27th, 2008) ===
 
 Addresses the following issues:
@@ -74,3 +83,26 @@ swfobject.addDomLoadEvent(outputPlayerversion);
 
 Addresses the following issue:
   * Issue 124: swfobject.removeSWF method can be improved for Internet Explorer [ http://code.google.com/p/swfobject/issues/detail?id=124 ]
+  
+=== SWFObject v2.2 alpha8 (December 9th, 2008) ===
+
+Addresses the following issue:
+  * Issue 126: Callback-method on success or failure of embedding for both static and dynamic publishing
+
+Extends the following API methods with the optional callbackFn parameter:
+{{{  
+swfobject.registerObject(objectIdStr, swfVersionStr, xiSwfUrlStr, callbackFn)
+swfobject.embedSWF(swfUrlStr, replaceElemIdStr, widthStr, heightStr, swfVersionStr, xiSwfUrlStr, flashvarsObj, parObj, attObj, callbackFn)
+}}
+
+Where callbackFn is a JavaScript function that has an event object as a parameter:
+{{{
+function callbackFn(e) { ... }
+}}}
+
+Properties of this event object are:
+  * success, Boolean to indicate whether the embedding of a SWF was success or not
+  * objId, String indicating the ID of the object element
+  * altId, String indicating the ID of the alternative content (Dynamic Publishing only)
+  * objRef, HTML object element reference
+ 
