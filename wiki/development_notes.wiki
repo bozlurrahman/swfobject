@@ -87,7 +87,7 @@ Addresses the following issue:
 === SWFObject v2.2 alpha8 (December 9th, 2008) ===
 
 Addresses the following issue:
-  * Issue 126: Callback-method on success or failure of embedding for both static and dynamic publishing
+  * Issue 126: Callback-method on success or failure of embedding for both static and dynamic publishing [ http://code.google.com/p/swfobject/issues/detail?id=126 ]
 
 Extends the following API methods with the optional callbackFn parameter:
 {{{  
