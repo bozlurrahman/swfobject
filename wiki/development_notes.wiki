@@ -102,7 +102,38 @@ function callbackFn(e) { ... }
 
 Properties of this event object are:
   * success, Boolean to indicate whether the embedding of a SWF was success or not
-  * objId, String indicating the ID of the object element
+  * objId, String indicating the ID of the object element (when using Dynamic Publishing it returns undefined when undefined by web author or when success=false) 
   * altId, String indicating the ID of the alternative content (Dynamic Publishing only)
-  * objRef, HTML object element reference
+  * objRef, HTML object element reference (returns undefined when success=false)
  
+ === SWFObject v2.2 alpha9 (January 5th, 2009) ===
+ 
+ Addresses the following issues:
+   * Issue 136: Express Install inherits all parameters and attributes from the targeted SWF [ http://code.google.com/p/swfobject/issues/detail?id=136 ]
+   * Issue 172: Express Install redirect not redirecting after updating Flash Player when using multiple GET variables [ http://code.google.com/p/swfobject/issues/detail?id=172 ]
+   * Updated the copyright to include 2009
+   * Web authors can now reuse SWFObject's Express Install and call it via the API via `swfobject.showExpressInstall(att, par, replaceElemIdStr, callbackFn)`, an example:
+   
+{{{
+function cancelFunction() {
+	alert("Express Install was cancelled");
+}
+if (swfobject.hasFlashPlayerVersion("10")) {
+	var fn = function() {
+		var att = { data:"flashContent.swf", width:"300", height:"120" };
+		var par = {};
+		var id = "myContent";
+		swfobject.createSWF(att, par, id);
+	};
+	
+}
+else {
+	var fn = function() {
+		var att = { data:"expressInstall.swf", width:"600", height:"240" };
+		var par = {};
+		var id = "myContent";
+		swfobject.showExpressInstall(att, par, id, cancelFunction);
+	}
+}
+swfobject.addDomLoadEvent(fn);
+}}}
