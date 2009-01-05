@@ -106,14 +106,14 @@ Properties of this event object are:
   * altId, String indicating the ID of the alternative content (Dynamic Publishing only)
   * objRef, HTML object element reference (returns undefined when success=false)
  
- === SWFObject v2.2 alpha9 (January 5th, 2009) ===
+=== SWFObject v2.2 alpha9 (January 5th, 2009) ===
  
- Addresses the following issues:
-   * Issue 136: Express Install inherits all parameters and attributes from the targeted SWF [ http://code.google.com/p/swfobject/issues/detail?id=136 ]
-   * Issue 172: Express Install redirect not redirecting after updating Flash Player when using multiple GET variables [ http://code.google.com/p/swfobject/issues/detail?id=172 ]
-   * Updated the copyright to include 2009
-   * Web authors can now reuse SWFObject's Express Install and call it via the API via `swfobject.showExpressInstall(att, par, replaceElemIdStr, callbackFn)`, an example:
-   
+Addresses the following issues:
+  * Issue 136: Express Install inherits all parameters and attributes from the targeted SWF [ http://code.google.com/p/swfobject/issues/detail?id=136 ]
+  * Issue 172: Express Install redirect not redirecting after updating Flash Player when using multiple GET variables [ http://code.google.com/p/swfobject/issues/detail?id=172 ]
+  * Updated the copyright to include 2009
+  * Web authors can now reuse SWFObject's Express Install and call it via the API via `swfobject.showExpressInstall(att, par, replaceElemIdStr, callbackFn)`, an example:
+  
 {{{
 function cancelFunction() {
 	alert("Express Install was cancelled");
