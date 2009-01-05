@@ -137,3 +137,7 @@ else {
 }
 swfobject.addDomLoadEvent(fn);
 }}}
+
+=== Known issues ===
+
+   # The callback function's event object mostly returns `null` or `undefined` when using static publishing and Firefox (caused by the getObjectById returning null, because object.SetVariable is still undefined when the test takes place).
