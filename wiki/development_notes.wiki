@@ -102,7 +102,7 @@ function callbackFn(e) { ... }
 
 Properties of this event object are:
   * success, Boolean to indicate whether the embedding of a SWF was success or not
-  * objId, String indicating the ID of the object element (when using Dynamic Publishing it returns undefined when undefined by web author or when success=false) 
+  * i, String indicating the ID of the object element (when using Dynamic Publishing it returns undefined when undefined by web author or when success=false) 
   * altId, String indicating the ID of the alternative content (Dynamic Publishing only)
   * objRef, HTML object element reference (returns undefined when success=false)
  
@@ -138,6 +138,15 @@ else {
 swfobject.addDomLoadEvent(fn);
 }}}
 
-=== Known issues ===
+=== SWFObject v2.2 alpha10 (January 7th, 2009) ===
+ 
+Addresses the following issues:
+  * Fixed a bug that caused memory leaks in IE
+  * File size optimization to crunch everything within the max 10Kb file size
+  * Issue 126: Callback-method on success or failure of embedding for both static and dynamic publishing [ http://code.google.com/p/swfobject/issues/detail?id=126 ]; fixed an issue and changed the API of the event object.
 
-   # The callback function's event object mostly returns `null` or `undefined` when using static publishing and Firefox (caused by the `getObjectById` method returning `null`, because `object.SetVariable` returns `undefined` when the test takes place).
+Updated properties of the event object are:
+  * `success`, Boolean to indicate whether the embedding of a SWF was success or not
+  * `id`, String indicating the ID as used in `swfobject.registerObject` or `swfobject.embedSWF`
+  * `ref`, HTML object element reference (returns undefined when success=false)
+
