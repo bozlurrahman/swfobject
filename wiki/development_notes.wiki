@@ -143,10 +143,10 @@ swfobject.addDomLoadEvent(fn);
 Addresses the following issues:
   * Fixed a bug that caused memory leaks in IE
   * File size optimization to crunch everything within the max 10Kb file size
+  * Issue 154: Updated Express Install functionality [ http://code.google.com/p/swfobject/issues/detail?id=154 ]
   * Issue 126: Callback-method on success or failure of embedding for both static and dynamic publishing [ http://code.google.com/p/swfobject/issues/detail?id=126 ]; fixed an issue and changed the API of the event object.
 
 Updated properties of the event object are:
   * `success`, Boolean to indicate whether the embedding of a SWF was success or not
   * `id`, String indicating the ID as used in `swfobject.registerObject` or `swfobject.embedSWF`
   * `ref`, HTML object element reference (returns undefined when success=false)
-
