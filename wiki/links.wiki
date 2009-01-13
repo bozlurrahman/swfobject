@@ -49,3 +49,5 @@ _BrowserCanvas_ by doesnotcompute for dynamic Flash resizing: http://www.dncompu
 _jQuery SWFObject plugin_ by Jonathan Neal: http://jquery.thewikies.com/swfobject/
 
 _swfobject.net_ .NET Webcontrol by Gustavo Arjones: http://www.arjones.net/opensource/swfobject.net/
+
+_Ruby on Rails plugin_ to interface with SWFObject 2.1 by Marc-Andr&eacute; Lafortune: http://github.com/marcandre/swf_fu
