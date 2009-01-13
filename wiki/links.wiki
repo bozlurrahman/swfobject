@@ -50,4 +50,4 @@ _jQuery SWFObject plugin_ by Jonathan Neal: http://jquery.thewikies.com/swfobjec
 
 _swfobject.net_ .NET Webcontrol by Gustavo Arjones: http://www.arjones.net/opensource/swfobject.net/
 
-_Ruby on Rails plugin_ to interface with SWFObject 2.1 by Marc-Andr&eacute; Lafortune: http://github.com/marcandre/swf_fu
+_Ruby on Rails plugin_ to interface with SWFObject 2.1 by Marc-André Lafortune: http://github.com/marcandre/swf_fu
