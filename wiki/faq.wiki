@@ -25,7 +25,7 @@
   # Where can I find older Flash Player versions, e.g. to test Adobe Express Install?
   # How do I know which Flash Player version is installed and which version is detected by SWFObject?
   # Why won't Flash Player 10 display my SWF file?
-  # Why do `stage.stageWidth` and `stage.stageHeight` return `0z in Firefox or Internet Explorer when using dynamic publishing?
+  # Why do `stage.stageWidth` and `stage.stageHeight` return `0` in Firefox or Internet Explorer when using dynamic publishing?
 
 == 1. How can I create a SWF that will encompass 100% of the browser window?  ==
 
@@ -321,7 +321,7 @@ A new security feature in Flash Player 10 causes SWF's not to be displayed when 
 
 More info on this issue and how to resolve it can be found here: http://www.adobe.com/devnet/flashplayer/articles/fplayer10_security_changes_02.html#head32
 
-== 21. Why do `stage.stageWidth` and `stage.stageHeight` return `0z in Firefox or Internet Explorer when using dynamic publishing? ==
+== 21. Why do `stage.stageWidth` and `stage.stageHeight` return `0` in Firefox or Internet Explorer when using dynamic publishing? ==
 
 When using the _dynamic publishing method_ in Internet Explorer or Firefox on Mac `stage.stageWidth` and `stage.stageHeight` might initially return 0 (note that for Internet Explorer the stage size will be available on first load, however when reloading or revisiting a page it will initially be 0).
 
