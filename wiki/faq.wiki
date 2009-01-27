@@ -333,6 +333,7 @@ stage.addEventListener(Event.RESIZE, resizeHandler);
 
 function resizeHandler(event:Event):void {
   if (stage.stageHeight > 0 && stage.stageWidth > 0) {
+  	stage.removeEventListener(Event.RESIZE, resizeHandler);
      // your code here
   }
 }
