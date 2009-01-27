@@ -330,7 +330,7 @@ The solution is to define a resize handler in your ActionScript code. The Flash 
 An AS3 example:
 {{{
 stage.addEventListener(Event.RESIZE, resizeHandler);
-stage.dispatchEvent(new Event(Event.RESIZE)); // force onResize for normal cases 
+stage.dispatchEvent(new Event(Event.RESIZE)); // force stage resize event for normal cases 
 
 function resizeHandler(event:Event):void {
   if (stage.stageHeight > 0 && stage.stageWidth > 0) {
