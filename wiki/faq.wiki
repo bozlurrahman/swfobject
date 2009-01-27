@@ -25,6 +25,7 @@
   # Where can I find older Flash Player versions, e.g. to test Adobe Express Install?
   # How do I know which Flash Player version is installed and which version is detected by SWFObject?
   # Why won't Flash Player 10 display my SWF file?
+  # Why are `stage.stageWidth` and `stage.stageHeight` 0 in Firefox or Internet Explorere when using dynamic publishing?
 
 == 1. How can I create a SWF that will encompass 100% of the browser window?  ==
 
@@ -319,6 +320,23 @@ The Flash Player version as detected by:
 A new security feature in Flash Player 10 causes SWF's not to be displayed when a HTTP server sends the following response: `Content-Disposition: attachment`.
 
 More info on this issue and how to resolve it can be found here: http://www.adobe.com/devnet/flashplayer/articles/fplayer10_security_changes_02.html#head32
+
+== 21. Why are `stage.stageWidth` and `stage.stageHeight` 0 in Firefox or Internet Explorere when using dynamic publishing? ==
+
+When using the _dynamic publishing method_ in Internet Explorer or Firefox on Mac `stage.stageWidth` and `stage.stageHeight` might initially return 0 (note that for Internet Explorer the stage size will be available on first load, however when reloading or revisiting a page it will initially be 0).
+
+The solution is to define a resize handler in your ActionScript code. The Flash Player team was obviously aware of this issue and therefore the Flash Player will keep on triggering the stage.resize event until it receives its actual width and height.  
+
+An AS3 example:
+{{{
+stage.addEventListener(Event.RESIZE, resizeHandler);
+
+function resizeHandler(event:Event):void {
+  if (stage.stageHeight > 0 && stage.stageWidth > 0) {
+     // your code here
+  }
+}
+}}}
 
 == Comments ==
 
