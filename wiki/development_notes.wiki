@@ -171,7 +171,7 @@ swfobject.embedSWF("test6.swf", "myContent", "300", "120", "9.0.0", "expressInst
 </script>
 }}}
 
-Now the following user agent properties are available:
+The following user agent properties are available:
   * `swfobject.ua.w3` returns a Boolean whether or not W3C DOM methods are supported
   * `swfobject.ua.pv` returns an Array that contains the major, minor and release version number of the Flash Player
   * `swfobject.ua.wk` returns the Webkit version or false if not Webkit
