@@ -2,7 +2,7 @@
 
 == SWFObject 2.2 development notes ==
 
-We have started with the development of SWFObject 2.2, which will address all items with the status `OnHold` or `FixedIn2.2AlphaX` in the SWFObject 2 Issues list [ http://code.google.com/p/swfobject/issues/list ].
+We have started with the development of SWFObject 2.2, which will address all items with the status `OnHold` or `FixedIn2.2AlphaX` in the SWFObject 2 Issues list http://code.google.com/p/swfobject/issues/list.
 
 You can preview or get the latest alpha releases (uncompressed library only) via the SWFObject 2 SVN repository [ http://code.google.com/p/swfobject/source/browse/trunk/swfobject/src/swfobject.js ]. Please note that these alpha releases are solely intended for testing and to give you a sneak peak of what is coming. They may still contain bugs or defects and should not be used for production purposes.
 
@@ -157,7 +157,7 @@ Addresses the following issues:
   * Updated header notice
   * Removed conditional compilation directives as a proprietary feature test for IE, because it hinders developers creating their own minified JavaScript files. Now we reuse the SWFObject Flash detection mechanism instead
   * Issue 250: ? is grabbed from query string when calling `swfobject.getQueryParamValue()` with arguments [ http://code.google.com/p/swfobject/issues/detail?id=250 ]
-  * Issue 265: update Flash detection for non IE browsers to include build/dev versions (enhancement request by Flash player team) [ http://code.google.com/p/swfobject/issues/detail?id=265 ]
+  * Issue 265: update Flash detection for non IE browsers to include build/dev versions (enhancement request by Flash Player team) [ http://code.google.com/p/swfobject/issues/detail?id=265 ]
   * Detected user agent properties are now public via `swfobject.ua` (see below), which is especially handy for SWFObject plug-ins
   * Issue 277: allow option to see alternative content (e.g. background image) while waiting for the swf file to load. Now a developer can switch off SWFObject's default hide/show behavior with `swfobject.switchOffAutoHideShow()` [ http://code.google.com/p/swfobject/issues/detail?id=277 ]
 
