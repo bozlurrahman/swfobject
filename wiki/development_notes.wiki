@@ -151,7 +151,7 @@ Updated properties of the event object are:
   * `id`, String indicating the ID as used in `swfobject.registerObject` or `swfobject.embedSWF`
   * `ref`, HTML object element reference (returns undefined when success=false)
   
-  === SWFObject v2.2 alpha11 (April 3rd, 2009) ===
+=== SWFObject v2.2 alpha11 (April 3rd, 2009) ===
  
 Addresses the following issues:
   * Updated header notice
@@ -197,3 +197,10 @@ function test() {
 swfobject.addLoadEvent(test);
 </script>
 }}}
+
+=== SWFObject v2.2 alpha12 (April 15th, 2009) ===
+ 
+Addresses the following issues:
+  * Fixed a bug in the new Internet Explorer detection routine that was introduced by alpha11
+  * Fixed a bug regarding callbacks in Firefox
+  * Fixed a bug in the getObjectById method when using Internet Explorer and static publishing with no plug-in installed 
