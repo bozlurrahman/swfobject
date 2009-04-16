@@ -6,7 +6,7 @@ After five months of development we are happy to announce SWFObject 2.2 beta. Th
 
 Please give it a good test drive and help us test SWFObject 2.2 beta, for example you can test SWFObject 2.2 beta with existing projects or just browse through the [http://www.bobbyvandersluis.com/swfobject/testsuite_2_2/ SWFObject 2.2 test suite].
 
-If you have any questions, please use the [http://groups.google.com/group/swfobject SWFObject 2 discussion group]. When you find bug, please log it in the [http://code.google.com/p/swfobject/issues/list SWFObject 2 Issues list].
+If you have any questions, please use the [http://groups.google.com/group/swfobject SWFObject 2 discussion group]. When you find a bug, please log it in the [http://code.google.com/p/swfobject/issues/list SWFObject 2 Issues list].
 
 Please note that SWFObject 2.2 beta is solely intended for testing purposes and to give you a sneak peak of what is coming. It may still contain bugs or defects and should not be used for production purposes.
 
