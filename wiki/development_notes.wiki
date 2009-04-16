@@ -203,4 +203,9 @@ swfobject.addLoadEvent(test);
 Addresses the following issues:
   * Fixed a bug in the new Internet Explorer detection routine that was introduced by alpha11
   * Fixed a bug regarding callbacks in Firefox
-  * Fixed a bug in the getObjectById method when using Internet Explorer and static publishing with no plug-in installed 
+  * Fixed a bug in the getObjectById method when using Internet Explorer and static publishing with no plug-in installed
+  
+=== SWFObject v2.2 beta1 (April 16th, 2009) ===
+ 
+Addresses the following issues:
+  * Fixed an additional bug regarding callbacks in Firefox

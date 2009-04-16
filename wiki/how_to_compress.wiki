@@ -1,7 +1,18 @@
 #summary How to compress the swfobject.js source file using YUI Compressor
 #labels Phase-Deploy
 
-== How to compress the swfobject.js source file using YUI Compressor? ==
+== How to compress the swfobject.js v2.2 source file using YUI Compressor? ==
+
+  # Download the latest version of the YUI Compressor from [ http://www.julienlecomte.net/yuicompressor/ ]
+  # Unzip the yuicompressor-x.x.x.zip file
+  # Compress the swfobject.js source file, e.g.:
+{{{
+   java -jar /yuicompressorpath/yuicompressor-2.3.5/build/yuicompressor-2.3.5.jar -o /swfobjectpath/swfobject.js /swfobjectpath/src/swfobject.js
+  
+   For more info, please read the YUI Compressor documentation [ http://developer.yahoo.com/yui/compressor/ ]
+}}}
+
+== How to compress the swfobject.js v2.1 source file using YUI Compressor? ==
 
   # Download the latest version of the YUI Compressor from [ http://www.julienlecomte.net/yuicompressor/ ]
   # Unzip the yuicompressor-x.x.x.zip file
@@ -48,5 +59,4 @@
 {{{  
    return{w3cdom:v,pv:AC,webkit:AA,ie:q,win:z,mac:w}}(); ...
 }}}   
-
   # Save your adjusted compressed swfobject.js file
