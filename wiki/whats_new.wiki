@@ -75,9 +75,9 @@ else {
 swfobject.addDomLoadEvent(fn);
 }}}
 
-== 7. Extended and improved `createCSS` method ==
+== 7. Improved `createCSS` method ==
 
-SWFObject 2.2 reuses earlier created dynamic style sheets when possible. The method is not extended with two new optional parameters:
+SWFObject 2.2 reuses earlier created dynamic style sheets when possible. The method is extended with two new optional parameters:
   * `mediaStr` to define the media type of the style sheet (default value is `screen`)
   * `newStyleBoolean` to define whether or not SWFObject should create a new dynamic style sheet (instead of reusing a possible earlier created dynamic style sheet for that specific media type, default value is `false`)
 
@@ -115,6 +115,6 @@ swfobject.addLoadEvent(test);
 
 == 9. Bye, bye conditional compilation directives ==
 
-We removed conditional compilation directives as a proprietary feature test for Internet Explorer, so now it is easier for developers to create their own minified SWFObject library.
+We removed all conditional compilation directives as a proprietary feature test for Internet Explorer, so now it is easier for developers to create their own minified SWFObject library.
 
 == 10. We fixed a series of minor bugs ==
