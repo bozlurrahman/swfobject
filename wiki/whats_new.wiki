@@ -4,9 +4,9 @@
 
 After five months of development we are happy to announce SWFObject 2.2 beta. This page will give you an overview of all new features and changes.
 
-Please give it a good test drive and help us test SWFObject 2.2 beta, e.g. you can test SWFObject 2.2 beta with existing projects or just browse through the [http://www.bobbyvandersluis.com/swfobject/testsuite_2_2/ SWFObject 2.2 test suite].
+Please give it a good test drive and help us test SWFObject 2.2 beta, for example you can test SWFObject 2.2 beta with existing projects or just browse through the [http://www.bobbyvandersluis.com/swfobject/testsuite_2_2/ SWFObject 2.2 test suite].
 
-If you have any questions, please use the [http://groups.google.com/group/swfobject SWFObject discussion group]. When you find bug, please log it in the [http://code.google.com/p/swfobject/issues/list SWFObject 2 Issues list].
+If you have any questions, please use the [http://groups.google.com/group/swfobject SWFObject 2 discussion group]. When you find bug, please log it in the [http://code.google.com/p/swfobject/issues/list SWFObject 2 Issues list].
 
 Please note that SWFObject 2.2 beta is solely intended for testing purposes and to give you a sneak peak of what is coming. It may still contain bugs or defects and should not be used for production purposes.
 
@@ -48,7 +48,7 @@ SWFObject 2.2 now corrects wrong version numbers provided by corrupt Player inst
 Express Install now:
   * inherits all parameters and attributes from the targeted SWF
   * redirects correctly when using multiple GET variables
-  * shows alternative content in cases where in SWFObject 2.1 it silently failed
+  * reverts to alternative content in cases where it previously failed silently
 
 Furthermore, SWFObject's Express Install functionality can now be reused by JavaScript developers with the new `showExpressInstall` API method. An example:
 {{{
