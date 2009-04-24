@@ -32,6 +32,8 @@ _SWFAddress 2.1 + SWFObject 2.1 + Flash CS3 (AS3) Example_ by Adrian Parr: http:
 
 _Flash + iPhone: SWFObject 2 + MP4_: http://code.google.com/p/swfobject/wiki/iphone_mp4
 
+_Using the HTML5 video tag with a Flash fallback_: http://henriksjokvist.net/archive/2009/2/using-the-html5-video-tag-with-a-flash-fallback
+
 == Compatible libraries ==
 
 _SWFAddress 2.1_ for deeplinking by Asual: http://www.asual.com/swfaddress/
