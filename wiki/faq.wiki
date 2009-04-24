@@ -302,8 +302,12 @@ For `dynamic publishing` you can enable/disable JavaScript by:
   
   * Flash Player uninstaller: http://www.adobe.com/go/tn_14157
   * Archived Flash Player versions for testing purposes: http://www.adobe.com/go/tn_14266
-  * The latest released version of Flash Player: http://www.adobe.com/go/getflashplayer 
-
+  * The latest released version of Flash Player: http://www.adobe.com/go/getflashplayer
+  
+When you run an archived Flash Player on Intel-based Macintosh computers please keep in mind that there are two types of Mac installers:
+  * A universal binary installer includes both a version of Flash Player that runs natively on Intel-based Macs and a PowerPC version.
+  * PowerPC installers require browsers to run in Rosetta, which is a special mode that runs older legacy PowerPC applications on Intel-based Macs. You can force a browser to open in Rosetta by opening the info window in Finder (clicking the app and selecting "Get Info"), then ticking the "Open in Rosetta" box. New versions of Safari and Opera no longer support this, but Firefox 3 does.
+ 
 == 19. How do I know which Flash Player version is installed and which version is detected by SWFObject? ==
 
 The Flash Player version as installed by:
