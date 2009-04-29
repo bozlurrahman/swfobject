@@ -40,4 +40,4 @@ In short, SWFObject offers web authors the following advantages over using the p
   
 Currently Flash Player is the default technology for displaying video content on the Web. Web browsers vendors will try to gain a piece of this market share by standardizing video playback in HTML5 with the `video` element.
 Web authors who choose to use HTML5 and the `video` object will have to provide multiple versions of a video, at least an MP4 and Ogg version.
-Henrik Sj&ouml;kvist has made a [http://henriksjokvist.net/archive/2009/2/using-the-html5-video-tag-with-a-flash-fallback nice write-up] on how you can use the HTML5 `<video>` tag with a Flash fallback.
+Henrik Sjokvist has made a [http://henriksjokvist.net/archive/2009/2/using-the-html5-video-tag-with-a-flash-fallback nice write-up] on how you can use the HTML5 `<video>` tag with a Flash fallback.
