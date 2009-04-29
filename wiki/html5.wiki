@@ -29,16 +29,15 @@ If you don't care about these things you can just use the plain `embed` element 
   * It shows nothing or a missing plug-in icon when people don't have the Flash plug-in installed
   * It might show broken Flash content when a published SWF version is higher than the installed Flash Player version (it doesn't perform any version matching)
  
- In short, SWFObject offers web authors the following advantages over using the `embed` element with HTML5:
-  * Alernative content support
-  * SWF version and Flash Player version matching
+ In short, SWFObject offers web authors the following advantages over using the plain `embed` element with HTML5:
+  * Alternative content support
+  * SWF and Flash Player version matching
   * The option to use Adobe Express Install to download the latest Flash Player 
   * Dynamic publishing
   * An API for JavaScript developers
   
  === HTML5 introduces the `video` element ===
   
-Currently Flash Player is the default technology for displaying video content on the Web. Web browsers vendors will try to eat a piece of this market share by standardizing video playback in HTML5 with the `video` element.
-For web authors who choose to use HTML5 and the `video` object they will have to provide multiple versions of a video, at least MP4 and Ogg.
-
+Currently Flash Player is the default technology for displaying video content on the Web. Web browsers vendors will try to gain a piece of this market share by standardizing video playback in HTML5 with the `video` element.
+Web authors who choose to use HTML5 and the `video` object will have to provide multiple versions of a video, at least an MP4 and Ogg version.
 Henrik Sjškvist has made a [http://henriksjokvist.net/archive/2009/2/using-the-html5-video-tag-with-a-flash-fallback nice write-up] on how you can use the HTML5 `<video>` tag with a Flash fallback.
