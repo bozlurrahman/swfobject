@@ -2,18 +2,16 @@
 
 = SWFObject 2 HTML and JavaScript generator =
 
-The *online* version: [ http://www.bobbyvandersluis.com/swfobject/generator/index.html ]
-
-Or *download* one of the the ZIP files from the downloads page: [ http://code.google.com/p/swfobject/downloads/list ]
+You use the [http://www.bobbyvandersluis.com/swfobject/generator/index.html *online* version]  or *download* one of the the ZIP files from the [http://code.google.com/p/swfobject/downloads/list downloads page].
 
 == version 1.2 (November 28th, 2008) ==
 
-  * Added two new by Flash Player 10 introduced `wmode` param element values: `direct` and `gpu`, see [ http://www.kaourantin.net/2008/05/what-does-gpu-acceleration-mean.html ]
+  * Added two new by Flash Player 10 introduced `wmode` param element values: [http://www.kaourantin.net/2008/05/what-does-gpu-acceleration-mean.html `direct` and `gpu`].
   * Updated version numbering
 
 == version 1.1 (February 28th, 2008) ==
 
-  * Added the "sameDomain" value to the "allowScriptAccess" parameter. For more info, see Adobe technote [ http://www.adobe.com/go/kb402975 ]
+  * Added the [http://www.adobe.com/go/kb402975 `sameDomain` value] to the `allowScriptAccess` parameter.
   * Updated the Adobe AIR version (now: Adobe AIR 1.0)
   
 == version 1.0 (February 15th, 2008) ==
