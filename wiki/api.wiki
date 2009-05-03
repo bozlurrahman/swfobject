@@ -102,7 +102,7 @@ swfobject.addDomLoadEvent(sayHi);
 
  Exposes SWFObject's internal cross-browser method to create a SWF. This 'low level' method will primarily be useful when combining it with other JavaScript libraries:
   * `attObj` is a JavaScript Object that contains the name value pairs of the `object` element's attributes and values, as explained [http://code.google.com/p/swfobject/wiki/documentation here]
-  * `parObj` is a JavaScript Object that contains the name value pairs of the `object` element's nested `param` element's names and values, as explained [ http://code.google.com/p/swfobject/wiki/documentation here]
+  * `parObj` is a JavaScript Object that contains the name value pairs of the `object` element's nested `param` element's names and values, as explained [http://code.google.com/p/swfobject/wiki/documentation here]
   * `replaceElemIdStr` is the `id` attribute of the HTML element that you want to have replaced by your SWF content
  
  Returns the newly created `object` element
@@ -158,7 +158,7 @@ swfobject.addDomLoadEvent(sayHi);
 swfobject.removeSWF("myContent");
 }}}
 
- Sample page: [ http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_api_create_remove.html ]
+ [http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_api_create_remove.html Sample page]
 
 === `swfobject.createCSS(selStr, declStr)` ===
 
