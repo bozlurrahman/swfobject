@@ -2,24 +2,22 @@
 #labels Featured
 
 Translations:
-  * Chinese by FarThinker [ http://farthinker.cn/2007/12/27/swfobject-2_0-doc-translation/ ]
-  * French by Montoumes [ http://egypte.olympe-network.com/swfobject-francais.html ]
-  * German by Powerflasher [ http://blog.powerflasher.de/swfobject2/ ]
-  * Italian by Luka M. [ http://www.magnificaweb.it/swfobject-2/ ]
-  * Japanese by Shuhei Terai [ http://mtl.recruit.co.jp/blog/2007/10/swfobject_v20.html ]
-  * Russian by Denis Kuznetsov [ http://designformasters.info/posts/flash-embed-with-swfobject-2/ ]
-  * Swedish by Seoserver [ http://labb.seoserver.se/swfobject-2/ ]
+  * [http://farthinker.cn/2007/12/27/swfobject-2_0-doc-translation/ Chinese] by FarThinker
+  * [http://egypte.olympe-network.com/swfobject-francais.html French] by Montoumes
+  * [http://blog.powerflasher.de/swfobject2/ German] by Powerflasher
+  * [http://www.magnificaweb.it/swfobject-2/ Italian] by Luka M.
+  * [http://mtl.recruit.co.jp/blog/2007/10/swfobject_v20.html Japanese] by Shuhei Terai
+  * [http://designformasters.info/posts/flash-embed-with-swfobject-2/ Russian] by Denis Kuznetsov
+  * [http://labb.seoserver.se/swfobject-2/ Swedish] by Seoserver
 
 == What is SWFObject? == 
 
 SWFObject 2:
   * Offers two optimized Flash Player embed methods; a markup based approach and a method that relies on JavaScript
-  * Offers a JavaScript API that aims to provide a complete tool set for embedding SWF files and retrieving Flash Player related information [ http://code.google.com/p/swfobject/wiki/api ]
+  * Offers a [http://code.google.com/p/swfobject/wiki/api JavaScript API] that aims to provide a complete tool set for embedding SWF files and retrieving Flash Player related information
   * Utilizes only one small JavaScript file (9.5Kb / GZIPed: 3.8Kb)
-  * Is the successor of SWFObject 1.5 [ http://blog.deconcept.com/swfobject/ ] and UFO [ http://www.bobbyvandersluis.com/ufo/ ]
-  * Will eventually replace the Adobe Flash Player Detection Kit [ http://www.adobe.com/products/flashplayer/download/detection_kit/ ]
+  * Is the successor of [http://blog.deconcept.com/swfobject/ SWFObject 1.5], [http://www.bobbyvandersluis.com/ufo/ UFO] and the [http://www.adobe.com/products/flashplayer/download/detection_kit/ Adobe Flash Player Detection Kit]
   * Intends to unify all existing Flash Player embed methods and provide a new standard for embedding Adobe Flash Player content
-  * Is an open source project by Geoff Stearns, Michael Williams, and Bobby van der Sluis, and is formerly known as SWFFix [ http://code.google.com/p/swffix/ ]
 
 == Why should you use SWFObject? ==
 
@@ -30,7 +28,7 @@ SWFObject 2:
   * Uses unobtrusive JavaScript and JavaScript best practices
   * Is easy to use
 
-The A List Apart article Flash Embedding Cage Match [ http://www.alistapart.com/articles/flashembedcagematch/ ] describes the full rationale behind SWFObject 2.
+The A List Apart article [http://www.alistapart.com/articles/flashembedcagematch/ Flash Embedding Cage Match] describes the full rationale behind SWFObject 2.
 
 == Why does SWFObject use JavaScript? ==
 
@@ -56,7 +54,7 @@ The advantages of the *static publishing method* are:
     * Automated tools like RSS readers are able to pick up Flash content 
 
 The advantages of the *dynamic publishing method* are:
-  # It avoids _click-to-activate mechanisms_ to activate _active content_ in Internet Explorer 6/7 and Opera 9+. Please note that Microsoft is currently phasing out all active content from its Internet Explorer browsers [ http://blogs.msdn.com/ie/archive/2007/11/08/ie-automatic-component-activation-changes-to-ie-activex-update.aspx ]
+  # It avoids _click-to-activate mechanisms_ to activate _active content_ in Internet Explorer 6/7 and Opera 9+. Please note that Microsoft [http://blogs.msdn.com/ie/archive/2007/11/08/ie-automatic-component-activation-changes-to-ie-activex-update.aspx has phased out most active content] from its Internet Explorer browsers
   # It integrates very well with scripted applications  
  
 == How to embed Flash Player content using SWFObject _static publishing_ ==
@@ -113,7 +111,7 @@ You can add the following often-used optional attributes [ http://www.w3schools.
   * `class`
   * `align`
 
-You can use the following optional Flash specific `param` elements [ http://www.adobe.com/cfusion/knowledgebase/index.cfm?id=tn_12701 ]:
+You can use the following optional Flash specific `param` elements [more info http://www.adobe.com/cfusion/knowledgebase/index.cfm?id=tn_12701]:
   * `play`
   * `loop`
   * `menu`
@@ -125,15 +123,15 @@ You can use the following optional Flash specific `param` elements [ http://www.
   * `base`
   * `swliveconnect`
   * `flashvars`
-  * `devicefont` [ http://www.adobe.com/cfusion/knowledgebase/index.cfm?id=tn_13331 ]
-  * `allowscriptaccess` [ http://www.adobe.com/cfusion/knowledgebase/index.cfm?id=tn_16494 ] and [ http://www.adobe.com/go/kb402975 ]
-  * `seamlesstabbing` [ http://www.adobe.com/support/documentation/en/flashplayer/7/releasenotes.html ]
-  * `allowfullscreen` [ http://www.adobe.com/devnet/flashplayer/articles/full_screen_mode.html ]
-  * `allownetworking` [ http://livedocs.adobe.com/flash/9.0/main/00001079.html ]
+  * `devicefont` [more info http://www.adobe.com/cfusion/knowledgebase/index.cfm?id=tn_13331]
+  * `allowscriptaccess` more info [here http://www.adobe.com/cfusion/knowledgebase/index.cfm?id=tn_16494] and [here http://www.adobe.com/go/kb402975]
+  * `seamlesstabbing` [more info http://www.adobe.com/support/documentation/en/flashplayer/7/releasenotes.html]
+  * `allowfullscreen` [more info http://www.adobe.com/devnet/flashplayer/articles/full_screen_mode.html]
+  * `allownetworking` [more info http://livedocs.adobe.com/flash/9.0/main/00001079.html]
 
 ==== Why should you use alternative content? ====
 
-The `object` element allows you to nest alternative content inside of it, which will be displayed if Flash is not installed or supported. This content will also be picked up by search engines, making it a great tool for creating search-engine-friendly content. Summarizing, you should use alternative content when you like to create content that is accessible for people who browse the Web without plugins [ http://www.adobe.com/devnet/flash/articles/progressive_enhancement_03.html ], create search-engine-friendly content [ http://www.adobe.com/devnet/flash/articles/progressive_enhancement_04.html ] or tell visitors that they can have a richer user experience by downloading the Flash plug-in.
+The `object` element allows you to nest alternative content inside of it, which will be displayed if Flash is not installed or supported. This content will also be picked up by search engines, making it a great tool for creating search-engine-friendly content. Summarizing, you should use alternative content when you like to create content that is accessible for [http://www.adobe.com/devnet/flashplayer/articles/alternative_content_02.html people who browse the Web without plugins], create [http://www.adobe.com/devnet/flashplayer/articles/alternative_content_04.html search-engine-friendly content] or tell visitors that they can have a richer user experience by [http://www.adobe.com/devnet/flashplayer/articles/alternative_content_03.html downloading the Flash plug-in].
 
 === STEP 2: Include the SWFObject JavaScript library in the head of your HTML page ===
 
@@ -171,7 +169,7 @@ The SWFObject library consists of one external JavaScript file. SWFObject will b
 First add a unique `id` to the outer `object` tag that defines your Flash content. Second add the `swfobject.registerObject` method:
   # The first argument (String, required) specifies the `id` used in the markup.
   # The second argument (String, required) specifies the Flash player version your content is published for. It activates the Flash version detection for a SWF to determine whether to show Flash content or force alternative content by doing a DOM manipulation. While Flash version numbers normally consist of major.minor.release.build, SWFObject only looks at the first 3 numbers, so both "WIN 9,0,18,0" (IE) or "Shockwave Flash 9 r18" (all other browsers) will translate to "9.0.18".
-  # The third argument (String, optional) can be used to activate Adobe express install [ http://www.adobe.com/cfusion/knowledgebase/index.cfm?id=6a253b75 ] and specifies the URL of your express install SWF file. Express install displays a standardized Flash plugin download dialog instead of your Flash content when the required plugin version is not available. A default expressInstall.swf file is packaged with the project. It also contains the corresponding expressInstall.fla and AS files (in the SRC directory) to let you create your own custom express install experience. Please note that express install will only fire once (the first time that it is invoked), that it is only supported by Flash Player 6.0.65 or higher on Win or Mac platforms, and that it requires a minimal SWF size of 310x137px. 
+  # The third argument (String, optional) can be used to activate [http://www.adobe.com/cfusion/knowledgebase/index.cfm?id=6a253b75 Adobe express install] and specifies the URL of your express install SWF file. Express install displays a standardized Flash plugin download dialog instead of your Flash content when the required plugin version is not available. A default expressInstall.swf file is packaged with the project. It also contains the corresponding expressInstall.fla and AS files (in the SRC directory) to let you create your own custom express install experience. Please note that express install will only fire once (the first time that it is invoked), that it is only supported by Flash Player 6.0.65 or higher on Win or Mac platforms, and that it requires a minimal SWF size of 310x137px. 
 	
 {{{
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -207,15 +205,15 @@ First add a unique `id` to the outer `object` tag that defines your Flash conten
 
 === TIPS ===
 
-  * Use the SWFObject HTML and JavaScript generator to help you author your code [ http://code.google.com/p/swfobject/wiki/generator ]
+  * Use the [http://code.google.com/p/swfobject/wiki/generator SWFObject HTML and JavaScript generator] to help you author your code
   * Just repeat steps 1 and 3 to embed multiple SWF files into one HTML page
-  * The easiest way to reference the active `object` element is by using the JavaScript API: `swfobject.getObjectById(objectIdStr)` [ http://code.google.com/p/swfobject/wiki/api ]
+  * The easiest way to reference the active `object` element is by using the [http://code.google.com/p/swfobject/wiki/api JavaScript API]: `swfobject.getObjectById(objectIdStr)
 
 == How to embed Flash Player content using SWFObject _dynamic publishing_ ==
 
 === STEP 1: Create alternative content using standards compliant markup ===
 
-SWFObject's dynamic embed method follows the principle of progressive enhancement [ http://www.adobe.com/devnet/flash/articles/progressive_enhancement.html ] and replaces alternative HTML content for Flash content when enough JavaScript and Flash plug-in support is available. First define your alternative content and label it with an `id`: 
+SWFObject's dynamic embed method follows the principle of progressive enhancement and replaces alternative HTML content for Flash content when enough JavaScript and Flash plug-in support is available. First define your alternative content and label it with an `id`: 
 
 {{{
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -264,7 +262,7 @@ The SWFObject library consists of one external JavaScript file. SWFObject will b
   # width (String, required) specifies the width of your SWF
   # height (String, required) specifies the height of your SWF
   # version (String, required) specifies the Flash player version your SWF is published for (format is: "major.minor.release")
-  # expressInstallSwfurl (String, optional) specifies the URL of your express install SWF and activates Adobe express install [ http://www.adobe.com/cfusion/knowledgebase/index.cfm?id=6a253b75 ]. Please note that express install will only fire once (the first time that it is invoked), that it is only supported by Flash Player 6.0.65 or higher on Win or Mac platforms, and that it requires a minimal SWF size of 310x137px. 
+  # expressInstallSwfurl (String, optional) specifies the URL of your express install SWF and activates [http://www.adobe.com/cfusion/knowledgebase/index.cfm?id=6a253b75 Adobe express install]. Please note that express install will only fire once (the first time that it is invoked), that it is only supported by Flash Player 6.0.65 or higher on Win or Mac platforms, and that it requires a minimal SWF size of 310x137px. 
   # flashvars (Object, optional) specifies your flashvars with name:value pairs 
   # params (Object, optional) specifies your nested `object` element `params` with name:value pairs 
   # attributes (Object, optional) specifies your `object`'s attributes with name:value pairs 
@@ -300,7 +298,7 @@ You can add the following often-used optional attributes [ http://www.w3schools.
   * `styleclass` (used instead of `class`, because this is also an ECMA4 reserved keyword)
   * `align`
 
-You can use the following optional Flash specific `param` elements [ http://www.adobe.com/cfusion/knowledgebase/index.cfm?id=tn_12701 ]:
+You can use the following optional Flash specific `param` elements [(more info) http://www.adobe.com/cfusion/knowledgebase/index.cfm?id=tn_12701]:
   * `play`
   * `loop`
   * `menu`
@@ -312,11 +310,11 @@ You can use the following optional Flash specific `param` elements [ http://www.
   * `base`
   * `swliveconnect`
   * `flashvars`
-  * `devicefont` [ http://www.adobe.com/cfusion/knowledgebase/index.cfm?id=tn_13331 ]
-  * `allowscriptaccess` [ http://www.adobe.com/cfusion/knowledgebase/index.cfm?id=tn_16494 ] and [ http://www.adobe.com/go/kb402975 ]
-  * `seamlesstabbing` [ http://www.adobe.com/support/documentation/en/flashplayer/7/releasenotes.html ]
-  * `allowfullscreen` [ http://www.adobe.com/devnet/flashplayer/articles/full_screen_mode.html ]
-  * `allownetworking` [ http://livedocs.adobe.com/flash/9.0/main/00001079.html ]
+  * `devicefont` [more info http://www.adobe.com/cfusion/knowledgebase/index.cfm?id=tn_13331]
+  * `allowscriptaccess` more info [here http://www.adobe.com/cfusion/knowledgebase/index.cfm?id=tn_16494] and [here http://www.adobe.com/go/kb402975]
+  * `seamlesstabbing` [more info http://www.adobe.com/support/documentation/en/flashplayer/7/releasenotes.html]
+  * `allowfullscreen` [more info http://www.adobe.com/devnet/flashplayer/articles/full_screen_mode.html]
+  * `allownetworking` [more info http://livedocs.adobe.com/flash/9.0/main/00001079.html]
 
 ==== How do you use JavaScript Objects to define your flashvars, params and object's attributes? ====
 
@@ -428,7 +426,7 @@ swfobject.embedSWF("myContent.swf", "myContent", "300", "120", "9.0.0","expressI
 
 === TIPS ===
 
-  * Use the SWFObject HTML and JavaScript generator to help you author your code [ http://code.google.com/p/swfobject/wiki/generator ]
+  * Use the [http://code.google.com/p/swfobject/wiki/generator SWFObject HTML and JavaScript generator] to help you author your code
   * Just repeat steps 1 and 3 to embed multiple SWF files into one HTML page
 
 == SWFObject 1.5 to SWFObject 2 migration tips ==
@@ -437,7 +435,7 @@ swfobject.embedSWF("myContent.swf", "myContent", "300", "120", "9.0.0","expressI
   # It is now preferred to insert all script blocks in the head of your HTML page. Adding your scripts in the body of your page may have visual impact (e.g. flashes of replaced alternative content), because your JavaScript code will be executed in a later stage (the exact impact depends on your implementation)
   # The library itself is now written in lowercase: `swfobject` instead of `SWFObject`
   # Methods can only be accessed via the library (instead via a SWFObject instance in SWFObject 1.5)
-  # The API is entirely different and more elaborate: [ http://code.google.com/p/swfobject/wiki/api ]
+  # The [http://code.google.com/p/swfobject/wiki/api JavaScript API] is entirely different and more elaborate
   # SWFObject 2 replaces your entire alternative HTML content block, including the referenced HTML container element, for Flash content when enough JavaScript and Flash support is available, while SWFObject 1.5 only replaces the content inside the referenced HTML container. When you don't specify an `id` attribute, the `object` element will automatically inherit the `id` of the HTML container element of your alternative content.
 
 == UFO to SWFObject 2 migration tips ==
@@ -456,16 +454,16 @@ There are a number of reasons why we are not supporting this:
 
 == Tutorials (beginner level) ==
 
-  * Detecting Flash Player versions and embedding SWF files with SWFObject 2 [ http://www.adobe.com/devnet/flashplayer/articles/swfobject.html ]
-  * Providing alternative content for SWF files [ http://www.adobe.com/devnet/flashplayer/articles/alternative_content.html ]
-  * Embedding Flash with SWFObject 2.0 (video tutorial) by Lee Brimelow [ http://www.gotoandlearn.com ]
+  * [http://www.adobe.com/devnet/flashplayer/articles/swfobject.html Detecting Flash Player versions and embedding SWF files with SWFObject 2]
+  * [http://www.adobe.com/devnet/flashplayer/articles/alternative_content.html Providing alternative content for SWF files]
+  * [http://www.gotoandlearn.com/play?id=77 Embedding Flash with SWFObject 2.0] (video tutorial) by Lee Brimelow
 
 == Comments ==
 
 The comments functionality on this wiki has been switched off to avoid spam and abuse.
 
 If you have any questions/comments about SWFObject or its documentation, or have problems with an implementation:
-  # Please make sure you have read our FAQ [ http://code.google.com/p/swfobject/wiki/faq ]
-  # Use the SWFObject discussion group [ http://groups.google.com/group/swfobject ]
+  # Please make sure you have read [http://code.google.com/p/swfobject/wiki/faq our FAQ]
+  # Use the [http://groups.google.com/group/swfobject SWFObject discussion group]
 
-If you find any bugs or want to request a future enhancement, you can fill in an issue report on the SWFObject issues page [ http://code.google.com/p/swfobject/issues/list ]
+If you find any bugs or want to request a future enhancement, you can fill in an issue report on the [http://code.google.com/p/swfobject/issues/list SWFObject issues page]
