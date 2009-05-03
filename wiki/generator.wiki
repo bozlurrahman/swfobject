@@ -2,7 +2,7 @@
 
 = SWFObject 2 HTML and JavaScript generator =
 
-You use the [http://www.bobbyvandersluis.com/swfobject/generator/index.html *online* version]  or *download* one of the the ZIP files from the [http://code.google.com/p/swfobject/downloads/list downloads page].
+You use the [http://www.bobbyvandersluis.com/swfobject/generator/index.html online version]  or download one of the the ZIP files from the [http://code.google.com/p/swfobject/downloads/list downloads page].
 
 == version 1.2 (November 28th, 2008) ==
 
