@@ -7,7 +7,7 @@ The Google AJAX Libraries API is a content distribution network and loading arch
 
 What does this mean to you, the average user of SWFObject? It means you no longer need to place a copy of the SWFObject script on your own web server, and can instead link to the copy hosted on Google’s servers.
 
-If you are unfamiliar with the AJAX Library API, you can find more information on the Google code site [ http://code.google.com/apis/ajaxlibs/ ], or continue reading below for some simple examples to get you up and running quickly.
+If you are unfamiliar with the AJAX Library API, you can find more information on the [http://code.google.com/apis/ajaxlibs/ Google code site], or continue reading below for some simple examples to get you up and running quickly.
 
 = Usage =
 
@@ -25,7 +25,7 @@ For developers that like to create mashups using multiple libraries, Google's lo
 {{{
 google.load("swfobject", "2.1");
 }}}
-This method is fully documented here: [ http://code.google.com/apis/ajax/documentation/ ] 
+This method is fully documented [http://code.google.com/apis/ajax/documentation/ here]. 
 
 Finally, Google provides version aliasing for users who want to be automatically upgraded at the risk of breaking when there is a backward incompatible change. So a developer can reference version 2.1 by using just the major version "2".
 {{{
