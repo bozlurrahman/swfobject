@@ -110,7 +110,7 @@ Can be replaced with:
 
 *NOTE:* When publishing for Flash 8 or higher, the use of ExternalInterface is recommended for JavaScript-ActionScript communication over the use of fscommand()
 
-A code example can be found in the SWFObject test suite: [ http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_dynamic_com.html ]
+A [http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_dynamic_com.html code example] can be found in the SWFObject test suite.
 
 == 6. How do I fix a "Line 56: Out of Memory" error, when unloading a page in Internet Explorer using earlier versions of Flash Player 9 and multiple SWFs using ExternalInterface? ==
 
@@ -129,7 +129,7 @@ window.attachEvent("onbeforeunload", fixOutOfMemoryError);
 
 == 7. How do I prevent Internet Explorer from showing an error message when using External Interface and SWF that is inside a `<form>` tag? ==
 
-This technote provides additional info and two solutions: http://www.adobe.com/go/kb400730
+[http://www.adobe.com/go/kb400730 This technote] provides additional info and two solutions.
 
 It is preferred to use the first solution that applied to SWFObject 2 embedding looks like the following:
 {{{
