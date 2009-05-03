@@ -44,7 +44,7 @@
 
 [http://www.flensed.com flensed] by Getify Solutions is a set of javascript+swf tools to spice up your websites with flash goodness
 
-[http://www.gaiaflashframework.com Gaia] Framework for Adobe Flash
+[http://www.gaiaflashframework.com Gaia Framework for Adobe Flash]
 
 [http://www.dncompute.com/blog/2008/06/23/browsercanvas-the-worlds-easiest-way-to-dynamically-resize-flash.html BrowserCanvas] by doesnotcompute for dynamic Flash resizing
 
