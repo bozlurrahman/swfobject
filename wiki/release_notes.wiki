@@ -60,12 +60,12 @@
 
 === SWFObject v2.0 beta6 (November 2nd, 2007) ===
 
-  * Added the `swfobject.getObjectById(objectIdStr)` and `swfobject.getQueryParamValue(paramStr)` methods to the [http://code.google.com/p/swfobject/wiki/api JavaSCript API]
+  * Added the `swfobject.getObjectById(objectIdStr)` and `swfobject.getQueryParamValue(paramStr)` methods to the [http://code.google.com/p/swfobject/wiki/api JavaScript API]
   * Fixed an express install callback related bug (issue 14)
 
 === SWFObject v2.0 beta5 (October 16th, 2007) ===
  
-  * Extended the [ http://code.google.com/p/swfobject/wiki/api JavaScript API] to suit the needs of JavaScript developers 
+  * Extended the [http://code.google.com/p/swfobject/wiki/api JavaScript API] to suit the needs of JavaScript developers 
   * Removed the `fixOutOfMemoryError` method, and added the solution of the issue to the [http://code.google.com/p/swfobject/wiki/faq FAQ for web authors] 
 
 === SWFObject v2.0 beta4 (October 15th, 2007) ===
@@ -102,8 +102,8 @@
 === SWFFix v0.3 public alpha (August 20th, 2007) ===
 
   * The API got an overhaul to optimize the library's usability. It is more simplified and looks like:
-    * SWFFix.registerObject(objectIdStr, swfVersionStr, xiSwfUrlStr); [ We removed the object notation. ]
-    * SWFFix.embedSWF(swfUrlStr, replaceElemIdStr, widthStr, heightStr, swfVersionStr, xiSwfUrlStr, flashvarsObj, parObj, attObj); [ Is new and replaces the previous dynamic embed method. It now also supports express install and is closer to the SWFObject/UFO notation. ]
+    * SWFFix.registerObject(objectIdStr, swfVersionStr, xiSwfUrlStr); We removed the object notation.
+    * SWFFix.embedSWF(swfUrlStr, replaceElemIdStr, widthStr, heightStr, swfVersionStr, xiSwfUrlStr, flashvarsObj, parObj, attObj); Is new and replaces the previous dynamic embed method. It now also supports express install and is closer to the SWFObject/UFO notation.
     * SWFFix.getFlashPlayerVersion();
     * SWFFix.hasFlashPlayerVersion(versionStr);
   * We compressed the library with Dojo Shrinksafe for file size optimization, and created a SRC directory that includes the uncompressed library (for means of development) and express install source files
