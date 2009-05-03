@@ -4,52 +4,52 @@
 
 == Tutorials ==
 
-_Detecting Flash Player versions and embedding SWF files with SWFObject 2_ (beginners tutorial) by Bobby van der Sluis: http://www.adobe.com/devnet/flashplayer/articles/swfobject.html
+[http://www.adobe.com/devnet/flashplayer/articles/swfobject.html Detecting Flash Player versions and embedding SWF files with SWFObject 2] (beginners tutorial) by Bobby van der Sluis
 
-_Providing alternative content for SWF files_ (beginners tutorial) by Bobby van der Sluis: http://www.adobe.com/devnet/flashplayer/articles/alternative_content.html 
+[http://www.adobe.com/devnet/flashplayer/articles/alternative_content.html  Providing alternative content for SWF files] (beginners tutorial) by Bobby van der Sluis
 
-_Embedding Flash with SWFObject 2.0_ (beginners video tutorial) by Lee Brimelow on gotoandlearn.com: http://www.gotoandlearn.com
+[http://www.gotoandlearn.com/play?id=77 Embedding Flash with SWFObject 2.0] (beginners video tutorial) by Lee Brimelow on gotoandlearn.com
 
-_SWFObject 2 and Adobe Flex integration_: http://code.google.com/p/swfobject/wiki/flex
+[http://code.google.com/p/swfobject/wiki/flex SWFObject 2 and Adobe Flex integration] 
 
-_YouTube JavaScript Player API Reference_ recommends using SWFObject to embed YouTube players that will be accessed using the JavaScript API: http://code.google.com/apis/youtube/js_api_reference.html
+[http://code.google.com/apis/youtube/js_api_reference.html YouTube JavaScript Player API Reference] recommends using SWFObject to embed YouTube players that will be accessed using the JavaScript API
 
-_Improved Flash indexing_ on Google Webmaster Central Blog: http://googlewebmastercentral.blogspot.com/2008/06/improved-flash-indexing.html
+[http://googlewebmastercentral.blogspot.com/2008/06/improved-flash-indexing.html Improved Flash indexing] on Google Webmaster Central Blog
 
-_Video tutorial:Google for webmasters_: http://googlewebmastercentral.blogspot.com/2008/10/video-tutorial-google-for-webmasters.html
+[http://googlewebmastercentral.blogspot.com/2008/10/video-tutorial-google-for-webmasters.html Video tutorial:Google for webmasters]
 
-_How to SEO Flash_ by Jonathan Hochman: http://www.hochmanconsultants.com/articles/seo-friendly-flash.shtml
+[http://www.hochmanconsultants.com/articles/seo-friendly-flash.shtml How to SEO Flash] by Jonathan Hochman
 
 == Examples ==
 
-_SWFObject 2 test suite_: http://code.google.com/p/swfobject/wiki/test_suite
+[http://code.google.com/p/swfobject/wiki/test_suite SWFObject 2 test suite]
 
-_Lab: SWFObject_ by Philip Hutchison: http://pipwerks.com/lab/swfobject/
+[http://pipwerks.com/lab/swfobject/ Lab: SWFObject] by Philip Hutchison
 
-_Fullscreen flash with browser scrollbar_: http://blog.wezside.co.za/2008/10/fullscreen-flas.html
+[http://blog.wezside.co.za/2008/10/fullscreen-flas.html Fullscreen flash with browser scrollbar]
 
-_SWFAddress 2.1 + SWFObject 2.1 + Flash CS3 (AS3) Example_ by Adrian Parr: http://www.adrianparr.com/?p=84
+[http://www.adrianparr.com/?p=84 SWFAddress 2.1 + SWFObject 2.1 + Flash CS3 (AS3) Example] by Adrian Parr
 
-_Flash + iPhone: SWFObject 2 + MP4_: http://code.google.com/p/swfobject/wiki/iphone_mp4
+[http://code.google.com/p/swfobject/wiki/iphone_mp4 Flash + iPhone: SWFObject 2 + MP4]
 
-_Using the HTML5 video tag with a Flash fallback_: http://henriksjokvist.net/archive/2009/2/using-the-html5-video-tag-with-a-flash-fallback
+[http://henriksjokvist.net/archive/2009/2/using-the-html5-video-tag-with-a-flash-fallback Using the HTML5 video tag with a Flash fallback]
 
 == Compatible libraries ==
 
-_SWFAddress 2.1_ for deeplinking by Asual: http://www.asual.com/swfaddress/
+[http://www.asual.com/swfaddress/ SWFAddress] for deeplinking by Asual
 
-_AS3.0 MouseWheel on Mac OS X_ by pixelbreaker: http://blog.pixelbreaker.com/flash/as30-mousewheel-on-mac-os-x/
+[http://blog.pixelbreaker.com/flash/as30-mousewheel-on-mac-os-x/ AS3.0 MouseWheel on Mac OS X] by pixelbreaker
 
-_swffit_ by Miller Medeiros for Flash resizing: http://swffit.millermedeiros.com
+[http://swffit.millermedeiros.com swffit] by Miller Medeiros for Flash resizing
 
-_flensed_ by Getify Solutions is a set of javascript+swf tools to spice up your websites with flash goodness: http://www.flensed.com
+[http://www.flensed.com flensed] by Getify Solutions is a set of javascript+swf tools to spice up your websites with flash goodness
 
-_Gaia_ Framework for Adobe Flash: http://www.gaiaflashframework.com
+[http://www.gaiaflashframework.com Gaia] Framework for Adobe Flash
 
-_BrowserCanvas_ by doesnotcompute for dynamic Flash resizing: http://www.dncompute.com/blog/2008/06/23/browsercanvas-the-worlds-easiest-way-to-dynamically-resize-flash.html
+[http://www.dncompute.com/blog/2008/06/23/browsercanvas-the-worlds-easiest-way-to-dynamically-resize-flash.html BrowserCanvas] by doesnotcompute for dynamic Flash resizing
 
-_jQuery SWFObject plugin_ by Jonathan Neal: http://jquery.thewikies.com/swfobject/
+[http://jquery.thewikies.com/swfobject/ jQuery SWFObject plugin] by Jonathan Neal
 
-_swfobject.net_ .NET Webcontrol by Gustavo Arjones: http://www.arjones.net/opensource/swfobject.net/
+[http://www.arjones.net/opensource/swfobject.net/ swfobject.net] .NET Webcontrol by Gustavo Arjones
 
-_Ruby on Rails plugin_ to interface with SWFObject 2.1 by Marc-Andr√© Lafortune: http://github.com/marcandre/swf_fu
+[http://github.com/marcandre/swf_fu Ruby on Rails plugin] to interface with SWFObject 2.1 by Marc-André Lafortune
