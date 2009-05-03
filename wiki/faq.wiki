@@ -63,7 +63,7 @@ When an install gets corrupted (very often caused by corrupt installers) it is i
 
 You can test the by SWFObject detected Flash Player version [http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_api_getflashplayerversion.html here].
 
-The only way to avoid this issue is by uninstalling the Flash Player using the [http://www.adobe.com/go/tn_14157 Adobe uninstaller] and by reinstalling the plug-in via [http://www.adobe.com/go/getflashplayer the Adobe Flash Player installation page].
+The only way to avoid this issue is by uninstalling the Flash Player using the [http://www.adobe.com/go/tn_14157 Adobe uninstaller] and by reinstalling the plug-in via the [http://www.adobe.com/go/getflashplayer Adobe Flash Player installation page].
 
 == 3. Why does `swfobject.getFlashPlayerVersion()` sometimes incorrectly report the installed Flash Player version? ==
 
@@ -76,7 +76,7 @@ Known erroneous versions are (major.minor.release version):
   
 All corrupt installers have been replaced by correct installers. You can avoid this issue by getting the latest version of the Flash Player via the Adobe Flash Player installation page [ http://www.adobe.com/go/getflashplayer ] or via the Adobe Express Install mechanism.
 
-You can test [http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_api_getflashplayerversion.html the by SWFObject detected Flash Player version] versus [http://www.bobbyvandersluis.com/flashembed/testsuite/15_nested_iecc.html the real Flash Player version].
+You can test the [http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_api_getflashplayerversion.html by SWFObject detected Flash Player version] versus the [http://www.bobbyvandersluis.com/flashembed/testsuite/15_nested_iecc.html Flash Player version from within Flash].
 
 == 4. How do I prevent Internet Explorer from crashing and showing an "Operation Aborted" error when a `<base>` tag is defined? ==
 
