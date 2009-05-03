@@ -8,7 +8,7 @@
 
 === SWFObject v2.1 rc2 (June 24th, 2008) ===
 
-  * Fixed a bug in the getQueryParamValue method [ http://code.google.com/p/swfobject/issues/detail?id=115 ]
+  * Fixed a bug in the getQueryParamValue method (issue 115) [ http://code.google.com/p/swfobject/issues/detail?id=115 ]
 
 === SWFObject v2.1 rc1 (June 19th, 2008) ===
 
