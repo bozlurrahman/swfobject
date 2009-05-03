@@ -292,7 +292,7 @@ The SWFObject library consists of one external JavaScript file. SWFObject will b
 
 ==== How can you configure your Flash content? ====
 
-You can add the following often-used optional attributes [ http://www.w3schools.com/tags/tag_object.asp ] to the `object` element:
+You can add the following often-used [http://www.w3schools.com/tags/tag_object.asp optional attributes] to the `object` element:
   * `id` (NOTE: when undefined, the `object` element automatically inherits the `id` from the alternative content container element)
   * `name`
   * `styleclass` (used instead of `class`, because this is also an ECMA4 reserved keyword)
