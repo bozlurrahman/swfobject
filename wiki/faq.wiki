@@ -74,7 +74,7 @@ Known erroneous versions are (major.minor.release version):
   * 8.0.24 exposes 8.0.23
   * 9.0.115 exposes either 9.0.47 or 9.0.64 (Note: only Adobe Express Install installers, affecting Firefox on Mac OS X only)
   
-All corrupt installers have been replaced by correct installers. You can avoid this issue by getting the latest version of the Flash Player via the Adobe Flash Player installation page [ http://www.adobe.com/go/getflashplayer ] or via the Adobe Express Install mechanism.
+All corrupt installers have been replaced by correct installers. You can avoid this issue by getting the latest version of the Flash Player via the [http://www.adobe.com/go/getflashplayer Adobe Flash Player installation page] or via the Adobe Express Install mechanism.
 
 You can test the [http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_api_getflashplayerversion.html by SWFObject detected Flash Player version] versus the [http://www.bobbyvandersluis.com/flashembed/testsuite/15_nested_iecc.html Flash Player version from within Flash].
 
