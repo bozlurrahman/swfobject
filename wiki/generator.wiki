@@ -6,7 +6,7 @@ You use the [http://www.bobbyvandersluis.com/swfobject/generator/index.html onli
 
 == version 1.2 (November 28th, 2008) ==
 
-  * Added two new by Flash Player 10 introduced `wmode` param element values: [http://www.kaourantin.net/2008/05/what-does-gpu-acceleration-mean.html `direct` and `gpu`].
+  * Added two [[http://www.kaourantin.net/2008/05/what-does-gpu-acceleration-mean.html new by Flash Player 10 introduced] `wmode` param element values: `direct` and `gpu`.
   * Updated version numbering
 
 == version 1.1 (February 28th, 2008) ==
