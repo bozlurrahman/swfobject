@@ -441,7 +441,7 @@ swfobject.embedSWF("myContent.swf", "myContent", "300", "120", "9.0.0","expressI
 == UFO to SWFObject 2 migration tips ==
   
   # SWFObject 2 replaces your entire alternative HTML content block, including the referenced HTML container element, for Flash content when enough JavaScript and Flash support is available, while UFO only replaces the content inside the referenced HTML container. When you don't specify an `id` attribute, the `object` element will automatically inherit the `id` of the HTML container element of your alternative content.
-  # UFO's `setcontainercss` feature has not been incorporated in SWFObject 2, however it can easily be replicated by using the SWFObject JavaScript API, see: `swfobject.createCSS(selStr, declStr)` in [ http://code.google.com/p/swfobject/wiki/api ]
+  # UFO's `setcontainercss` feature has not been incorporated in SWFObject 2, however it can easily be replicated by using the [http://code.google.com/p/swfobject/wiki/api SWFObject JavaScript API], see: `swfobject.createCSS(selStr, declStr)`
 
 == Does SWFObject 2 support MIME type application/xhtml+xml? ==
 
