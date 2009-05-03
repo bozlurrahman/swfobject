@@ -14,7 +14,7 @@
 
 == How to compress the swfobject.js v2.1 source file using YUI Compressor? ==
 
-  # Download the latest version of the YUI Compressor from [ http://www.julienlecomte.net/yuicompressor/ ]
+  # Download the latest version of the [http://www.julienlecomte.net/yuicompressor/ YUI Compressor]
   # Unzip the yuicompressor-x.x.x.zip file
   # Open the uncompressed swfobject.js file in a text or code editor and remove the following conditional compiling directives and JavaScript code (line 85-92):
 {{{  
@@ -32,7 +32,7 @@
 {{{
    java -jar /yuicompressorpath/yuicompressor-2.3.5/build/yuicompressor-2.3.5.jar -o /swfobjectpath/swfobject.js /swfobjectpath/src/swfobject.js
   
-   For more info, please read the YUI Compressor documentation [ http://developer.yahoo.com/yui/compressor/ ]
+   For more info, please read the [http://developer.yahoo.com/yui/compressor/ YUI Compressor documentation]
 }}}  
   # Open the compressed swfobject.js file
   # You have to re-add the Internet Explorer conditional compiling directives and the JavaScript code it embodies (this is a proprietary feature test to check e.g. whether a browser is Internet Explorer). For *SWFObject 2.0* paste the following code block:
