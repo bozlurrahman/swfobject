@@ -6,13 +6,13 @@ http://www.bobbyvandersluis.com/swfobject/img/nullplugin.jpg
 
 What a pollution.
 
-The solution is rather simple: avoid the use of the HTML embed element and don’t use any twice-cooked markup [ http://alistapart.com/articles/flashembedcagematch ] (that means that you should ignore the large heap of outdated vendor documentation out there [ http://www.apple.com/quicktime/tutorials/embed2.html ] [ http://www.adobe.com/go/tn_4150 ]), because this doesn’t enable you to use fallback content. Use an HTML object element based approach instead: use SWFObject 2 to embed Adobe Flash content and for other types of plugin content it is best to use the nested objects method [ http://alistapart.com/articles/byebyeembed ], which enables the use of alternative content, which is a best practice. Just make the web a better place.
+The solution is rather simple: avoid the use of the HTML embed element and don't use any [http://alistapart.com/articles/flashembedcagematch twice-cooked markup] (that means that you should ignore the [http://www.apple.com/quicktime/tutorials/embed2.html large heap] of [http://www.adobe.com/go/tn_4150outdated vendor documentation] out there), because this doesn't enable you to use fallback content. Use an HTML object element based approach instead: use SWFObject 2 to embed Adobe Flash content and for other types of plugin content it is best to use the [http://alistapart.com/articles/byebyeembed nested objects method], which enables the use of alternative content, which is a best practice. Just make the web a better place.
 
-Because Flash and QuickTime (which is supported by the iPhone) both support MP4 video, you could even use this approach to offer video content in a cascaded manner. Just make sure to encode your video with the right encoding settings [ http://developer.apple.com/documentation/AppleApplications/Reference/SafariWebContent/CreatingVideoforSafarioniPhone/chapter_9_section_4.html#//apple_ref/doc/uid/TP40006514-SW9 ] [ http://www.adobe.com/devnet/flashplayer/articles/hd_video_flash_player.html ]. 
+Because Flash and QuickTime (which is supported by the iPhone) both support MP4 video, you could even use this approach to offer video content in a cascaded manner. Just make sure to encode your video with the right encoding settings [http://developer.apple.com/documentation/AppleApplications/Reference/SafariWebContent/CreatingVideoforSafarioniPhone/chapter_9_section_4.html#//apple_ref/doc/uid/TP40006514-SW9 1] and [http://www.adobe.com/devnet/flashplayer/articles/hd_video_flash_player.html 2]. 
 
-You can view a demo of this concept here: [ http://www.bobbyvandersluis.com/playground/swfobject/iphone/index.html ]
+You can view a demo of this concept [http://www.bobbyvandersluis.com/playground/swfobject/iphone/index.html here]:
 
-The markup (videoplayer.fla is included in the demo’s directory [ http://www.bobbyvandersluis.com/playground/swfobject/iphone/videoplayer.fla ]):
+The markup (videoplayer.fla is included in the[http://www.bobbyvandersluis.com/playground/swfobject/iphone/videoplayer.fla demo's directory]):
 {{{
 <object id="videoContent" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="320" height="240">
   <param name="movie" value="videoplayer.swf" />
@@ -36,7 +36,7 @@ The markup (videoplayer.fla is included in the demo’s directory [ http://www.b
 
 I used SWFObject 2 static publishing with alternative content (a JPG) and nested an additional object element to target any plugin that has registered itself with media type video/mp4. Et voila, we have video content on the desktop and on the iPhone while using only one media file.
 
-The video was taken on the Flash on the Beach [ http://www.flashonthebeach.com ] 2007 conference in Brighton, UK, and shows a snippet of Mario Klingemann’s [ http://www.quasimondo.com ] brilliant and incredibly funny presentation.
+The video was taken on the [http://www.flashonthebeach.com Flash on the Beach] 2007 conference in Brighton, UK, and shows a snippet of [http://www.quasimondo.com Mario Klingemann]'s brilliant and incredibly funny presentation.
 
 Note: 
 If you use QuickTime to export a mov as an mpeg4 file:
