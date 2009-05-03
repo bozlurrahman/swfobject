@@ -53,17 +53,17 @@ function resizeHandler(event:Event):void {
 *NOTE:* For positioning elements always define a resize handler, because a user can resize the browser window and in Internet Explorer (using the _dynamic publishing method_) the stage size is only available on first load. When reloading or revisiting a page it will initially be 0, causing the Flash player to keep on triggering the stage.resize event until it receives its current value
 
 Three code examples can be found in the SWFObject test suite:
-  * Static publishing: [ http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_fullbrowserflash.html ]
-  * Dynamic publishing: [ http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_dynamic_fullbrowserflash.html ]
-  * Dynamic publishing including min-width, min-height and scrollbars: [ http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_dynamic_fullbrowserflash_adv.html ]
+  * [http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_fullbrowserflash.html Static publishing]
+  * [http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_dynamic_fullbrowserflash.html Dynamic publishing]
+  * [http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_dynamic_fullbrowserflash_adv.html Dynamic publishing including min-width, min-height and scrollbars]
 
 == 2. Why don't I see Flash content in Internet Explorer on Windows while I do have the required minimal Flash Player version installed? ==
 
 When an install gets corrupted (very often caused by corrupt installers) it is impossible to read the Flash Player version number externally using scripting languages. When using dynamic publishing this results in the display of alternative content, with static publishing we let the object element do its job (it decides whether to show Flash content or alternative content based on its built-in MIME type mechanism) which results in the display of Flash content.
 
-You can test the by SWFObject detected Flash Player version here: [ http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_api_getflashplayerversion.html ]
+You can test the by SWFObject detected Flash Player version [http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_api_getflashplayerversion.html here].
 
-The only way to avoid this issue is by uninstalling the Flash Player using the Adobe uninstaller [ http://www.adobe.com/go/tn_14157 ] and by reinstalling the plug-in via the Adobe Flash Player installation page [ http://www.adobe.com/go/getflashplayer ].
+The only way to avoid this issue is by uninstalling the Flash Player using the [http://www.adobe.com/go/tn_14157 Adobe uninstaller] and by reinstalling the plug-in via [http://www.adobe.com/go/getflashplayer the Adobe Flash Player installation page].
 
 == 3. Why does `swfobject.getFlashPlayerVersion()` sometimes incorrectly report the installed Flash Player version? ==
 
@@ -76,7 +76,7 @@ Known erroneous versions are (major.minor.release version):
   
 All corrupt installers have been replaced by correct installers. You can avoid this issue by getting the latest version of the Flash Player via the Adobe Flash Player installation page [ http://www.adobe.com/go/getflashplayer ] or via the Adobe Express Install mechanism.
 
-You can test the by SWFObject detected Flash Player version here: [ http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_api_getflashplayerversion.html ] versus the real Flash Player version: [ http://www.bobbyvandersluis.com/flashembed/testsuite/15_nested_iecc.html ].
+You can test [http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_api_getflashplayerversion.html the by SWFObject detected Flash Player version] versus [http://www.bobbyvandersluis.com/flashembed/testsuite/15_nested_iecc.html the real Flash Player version].
 
 == 4. How do I prevent Internet Explorer from crashing and showing an "Operation Aborted" error when a `<base>` tag is defined? ==
 
@@ -154,8 +154,8 @@ An object tag cannot be placed inside another object tag.
 
 You can avoid this error by using one of the following workarounds (note: which workaround will be best will depend on your specific situation):
   # Configure IIS not to serve .htm and .html files as ASP
-  # Use a server-side include, as explained here: http://seanys.com/2007/09/10/asp-flash-nested-objects/
-  # Create the object tags dynamically, using 'Update - The Dynamic Approach' from: http://juicystudio.com/article/object-paranoia.php
+  # Use a server-side include, as explained [http://seanys.com/2007/09/10/asp-flash-nested-objects/ here]
+  # Create the object tags dynamically, the 'Update - The Dynamic Approach' as explained in [http://juicystudio.com/article/object-paranoia.php this article]
   
 == 9. How can I pass URIs or HTML code as a value using _flashvars_? ==
 
@@ -174,7 +174,7 @@ You can also escape these characters manually by using:
   * `%3D` instead of `=` 
   * `%26` instead of `&`
 
-You can find more info about encoding characters in this technote: http://www.adobe.com/go/tn_14143
+You can find more info about encoding characters in [http://www.adobe.com/go/tn_14143 this technote]
 
 == 10. How can I center a SWF? ==
 
@@ -202,7 +202,7 @@ You can use CSS to center your `object` element. Which styles to use depends on 
 </html>
 }}}
 
-or: [ http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_dynamic_centered_inline.html ]
+or view the [http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_dynamic_centered_inline.html example from our test suite].
 
 {{{
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -226,7 +226,7 @@ or: [ http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_dynamic_cente
 </html>
 }}}
 
-or: [ http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_dynamic_centered_block.html ]
+or view the [http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_dynamic_centered_block.html example from our test suite].
 
 == 11. How can I avoid that extra whitespace is created underneath my SWF? ==
 
@@ -246,8 +246,7 @@ The Opera web browser on Nintendo Wii displays both Flash content embedded with 
 
 The Netfront browser on Sony PSP and older versions of PS3 will only display Flash content when using static publishing. The reason for this is that it's JavaScript support is extremely limited, so that the SWFObject 2 script will never be executed. Please also note that it currently only supports Flash Player 6 content and that Adobe Express Install is not supported.
 
-Sony recently updated the Playstation 3 browser. Now it supports Flash 9 and SWFObject 2. For more info: [ 
-http://www.us.playstation.com/PS3/About/SystemUpdate ]
+Sony recently updated the Playstation 3 browser. Now it supports [http://www.us.playstation.com/PS3/About/SystemUpdate Flash 9 and SWFObject 2].
 
 == 13. Why doesn't the `salign` `param` element work in Firefox or Safari? ==
 
@@ -257,9 +256,9 @@ Also the order of certain `param` elements are important, e.g. the `scale` param
 
 == 14. Why can't I see Flash content in Firefox 3? ==
 
-Do you have the Adblock extension [ https://addons.mozilla.org/en-US/firefox/addon/10 ] installed? In Firefox 3 Adblock incorrectly blocks Flash content (the `object` tag only, so that's why content embedded with SWFObject 1.5 does work, because it uses the `embed` tag), even if your entire page is whitelisted. In this case just disable Flash block (by disabling the extension, don't use Adblock's disable feature, because then it still won't show Flash content). Please note that the development of and support for Adblock has been discontinued.  
+Do you have the [https://addons.mozilla.org/en-US/firefox/addon/10 Adblock extension ] installed? In Firefox 3 Adblock incorrectly blocks Flash content (the `object` tag only, so that's why content embedded with SWFObject 1.5 does work, because it uses the `embed` tag), even if your entire page is whitelisted. In this case just disable Flash block (by disabling the extension, don't use Adblock's disable feature, because then it still won't show Flash content). Please note that the development of and support for Adblock has been discontinued.  
 
-Adblock Plus 1.0 [ https://addons.mozilla.org/nl/firefox/addon/1865 ] should be a good alternative (please update your extension if you run an older version).
+[https://addons.mozilla.org/nl/firefox/addon/1865 Adblock Plus 1.0] should be a good alternative (please update your extension if you run an older version).
   
 == 15. Why do I see a dotted border around my SWF when using Firefox 3 on Windows and wmode transparent or opaque? ==
 
@@ -278,9 +277,7 @@ The following style rule in the head of your web page should solve this issue:
 == 16. Why does Firefox load my SWF twice? ==
 
 Firefox 3 has a known issue that sometimes causes a swf to be 'double initialized'. The problem appears to be fixed in their codebase, but has not been released yet. See the following bugs for more details:
-https://bugzilla.mozilla.org/show_bug.cgi?id=438830
-and
-https://bugzilla.mozilla.org/show_bug.cgi?id=445599
+[https://bugzilla.mozilla.org/show_bug.cgi?id=438830 bug 438830] and [https://bugzilla.mozilla.org/show_bug.cgi?id=445599 bug 445599].
 
 Or, if you have "Disable cache" selected in your Firefox Web Developer Toolbar extension a double load will occur.
 
@@ -300,9 +297,9 @@ For `dynamic publishing` you can enable/disable JavaScript by:
  
 == 18. Where can I find older Flash Player versions, e.g. to test Adobe Express Install? ==
   
-  * Flash Player uninstaller: http://www.adobe.com/go/tn_14157
-  * Archived Flash Player versions for testing purposes: http://www.adobe.com/go/tn_14266
-  * The latest released version of Flash Player: http://www.adobe.com/go/getflashplayer
+  * [http://www.adobe.com/go/tn_14157 Flash Player uninstaller]
+  * [http://www.adobe.com/go/tn_14266 Archived Flash Player versions for testing purposes]
+  * [http://www.adobe.com/go/getflashplayer The latest released version of Flash Player]
   
 When you run an archived Flash Player on Intel-based Macintosh computers please keep in mind that there are two types of Mac installers:
   * A universal binary installer includes both a version of Flash Player that runs natively on Intel-based Macs and a PowerPC version.
@@ -315,15 +312,15 @@ The Flash Player version as installed by:
   * Safari 3: Click "Help > Installed Plug-ins" in the main menu and look for the "Shockwave Flash" entry
 
 The Flash Player version as detected by:
-  * SWFObject 2: http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_api_getflashplayerversion.html
-  * Flash (using HTML `object` element only): http://www.bobbyvandersluis.com/flashembed/testsuite/15_nested_iecc.html
-  * Flash (using HTML `embed` element only): http://www.bobbyvandersluis.com/flashembed/testsuite/21_embed.html
+  * [http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_api_getflashplayerversion.html SWFObject 2] 
+  * [http://www.bobbyvandersluis.com/flashembed/testsuite/15_nested_iecc.html Flash (using HTML `object` element only)]
+  * [http://www.bobbyvandersluis.com/flashembed/testsuite/21_embed.html Flash (using HTML `embed` element only)]
 
 == 20. Why won't Flash Player 10 display my SWF file? ==
 
 A new security feature in Flash Player 10 causes SWF's not to be displayed when a HTTP server sends the following response: `Content-Disposition: attachment`.
 
-More info on this issue and how to resolve it can be found here: http://www.adobe.com/devnet/flashplayer/articles/fplayer10_security_changes_02.html#head32
+More info on this issue and how to resolve it can be found [http://www.adobe.com/devnet/flashplayer/articles/fplayer10_security_changes_02.html#head32 here].
 
 == 21. Why do `stage.stageWidth` and `stage.stageHeight` return `0` in Firefox or Internet Explorer when using dynamic publishing? ==
 
@@ -348,6 +345,6 @@ function resizeHandler(event:Event):void {
 
 The comments functionality on this wiki has been switched off to avoid spam and abuse.
 
-If you have any questions/comments about SWFObject or its documentation, or have problems with an implementation, please use the SWFObject discussion group [ http://groups.google.com/group/swfobject ]
+If you have any questions/comments about SWFObject or its documentation, or have problems with an implementation, please use the [http://groups.google.com/group/swfobject SWFObject discussion group].
 
-If you find any bugs or want to request a future enhancement, you can fill in an issue report on the SWFObject issues page [ http://code.google.com/p/swfobject/issues/list ]
+If you find any bugs or want to request a future enhancement, you can fill in an issue report on the [http://code.google.com/p/swfobject/issues/list SWFObject issues page].
