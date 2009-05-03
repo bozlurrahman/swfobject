@@ -11,7 +11,7 @@ You use the [http://www.bobbyvandersluis.com/swfobject/generator/index.html onli
 
 == version 1.1 (February 28th, 2008) ==
 
-  * Added the [http://www.adobe.com/go/kb402975 `sameDomain` value] to the `allowScriptAccess` parameter.
+  * Added the [http://www.adobe.com/go/kb402975 sameDomain value] to the `allowScriptAccess` parameter.
   * Updated the Adobe AIR version (now: Adobe AIR 1.0)
   
 == version 1.0 (February 15th, 2008) ==
