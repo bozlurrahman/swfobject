@@ -50,6 +50,6 @@
 
 [http://jquery.thewikies.com/swfobject/ jQuery SWFObject plugin] by Jonathan Neal
 
-[http://www.arjones.net/opensource/swfobject.net/ swfobject.net] .NET Webcontrol by Gustavo Arjones
+[http://www.arjones.net/opensource/swfobject.net/ swfobject.net .NET Webcontrol] by Gustavo Arjones
 
 [http://github.com/marcandre/swf_fu Ruby on Rails plugin] to interface with SWFObject 2.1 by Marc-Andre Lafortune
