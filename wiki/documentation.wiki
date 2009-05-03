@@ -105,13 +105,13 @@ Required `param` element:
 
 ==== How can you use HTML to configure your Flash content? ====
 
-You can add the following often-used optional attributes [ http://www.w3schools.com/tags/tag_object.asp ] to the `object` element:
+You can add the following often-used [http://www.w3schools.com/tags/tag_object.asp optional attributes] to the `object` element:
   * `id`
   * `name`
   * `class`
   * `align`
 
-You can use the following optional Flash specific `param` elements [more info http://www.adobe.com/cfusion/knowledgebase/index.cfm?id=tn_12701]:
+You can use the following optional Flash specific `param` elements [http://www.adobe.com/cfusion/knowledgebase/index.cfm?id=tn_12701 (more info)]:
   * `play`
   * `loop`
   * `menu`
@@ -123,11 +123,11 @@ You can use the following optional Flash specific `param` elements [more info ht
   * `base`
   * `swliveconnect`
   * `flashvars`
-  * `devicefont` [more info http://www.adobe.com/cfusion/knowledgebase/index.cfm?id=tn_13331]
-  * `allowscriptaccess` more info [here http://www.adobe.com/cfusion/knowledgebase/index.cfm?id=tn_16494] and [here http://www.adobe.com/go/kb402975]
-  * `seamlesstabbing` [more info http://www.adobe.com/support/documentation/en/flashplayer/7/releasenotes.html]
-  * `allowfullscreen` [more info http://www.adobe.com/devnet/flashplayer/articles/full_screen_mode.html]
-  * `allownetworking` [more info http://livedocs.adobe.com/flash/9.0/main/00001079.html]
+  * `devicefont` [http://www.adobe.com/cfusion/knowledgebase/index.cfm?id=tn_13331 (more info)]
+  * `allowscriptaccess` (more info [http://www.adobe.com/cfusion/knowledgebase/index.cfm?id=tn_16494 here] and [http://www.adobe.com/go/kb402975 here])
+  * `seamlesstabbing` [http://www.adobe.com/support/documentation/en/flashplayer/7/releasenotes.html (more info)]
+  * `allowfullscreen` [http://www.adobe.com/devnet/flashplayer/articles/full_screen_mode.html (more info)]
+  * `allownetworking` [http://livedocs.adobe.com/flash/9.0/main/00001079.html (more info)]
 
 ==== Why should you use alternative content? ====
 
@@ -298,7 +298,7 @@ You can add the following often-used optional attributes [ http://www.w3schools.
   * `styleclass` (used instead of `class`, because this is also an ECMA4 reserved keyword)
   * `align`
 
-You can use the following optional Flash specific `param` elements [(more info) http://www.adobe.com/cfusion/knowledgebase/index.cfm?id=tn_12701]:
+You can use the following optional Flash specific `param` elements [http://www.adobe.com/cfusion/knowledgebase/index.cfm?id=tn_12701 (more info)]:
   * `play`
   * `loop`
   * `menu`
@@ -310,11 +310,11 @@ You can use the following optional Flash specific `param` elements [(more info) 
   * `base`
   * `swliveconnect`
   * `flashvars`
-  * `devicefont` [more info http://www.adobe.com/cfusion/knowledgebase/index.cfm?id=tn_13331]
-  * `allowscriptaccess` more info [here http://www.adobe.com/cfusion/knowledgebase/index.cfm?id=tn_16494] and [here http://www.adobe.com/go/kb402975]
-  * `seamlesstabbing` [more info http://www.adobe.com/support/documentation/en/flashplayer/7/releasenotes.html]
-  * `allowfullscreen` [more info http://www.adobe.com/devnet/flashplayer/articles/full_screen_mode.html]
-  * `allownetworking` [more info http://livedocs.adobe.com/flash/9.0/main/00001079.html]
+  * `devicefont` [http://www.adobe.com/cfusion/knowledgebase/index.cfm?id=tn_13331 (more info)]
+  * `allowscriptaccess` (more info [http://www.adobe.com/cfusion/knowledgebase/index.cfm?id=tn_16494 here] and [http://www.adobe.com/go/kb402975 here])
+  * `seamlesstabbing` [http://www.adobe.com/support/documentation/en/flashplayer/7/releasenotes.html (more info)]
+  * `allowfullscreen` [http://www.adobe.com/devnet/flashplayer/articles/full_screen_mode.html (more info)]
+  * `allownetworking` [http://livedocs.adobe.com/flash/9.0/main/00001079.html (more info)]
 
 ==== How do you use JavaScript Objects to define your flashvars, params and object's attributes? ====
 
