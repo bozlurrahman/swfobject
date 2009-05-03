@@ -174,7 +174,7 @@ You can also escape these characters manually by using:
   * `%3D` instead of `=` 
   * `%26` instead of `&`
 
-You can find more info about encoding characters in [http://www.adobe.com/go/tn_14143 this technote]
+You can find more info about encoding characters in [http://www.adobe.com/go/tn_14143 this technote].
 
 == 10. How can I center a SWF? ==
 
