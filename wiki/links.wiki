@@ -52,4 +52,6 @@
 
 [http://www.arjones.net/opensource/swfobject.net/ swfobject.net .NET Webcontrol] by Gustavo Arjones
 
+[http://gdnswfobject.codeplex.com/ ASP.NET server control that uses SWFObject] by GrannetDotNet
+
 [http://github.com/marcandre/swf_fu Ruby on Rails plugin] to interface with SWFObject 2.1 by Marc-Andre Lafortune
