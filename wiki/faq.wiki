@@ -26,6 +26,8 @@
   # How do I know which Flash Player version is installed and which version is detected by SWFObject?
   # Why won't Flash Player 10 display my SWF file?
   # Why do `stage.stageWidth` and `stage.stageHeight` return `0` in Firefox or Internet Explorer when using dynamic publishing?
+  # Why does Firefox report Permission denied to call method Location.toString in the error console?
+  # Why does Internet Explorer 6 and 7 show the error message J.parentNode is null or not an object?
 
 == 1. How can I create a SWF that will encompass 100% of the browser window?  ==
 
@@ -340,6 +342,14 @@ function resizeHandler(event:Event):void {
   }
 }
 }}}
+
+== 22. Why does Firefox report Permission denied to call method Location.toString in the error console? ==
+
+When you create an iframe on a page that resides on a different domain than the parent page you will get this error which is [http://bugs.adobe.com/jira/browse/FP-561 caused by the Flash plug-in]. Adding a cross-domain file as described [http://www.west-wind.com/WebLog/posts/408827.aspx here] will solve the issue.
+
+== 23. Why does Internet Explorer 6 and 7 show the error message J.parentNode is null or not an object? ==
+
+This happens when the SWFObject library (versions 2.0 or 2.1) are included more than once on the same web page. To avoid this, make sure that your swfobject.js file is only included once. SWFObject 2.2 will include a fix for this issue.
 
 == Comments ==
 
