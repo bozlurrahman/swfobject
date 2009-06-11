@@ -15,7 +15,7 @@ Translations:
 SWFObject 2:
   * Offers two optimized Flash Player embed methods; a markup based approach and a method that relies on JavaScript
   * Offers a [http://code.google.com/p/swfobject/wiki/api JavaScript API] that aims to provide a complete tool set for embedding SWF files and retrieving Flash Player related information
-  * Utilizes only one small JavaScript file (9.5Kb / GZIPed: 3.8Kb)
+  * Utilizes only one small JavaScript file (10Kb / GZIPed: 3.9Kb)
   * Is the successor of [http://blog.deconcept.com/swfobject/ SWFObject 1.5], [http://www.bobbyvandersluis.com/ufo/ UFO] and the [http://www.adobe.com/products/flashplayer/download/detection_kit/ Adobe Flash Player Detection Kit]
   * Intends to unify all existing Flash Player embed methods and provide a new standard for embedding Adobe Flash Player content
 
@@ -36,9 +36,7 @@ SWFObject 2 primarily uses JavaScript to overcome issues that cannot be solved b
   * Detects the Flash Player version and determines whether Flash content or alternative content should be shown, to avoid that outdated Flash plug-ins break Flash content
   * Offers functionality to revert to alternative content in case of an outdated plug-in by means of a DOM manipulation (Note: if no Flash plug-in is installed the HTML `object` element automatically falls back to its nested alternative content) 
   * Offers the option to use Adobe Express Install to download the latest Flash Player
-  * Solves the issue that older Webkit engines ignore the `object` element's nested `param` elements by using the proprietary `embed` element instead (Note: this is the only place where proprietary markup is used and will be phased out in a future version)
-  * Offers the option to publish Flash Player content with JavaScript and hereby avoid possible click-to-activate mechanisms
-  * Offers an elaborate JavaScript API to perform common Flash Player and Flash content related tasks 
+  * Offers a JavaScript API to perform common Flash Player and Flash content related tasks 
 
 == Should I use the static or dynamic publishing method? ==
 
@@ -48,15 +46,16 @@ SWFObject 2 offers two distinct methods to embed Flash Player content:
 
 The advantages of the *static publishing method* are:
   # The actual authoring of standards compliant markup is promoted
+  # Best embed performance
   # The mechanism of embedding Flash content does not rely on a scripting language, so your Flash content can reach a significant bigger audience:
     * If you have the Flash plug-in installed, but have JavaScript disabled or a use a browser that doesn't support JavaScript, you will still be able to see your Flash content
     * Flash will now also run on a device like Sony PSP, which has very poor JavaScript support
     * Automated tools like RSS readers are able to pick up Flash content 
 
 The advantages of the *dynamic publishing method* are:
+  # It integrates very well with scripted applications and enables the use of dynamic variables (flashvars)
   # It avoids _click-to-activate mechanisms_ to activate _active content_ in Internet Explorer 6/7 and Opera 9+. Please note that Microsoft [http://blogs.msdn.com/ie/archive/2007/11/08/ie-automatic-component-activation-changes-to-ie-activex-update.aspx has phased out most active content] from its Internet Explorer browsers
-  # It integrates very well with scripted applications  
- 
+
 == How to embed Flash Player content using SWFObject _static publishing_ ==
 
 === STEP 1: Embed both Flash content and alternative content using standards compliant markup ===
@@ -168,9 +167,9 @@ The SWFObject library consists of one external JavaScript file. SWFObject will b
 
 First add a unique `id` to the outer `object` tag that defines your Flash content. Second add the `swfobject.registerObject` method:
   # The first argument (String, required) specifies the `id` used in the markup.
-  # The second argument (String, required) specifies the Flash player version your content is published for. It activates the Flash version detection for a SWF to determine whether to show Flash content or force alternative content by doing a DOM manipulation. While Flash version numbers normally consist of major.minor.release.build, SWFObject only looks at the first 3 numbers, so both "WIN 9,0,18,0" (IE) or "Shockwave Flash 9 r18" (all other browsers) will translate to "9.0.18".
+  # The second argument (String, required) specifies the Flash player version your content is published for. It activates the Flash version detection for a SWF to determine whether to show Flash content or force alternative content by doing a DOM manipulation. While Flash version numbers normally consist of major.minor.release.build, SWFObject only looks at the first 3 numbers, so both "WIN 9,0,18,0" (IE) or "Shockwave Flash 9 r18" (all other browsers) will translate to "9.0.18". If you only want to test for a major version you can omit the minor and release numbers, like "9" instead of "9.0.0".
   # The third argument (String, optional) can be used to activate [http://www.adobe.com/cfusion/knowledgebase/index.cfm?id=6a253b75 Adobe express install] and specifies the URL of your express install SWF file. Express install displays a standardized Flash plugin download dialog instead of your Flash content when the required plugin version is not available. A default expressInstall.swf file is packaged with the project. It also contains the corresponding expressInstall.fla and AS files (in the SRC directory) to let you create your own custom express install experience. Please note that express install will only fire once (the first time that it is invoked), that it is only supported by Flash Player 6.0.65 or higher on Win or Mac platforms, and that it requires a minimal SWF size of 310x137px. 
-	
+  # The fourth argument (JavaScript function, optional) can be used to define a callback function that is called on both success or failure of embedding a SWF file (see [http://code.google.com/p/swfobject/wiki/api API documentation])
 {{{
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
@@ -180,7 +179,7 @@ First add a unique `id` to the outer `object` tag that defines your Flash conten
     <script type="text/javascript" src="swfobject.js"></script>
 
     <script type="text/javascript">
-    swfobject.registerObject("myId", "9.0.0", "expressInstall.swf");
+    swfobject.registerObject("myId", "9.0.115", "expressInstall.swf");
     </script>
 
   </head>
@@ -256,16 +255,17 @@ The SWFObject library consists of one external JavaScript file. SWFObject will b
 
 === STEP 3: Embed your SWF with JavaScript ===
 
-`swfobject.embedSWF(swfUrl, id, width, height, version, expressInstallSwfurl, flashvars, params, attributes)` has five required and four optional arguments:
+`swfobject.embedSWF(swfUrl, id, width, height, version, expressInstallSwfurl, flashvars, params, attributes, callbackFn)` has five required and five optional arguments:
   # swfUrl (String, required) specifies the URL of your SWF
   # id (String, required) specifies the `id` of the HTML element (containing your alternative content) you would like to have replaced by your Flash content
   # width (String, required) specifies the width of your SWF
   # height (String, required) specifies the height of your SWF
-  # version (String, required) specifies the Flash player version your SWF is published for (format is: "major.minor.release")
+  # version (String, required) specifies the Flash player version your SWF is published for (format is: "major.minor.release" or "major")
   # expressInstallSwfurl (String, optional) specifies the URL of your express install SWF and activates [http://www.adobe.com/cfusion/knowledgebase/index.cfm?id=6a253b75 Adobe express install]. Please note that express install will only fire once (the first time that it is invoked), that it is only supported by Flash Player 6.0.65 or higher on Win or Mac platforms, and that it requires a minimal SWF size of 310x137px. 
   # flashvars (Object, optional) specifies your flashvars with name:value pairs 
   # params (Object, optional) specifies your nested `object` element `params` with name:value pairs 
-  # attributes (Object, optional) specifies your `object`'s attributes with name:value pairs 
+  # attributes (Object, optional) specifies your `object`'s attributes with name:value pairs
+  # callbackFn (JavaScript function, optional) can be used to define a callback function that is called on both success or failure of embedding a SWF file (see [http://code.google.com/p/swfobject/wiki/api API documentation])
 
 *NOTE:* You can omit the optional parameters, as long as you don't break the parameter order. If you don't want to use an optional parameter, but would like to use a following optional parameter, you can simply pass `false` as its value. For the `flashvars`, `params` and `attributes` JavaScript Objects, you can also pass an empty object instead: `{}`. 
 
