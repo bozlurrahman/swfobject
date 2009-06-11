@@ -2,13 +2,7 @@
 
 = SWFObject 2.2 beta - What's new? =
 
-After five months of development we are happy to announce SWFObject 2.2 beta. This page will give you an overview of all new features and changes.
-
-Please give it a good test drive and help us test SWFObject 2.2 beta, for example you can test SWFObject 2.2 beta with existing projects or just browse through the [http://www.bobbyvandersluis.com/swfobject/testsuite_2_2/ SWFObject 2.2 test suite].
-
-If you have any questions, please use the [http://groups.google.com/group/swfobject SWFObject 2 discussion group]. When you find a bug, please log it in the [http://code.google.com/p/swfobject/issues/list SWFObject 2 Issues list].
-
-Please note that SWFObject 2.2 beta is solely intended for testing purposes and to give you a sneak peak of what is coming. It may still contain bugs or defects and should not be used for production purposes.
+After almost a year of development and testing we are happy to release SWFObject 2.2. This page will give you an overview of all new features and changes.
 
 == 1. Improved DomContentLoaded emulation for Internet Explorer ==
 
@@ -117,4 +111,21 @@ swfobject.addLoadEvent(test);
 
 We removed all conditional compilation directives as a proprietary feature test for Internet Explorer, so now it is easier for developers to create their own minified SWFObject library.
 
-== 10. We fixed a series of minor bugs ==
+== 10. The option to switch of SWFObject's default show/hide behavior ==
+
+Developers now have the option to display alternative content (e.g. background image) while waiting for the swf file to load by switching off SWFObject's default hide/show behavior.
+
+Just call the `swfobject.switchOffAutoHideShow()` method after you have included SWFObject, but before any `swfobject.registerObject()` or `swfobject.embedSWF()` calls, like:
+
+An example:
+{{{
+<script type="text/javascript" src="swfobject.js"></script>
+<script type="text/javascript">
+swfobject.switchOffAutoHideShow();
+swfobject.embedSWF("test6.swf", "myContent", "300", "120", "9.0.0", "expressInstall.swf");
+</script>
+}}}
+
+== And much more ==
+
+We fixed a series of minor bugs, made small improvements to existing methods and made a few tweaks to ensure better HTML5 compatibility.
