@@ -17,7 +17,7 @@ SWFObject 2 contains an API that allows JavaScript developers to reuse SWFObject
   * `xiSwfUrlStr` (String, optional) can be used to activate [http://www.adobe.com/cfusion/knowledgebase/index.cfm?id=6a253b75 Adobe express install] and specifies the URL of your express install SWF file. Express install displays a standardized Flash plugin download dialog instead of your Flash content when the required plugin version is not available. A default expressInstall.swf file is packaged with the project. It also contains the corresponding expressInstall.fla and AS files (in the SRC directory) to let you create your own custom express install experience. Please note that express install will only fire once (the first time that it is invoked), that it is only supported by Flash Player 6.0.65 or higher on Win or Mac platforms, and that it requires a minimal SWF size of 310x137px. 
   * `callbackFn` (JavaScript function, optional) can be used to define a callback function that is called on both success or failure of embedding a SWF file (SWFObject 2.2+)
  
- Where callbackFn is a JavaScript function that has an event object as a parameter:
+ Where `callbackFn` is a JavaScript function that has an event object as a parameter:
 {{{
 function callbackFn(e) { ... }
 }}}
@@ -25,11 +25,12 @@ function callbackFn(e) { ... }
  Properties of this event object are:
   * `success`, Boolean to indicate whether the embedding of a SWF was success or not
   * `id`, String indicating the ID used in swfobject.registerObject
-  * `ref`, HTML object element reference (returns undefined when success=false) 
+  * `ref`, HTML object element reference (returns `undefined` when `success=false`) 
  
  This method is explained in "How to embed Flash Player content using SWFObject static publishing" of the [http://code.google.com/p/swfobject/wiki/documentation SWFObject documentation page].
 
  [http://www.bobbyvandersluis.com/swfobject/testsuite_2_2/test.html Basic static publishing example]
+ 
  [http://www.bobbyvandersluis.com/swfobject/testsuite_2_2/test2.html Basic static publishing example with callback]
 
 === `swfobject.getObjectById(objectIdStr)` ===
@@ -73,7 +74,7 @@ if (obj) {
   * `attributes` (Object, optional) specifies your `object`'s attributes with name:value pairs
   * `callbackFn` (JavaScript function, optional) can be used to define a callback function that is called on both success or failure of embedding a SWF file (SWFObject 2.2+)
  
- Where callbackFn is a JavaScript function that has an event object as a parameter:
+ Where `callbackFn` is a JavaScript function that has an event object as a parameter:
 {{{
 function callbackFn(e) { ... }
 }}}
@@ -81,11 +82,12 @@ function callbackFn(e) { ... }
  Properties of this event object are:
   * `success`, Boolean to indicate whether the embedding of a SWF was success or not
   * `id`, String indicating the ID used in swfobject.registerObject
-  * `ref`, HTML object element reference (returns undefined when success=false) 
+  * `ref`, HTML object element reference (returns `undefined` when `success=false`) 
   
   This method is explained in "How to embed Flash Player content using SWFObject dynamic publishing" of the [http://code.google.com/p/swfobject/wiki/documentation SWFObject documentation page]
   
  [http://www.bobbyvandersluis.com/swfobject/testsuite_2_2/test_dynamic.html Basic dynamic publishing example]
+ 
  [http://www.bobbyvandersluis.com/swfobject/testsuite_2_2/test_dynamic2.html Basic dynamic publishing example with callback]
  
 === `swfobject.getFlashPlayerVersion()` ===
@@ -206,12 +208,12 @@ swfobject.removeSWF("myContent");
 
  [http://www.bobbyvandersluis.com/swfobject/testsuite_2_2/test_api_create_remove.html Sample page]
 
-=== `swfobject.createCSS(selStr, declStr)` ===
+=== `swfobject.createCSS(selStr, declStr, mediaStr, newStyleBoolean)` ===
 
- Exposes SWFObject's internal cross-browser method to create a dynamic stylesheet (for media type `screen` only). It's most important feature is that it can be called before the DOM of a page is loaded. Based on [http://www.bobbyvandersluis.com/articles/dynamic_css/index.html a solution] by Bobby van der Sluis:
+ Exposes SWFObject's internal cross-browser method to create a dynamic stylesheet. It's most important feature is that it can be called before the DOM of a page is loaded. Based on [http://www.bobbyvandersluis.com/articles/dynamic_css/index.html a solution] by Bobby van der Sluis:
   * `selStr` (String, required) represents a CSS selector
   * `declStr` (String, required) represents a CSS declaration
-  * `mediaStr` (String, optional) to indicate the CSS media type (SWFObject 2.2+)
+  * `mediaStr` (String, optional) to indicate the CSS media type (media type `scree` is the default, SWFObject 2.2+)
   * `newStyleBoolean` (Boolean, optional) to indicate whether a new dynamic style element should be appended to the head of the HTML document, or that SWFObject should reuse a possible earlier created dynamic style element (default, SWFObject 2.2+)
 
  From SWFObject 2.2 onwards this method will by default append new dynamic styles to an earlier created dynamic style sheet (if available).
@@ -227,6 +229,7 @@ if (swfobject.hasFlashPlayerVersion("6.0.0")) {
 }}}
 
  [http://www.bobbyvandersluis.com/swfobject/testsuite_2_2/test_api_createcss.html Basic example page]
+ 
  [http://www.bobbyvandersluis.com/swfobject/testsuite_2_2/test_api_createcss2.html Advanced example page]
 
 === `swfobject.getQueryParamValue(paramStr)` ===
@@ -262,6 +265,10 @@ swfobject.switchOffAutoHideShow();
 swfobject.embedSWF("test.swf", "myContent", "300", "120", "9", "expressInstall.swf");
 </script>
 }}}
+
+ [http://www.bobbyvandersluis.com/swfobject/testsuite_2_2/test3.html Basic static publishing example page]
+ 
+ [http://www.bobbyvandersluis.com/swfobject/testsuite_2_2/test_dynamic3.html Basic dynamic publishing example page]
 
 === `swfobject.showExpressInstall(att, par, replaceElemIdStr, callbackFn)` ===
 
