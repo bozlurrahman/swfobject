@@ -111,7 +111,7 @@ swfobject.addLoadEvent(test);
 
 We removed all conditional compilation directives as a proprietary feature test for Internet Explorer, so now it is easier for developers to create their own minified SWFObject library.
 
-== 10. The option to switch of SWFObject's default show/hide behavior ==
+== 10. The option to switch off SWFObject's default show/hide behavior ==
 
 Developers now have the option to display alternative content (e.g. background image) while waiting for the swf file to load by switching off SWFObject's default hide/show behavior.
 
