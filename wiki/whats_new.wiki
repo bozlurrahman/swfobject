@@ -1,6 +1,6 @@
-#summary SWFObject 2.2 beta - What's new?
+#summary SWFObject 2.2 - What's new?
 
-= SWFObject 2.2 beta - What's new? =
+= SWFObject 2.2 - What's new? =
 
 After almost a year of development and testing we are happy to release SWFObject 2.2. This page will give you an overview of all new features and changes.
 
