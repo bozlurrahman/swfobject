@@ -253,6 +253,8 @@ var attributes = {};
 swfobject.embedSWF("myContent.swf", "altContent", "100%", "100%", "9.0.0","expressInstall.swf", flashvars, params, attributes);
 }}}
 
+ [http://www.bobbyvandersluis.com/swfobject/testsuite_2_2/test_api_getqueryparamvalue2.html?abc=123&foo=bar Example page]
+
 === `swfobject.switchOffAutoHideShow()` ===
 
  Disable SWFObject's default show/hide behavior (SWFObject 2.2+). 
@@ -278,7 +280,7 @@ swfobject.embedSWF("test.swf", "myContent", "300", "120", "9", "expressInstall.s
   * `replaceElemIdStr` is the `id` attribute of the HTML element that you want to have replaced by your SWF content
   * `callbackFn` (JavaScript function, optional) can be used to define a callback function that is called on both success or failure of embedding a SWF file (SWFObject 2.2+)
  
- Where callbackFn is a JavaScript function that has an event object as a parameter:
+ Where `callbackFn` is a JavaScript function that has an event object as a parameter:
 {{{
 function callbackFn(e) { ... }
 }}}
@@ -286,7 +288,7 @@ function callbackFn(e) { ... }
  Properties of this event object are:
   * `success`, Boolean to indicate whether the embedding of a SWF was success or not
   * `id`, String indicating the ID used in swfobject.registerObject
-  * `ref`, HTML object element reference (returns undefined when success=false) 
+  * `ref`, HTML object element reference (returns `undefined` when `success=false`) 
 
  An example: 
 {{{
