@@ -126,6 +126,6 @@ swfobject.embedSWF("test6.swf", "myContent", "300", "120", "9.0.0", "expressInst
 </script>
 }}}
 
-== And much more ==
+== And much more... ==
 
 We fixed a series of minor bugs, made small improvements to existing methods and made a few tweaks to ensure better HTML5 compatibility.
