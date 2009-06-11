@@ -5,11 +5,32 @@
 
 SWFObject 2 contains an API that allows JavaScript developers to reuse SWFObject's internal functions and aims to deliver a complete tool set for publishing SWF's and retrieving Flash player related information.
 
-=== `swfobject.registerObject(objectIdStr, swfVersionStr, xiSwfUrlStr)` ===
+== Methods ==
+
+=== `swfobject.registerObject(objectIdStr, swfVersionStr, xiSwfUrlStr, callbackFn)` ===
 
  Embed Flash content and alternative content using standards compliant markup (the nested-objects method with proprietary Internet Explorer conditional comments), and use JavaScript to resolve the issues that markup alone cannot solve (also called static publishing).
+ 
+ Arguments:
+  * `objectIdStr` (String, required) specifies the `id` used in the markup.
+  * `swfVersionStr` (String, required) specifies the Flash player version your content is published for. It activates the Flash version detection for a SWF to determine whether to show Flash content or force alternative content by doing a DOM manipulation. While Flash version numbers normally consist of major.minor.release.build, SWFObject only looks at the first 3 numbers, so both "WIN 9,0,18,0" (IE) or "Shockwave Flash 9 r18" (all other browsers) will translate to "9.0.18". If you only want to test for a major version you can omit the minor and release numbers, like "9" instead of "9.0.0".
+  * `xiSwfUrlStr` (String, optional) can be used to activate [http://www.adobe.com/cfusion/knowledgebase/index.cfm?id=6a253b75 Adobe express install] and specifies the URL of your express install SWF file. Express install displays a standardized Flash plugin download dialog instead of your Flash content when the required plugin version is not available. A default expressInstall.swf file is packaged with the project. It also contains the corresponding expressInstall.fla and AS files (in the SRC directory) to let you create your own custom express install experience. Please note that express install will only fire once (the first time that it is invoked), that it is only supported by Flash Player 6.0.65 or higher on Win or Mac platforms, and that it requires a minimal SWF size of 310x137px. 
+  * `callbackFn` (JavaScript function, optional) can be used to define a callback function that is called on both success or failure of embedding a SWF file (SWFObject 2.2+)
+ 
+ Where callbackFn is a JavaScript function that has an event object as a parameter:
+{{{
+function callbackFn(e) { ... }
+}}}
 
+ Properties of this event object are:
+  * `success`, Boolean to indicate whether the embedding of a SWF was success or not
+  * `id`, String indicating the ID used in swfobject.registerObject
+  * `ref`, HTML object element reference (returns undefined when success=false) 
+ 
  This method is explained in "How to embed Flash Player content using SWFObject static publishing" of the [http://code.google.com/p/swfobject/wiki/documentation SWFObject documentation page].
+
+ [http://www.bobbyvandersluis.com/swfobject/testsuite_2_2/test.html Basic static publishing example]
+ [http://www.bobbyvandersluis.com/swfobject/testsuite_2_2/test2.html Basic static publishing example with callback]
 
 === `swfobject.getObjectById(objectIdStr)` ===
 
@@ -34,14 +55,39 @@ if (obj) {
 }
 }}}
 
- [http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_com.html Sample page]
+ [http://www.bobbyvandersluis.com/swfobject/testsuite_2_2/test_com.html Sample page]
 
-=== `swfobject.embedSWF(swfUrlStr, replaceElemIdStr, widthStr, heightStr, swfVersionStr, xiSwfUrlStr, flashvarsObj, parObj, attObj)` ===
+=== `swfobject.embedSWF(swfUrlStr, replaceElemIdStr, widthStr, heightStr, swfVersionStr, xiSwfUrlStr, flashvarsObj, parObj, attObj, callbackFn)` ===
 
  Insert alternative content using standards compliant markup and embed Flash content with unobtrusive JavaScript (also called dynamic publishing).
+ 
+ Arguments:
+  * `swfUrl` (String, required) specifies the URL of your SWF
+  * `id` (String, required) specifies the `id` of the HTML element (containing your alternative content) you would like to have replaced by your Flash content
+  * `width` (String, required) specifies the width of your SWF
+  * `height` (String, required) specifies the height of your SWF
+  * `version` (String, required) specifies the Flash player version your SWF is published for (format is: "major.minor.release" or "major")
+  * `expressInstallSwfurl` (String, optional) specifies the URL of your express install SWF and activates [http://www.adobe.com/cfusion/knowledgebase/index.cfm?id=6a253b75 Adobe express install]. Please note that express install will only fire once (the first time that it is invoked), that it is only supported by Flash Player 6.0.65 or higher on Win or Mac platforms, and that it requires a minimal SWF size of 310x137px. 
+  * `flashvars` (Object, optional) specifies your flashvars with name:value pairs 
+  * `params` (Object, optional) specifies your nested `object` element `params` with name:value pairs 
+  * `attributes` (Object, optional) specifies your `object`'s attributes with name:value pairs
+  * `callbackFn` (JavaScript function, optional) can be used to define a callback function that is called on both success or failure of embedding a SWF file (SWFObject 2.2+)
+ 
+ Where callbackFn is a JavaScript function that has an event object as a parameter:
+{{{
+function callbackFn(e) { ... }
+}}}
 
- This method is explained in "How to embed Flash Player content using SWFObject dynamic publishing" of the [http://code.google.com/p/swfobject/wiki/documentation SWFObject documentation page]
-
+ Properties of this event object are:
+  * `success`, Boolean to indicate whether the embedding of a SWF was success or not
+  * `id`, String indicating the ID used in swfobject.registerObject
+  * `ref`, HTML object element reference (returns undefined when success=false) 
+  
+  This method is explained in "How to embed Flash Player content using SWFObject dynamic publishing" of the [http://code.google.com/p/swfobject/wiki/documentation SWFObject documentation page]
+  
+ [http://www.bobbyvandersluis.com/swfobject/testsuite_2_2/test_dynamic.html Basic dynamic publishing example]
+ [http://www.bobbyvandersluis.com/swfobject/testsuite_2_2/test_dynamic2.html Basic dynamic publishing example with callback]
+ 
 === `swfobject.getFlashPlayerVersion()` ===
 
  Returns a JavaScript object containing the major version (major:Number), minor version (minor:Number) and release version (release:Number) of an installed Flash player. Please note that while Flash version numbers normally consist of major.minor.release.build, SWFObject only looks at the first 3 numbers, so both "WIN 9,0,18,0" (IE) or "Shockwave Flash 9 r18" (all other browsers) will translate to "9.0.18".
@@ -52,7 +98,7 @@ var playerVersion = swfobject.getFlashPlayerVersion(); // returns a JavaScript o
 var majorVersion = playerVersion.major; // access the major, minor and release version numbers via their respective properties
 }}}
 
- [http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_api_getflashplayerversion.html Sample page]
+ [http://www.bobbyvandersluis.com/swfobject/testsuite_2_2/test_api_getflashplayerversion.html Sample page]
 
 === `swfobject.hasFlashPlayerVersion(versionStr)` ===
 
@@ -68,7 +114,7 @@ else {
 }
 }}}
 
- [http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_api_hasflashplayerversion.html Sample page]
+ [http://www.bobbyvandersluis.com/swfobject/testsuite_2_2/test_api_hasflashplayerversion.html Sample page]
 
 === `swfobject.addLoadEvent(fn)` ===
 
@@ -82,7 +128,7 @@ function sayHi() {
 swfobject.addLoadEvent(sayHi);
 }}}
 
- [http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_api_addloadevent.html Sample page]
+ [http://www.bobbyvandersluis.com/swfobject/testsuite_2_2/test_api_addloadevent.html Sample page]
 
 === `swfobject.addDomLoadEvent(fn)` ===
 
@@ -96,7 +142,7 @@ function sayHi() {
 swfobject.addDomLoadEvent(sayHi);
 }}}
 
- [http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_api_adddomloadevent.html Sample page]
+ [http://www.bobbyvandersluis.com/swfobject/testsuite_2_2/test_api_adddomloadevent.html Sample page]
 
 === `swfobject.createSWF(attObj, parObj, replaceElemIdStr)` ===
 
@@ -143,9 +189,9 @@ swfobject.addDomLoadEvent(sayHi);
 </html>
 }}}
 
- [http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_api_createswf.html Sample page]
+ [http://www.bobbyvandersluis.com/swfobject/testsuite_2_2/test_api_createswf.html Sample page]
  
- [http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_api_createswf_com.html Sample page] that uses the returned `object` element for browser communication
+ [http://www.bobbyvandersluis.com/swfobject/testsuite_2_2/test_api_createswf_com.html Sample page] that uses the returned `object` element for browser communication
  
 === `swfobject.removeSWF(objElemIdStr)` ===
 
@@ -158,13 +204,17 @@ swfobject.addDomLoadEvent(sayHi);
 swfobject.removeSWF("myContent");
 }}}
 
- [http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_api_create_remove.html Sample page]
+ [http://www.bobbyvandersluis.com/swfobject/testsuite_2_2/test_api_create_remove.html Sample page]
 
 === `swfobject.createCSS(selStr, declStr)` ===
 
  Exposes SWFObject's internal cross-browser method to create a dynamic stylesheet (for media type `screen` only). It's most important feature is that it can be called before the DOM of a page is loaded. Based on [http://www.bobbyvandersluis.com/articles/dynamic_css/index.html a solution] by Bobby van der Sluis:
-  * `selStr` is a String value that represents a CSS selector
-  * `declStr` is a String value that represents a CSS declaration
+  * `selStr` (String, required) represents a CSS selector
+  * `declStr` (String, required) represents a CSS declaration
+  * `mediaStr` (String, optional) to indicate the CSS media type (SWFObject 2.2+)
+  * `newStyleBoolean` (Boolean, optional) to indicate whether a new dynamic style element should be appended to the head of the HTML document, or that SWFObject should reuse a possible earlier created dynamic style element (default, SWFObject 2.2+)
+
+ From SWFObject 2.2 onwards this method will by default append new dynamic styles to an earlier created dynamic style sheet (if available).
  
  An example:
 {{{
@@ -176,7 +226,8 @@ if (swfobject.hasFlashPlayerVersion("6.0.0")) {
 }
 }}}
 
- [http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_api_createcss.html Sample page]
+ [http://www.bobbyvandersluis.com/swfobject/testsuite_2_2/test_api_createcss.html Basic example page]
+ [http://www.bobbyvandersluis.com/swfobject/testsuite_2_2/test_api_createcss2.html Advanced example page]
 
 === `swfobject.getQueryParamValue(paramStr)` ===
 
@@ -198,6 +249,116 @@ var params = {};
 var attributes = {};
 swfobject.embedSWF("myContent.swf", "altContent", "100%", "100%", "9.0.0","expressInstall.swf", flashvars, params, attributes);
 }}}
+
+=== `swfobject.switchOffAutoHideShow()` ===
+
+ Disable SWFObject's default show/hide behavior (SWFObject 2.2+). 
+
+ Ensure to call `swfobject.switchOffAutoHideShow()` after you have included the SWFObject library, but before any `swfobject.registerObject()` or `swfobject.embedSWF()` calls, like:
+{{{
+<script type="text/javascript" src="swfobject.js"></script>
+<script type="text/javascript">
+swfobject.switchOffAutoHideShow();
+swfobject.embedSWF("test.swf", "myContent", "300", "120", "9", "expressInstall.swf");
+</script>
+}}}
+
+=== `swfobject.showExpressInstall(att, par, replaceElemIdStr, callbackFn)` ===
+
+ Enables developers to reuse SWFObject's internal methods to create their custom Express Install and activate it via the API (SWFObject 2.2+):
+  * `attObj` is a JavaScript Object that contains the name value pairs of the `object` element's attributes and values
+  * `parObj` is a JavaScript Object that contains the name value pairs of the `object` element's nested `param` element's names and values
+  * `replaceElemIdStr` is the `id` attribute of the HTML element that you want to have replaced by your SWF content
+  * `callbackFn` (JavaScript function, optional) can be used to define a callback function that is called on both success or failure of embedding a SWF file (SWFObject 2.2+)
+ 
+ Where callbackFn is a JavaScript function that has an event object as a parameter:
+{{{
+function callbackFn(e) { ... }
+}}}
+
+ Properties of this event object are:
+  * `success`, Boolean to indicate whether the embedding of a SWF was success or not
+  * `id`, String indicating the ID used in swfobject.registerObject
+  * `ref`, HTML object element reference (returns undefined when success=false) 
+
+ An example: 
+{{{
+<script type="text/javascript" src="swfobject.js"></script>
+<script type="text/javascript">
+function cancelFunction() {
+        alert("Express Install was cancelled");
+}
+if (swfobject.hasFlashPlayerVersion("10")) {
+        var fn = function() {
+                var att = { data:"flashContent.swf", width:"300", height:"120" };
+                var par = {};
+                var id = "myContent";
+                swfobject.createSWF(att, par, id);
+        };
+        
+}
+else {
+        var fn = function() {
+                var att = { data:"expressInstall.swf", width:"600", height:"240" };
+                var par = {};
+                var id = "myContent";
+                swfobject.showExpressInstall(att, par, id, cancelFunction);
+        }
+}
+swfobject.addDomLoadEvent(fn);
+</script>
+}}}
+
+ [http://www.bobbyvandersluis.com/swfobject/testsuite_2_2/test_api_express_install.html Example page]
+
+== Properties ==
+
+ SWFObject 2.2+ exposes the properties of its internal user agent detection for library authors (e.g. developers that like to write extensions for SWFObject).
+
+ An example:
+{{{
+<script type="text/javascript" src="swfobject.js"></script>
+<script type="text/javascript">
+function test() {
+    var output = "swfobject.ua.w3 = " + swfobject.ua.w3;
+    output += "\nswfobject.ua.pv[0] (major version) = " + swfobject.ua.pv[0];
+    output += "\nswfobject.ua.pv[1] (minor version) = " + swfobject.ua.pv[1];
+    output += "\nswfobject.ua.pv[2] (release version) = " + swfobject.ua.pv[2];
+    output += "\nswfobject.ua.wk = " + swfobject.ua.wk;
+    output += "\nswfobject.ua.ie = " + swfobject.ua.ie;
+    output += "\nswfobject.ua.win = " + swfobject.ua.win;
+    output += "\nswfobject.ua.mac = " + swfobject.ua.mac;
+    alert(output);
+}
+swfobject.addLoadEvent(test);
+</script>
+}}}
+
+ [http://www.bobbyvandersluis.com/swfobject/testsuite_2_2/test_api_ua.html Example page]
+
+=== `swfobject.ua.w3` ===
+
+ returns a Boolean whether or not W3C DOM methods are supported
+ 
+=== `swfobject.ua.pv` ===
+
+ returns an Array that contains the major, minor and release version number of the Flash Player
+
+=== `swfobject.ua.wk` ===
+
+ returns the Webkit version or false if not Webkit
+
+=== `swfobject.ua.ie` ===
+
+ returns a Boolean to indicate whether a visitor uses Internet Explorer on Windows or not
+ 
+=== `swfobject.ua.win` ===
+
+ returns a Boolean to indicate whether a visitor uses Windows OS or not
+ 
+=== `swfobject.ua.mac` ===
+
+ returns a Boolean to indicate whether a visitor uses Mac OS or not
 
 == SWF native methods and properties  ==
 
