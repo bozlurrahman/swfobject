@@ -1,4 +1,5 @@
 #summary SWFObject 2.2 development notes
+#labels Deprecated
 
 == SWFObject 2.2 development notes ==
 
