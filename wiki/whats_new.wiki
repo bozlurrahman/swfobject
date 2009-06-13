@@ -113,7 +113,7 @@ We removed all conditional compilation directives as a proprietary feature test 
 
 == 10. The option to switch off SWFObject's default show/hide behavior ==
 
-Developers now have the option to display alternative content (e.g. background image) while waiting for the swf file to load by switching off SWFObject's default hide/show behavior.
+Developers now have the option to switch off SWFObject's default hide/show behavior (SWFObject temporarily hides your SWF or alternative content until the library has decided which content to display).
 
 Just call the `swfobject.switchOffAutoHideShow()` method after you have included SWFObject, but before any `swfobject.registerObject()` or `swfobject.embedSWF()` calls, like:
 
