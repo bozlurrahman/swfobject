@@ -9,7 +9,7 @@ In short, SWFObject has followed a path of evolution - much more than revolution
 == FlashObject ==
 
 On October 14th 2004 Geoff Stearns [http://blog.deconcept.com/2004/10/14/web-standards-compliant-javascript-flash-detect-and-embed/ released FlashObject], a JavaScript based Flash embed method that combined a couple of nifty features in a new way:
-  # The ability to detect the major Flash player version in the user’s browser and display alternate content if needed
+  # The ability to detect the major Flash player version in the user's browser and display alternate content if needed
   # Different alternate content options: plain text (HTML), redirect, or image
   # Powered by one small reusable JavaScript file; only your Flash embed definition has to be defined in a Web page  
   # Ease of use (it was also aimed at non-technical designers)
@@ -17,8 +17,8 @@ On October 14th 2004 Geoff Stearns [http://blog.deconcept.com/2004/10/14/web-sta
 Soon FlashObject got picked up by many Flash developers around the globe.  
 
 When Macromedia released a new version of the [http://blog.deconcept.com/2005/08/08/new-macromedia-flash-player-detection-kit/ Flash Player Detection Kit] with the release of Flash 8 in 2005 it became obvious that the official embed library was far from perfect:
-  # Loads of non-reusable inline Javascript code
-  # Tough to modify
+  # It contained loads of non-reusable inline Javascript code
+  # It was tough to modify
 
 Slowly SWFObject became a popular tool of choice in the Flash community. The project went through 3 revisions under the FlashObject name:
   # FlashObject 1.1
@@ -36,7 +36,7 @@ In the next year SWFObject went through 2 more revisions:
 == Unobtrusive Flash Objects (UFO) ==
 
 On July 20th 2005 Bobby van der Sluis released [http://www.bobbyvandersluis.com/ufo/index.html Unobtrusive Flash Objects], a JavaScript based Flash embed method that was based on the same principles as introduced by FlashObject:
-  # The ability to detect the Flash player version in the user’s browser and display alternate content if needed
+  # The ability to detect the Flash player version in the user's browser and display alternate content if needed
   # Powered by one small reusable JavaScript file; only your Flash embed definition has to be defined in a Web page
   # Ease of use (it was also aimed at non-technical designers)
    
@@ -48,7 +48,7 @@ UFO differentiated itself from FlashObject, because it:
 
 UFO soon became a very popular dynamic embed script in the Web standards community. The project went through [http://www.bobbyvandersluis.com/ufo/archive/changeHistory.txt 2 major revisions]:
   # UFO 2 (October 2005) introduced support for Macromedia express install
-  # UFO 3 (January 2006) introduced a Dom load routine (where previously it relied on the much slower window onload event)
+  # UFO 3 (January 2006) introduced a DOM-content-loaded event (where previously it relied on the much slower window onload event)
   
 == SWFFix ==
 
@@ -68,13 +68,8 @@ SWFFix followed the following basic principles:
 SWFFix' early prototypes focused on static publishing by parsing mark-up and enhancing it with unobtrusive JavaScript. However it soon became clear that also a dynamic publishing method should be made available. Also the idea of a public JavaScript API with which a developer can reuse SWFFix' internal functions was born.
 
 The SWFFix project produced two public alpha versions and was renamed to SWFObject 2 on October 1st 2007, because it didn't really make sense to throw away two established open source brands to create a new one:
-{{{
-"While getting closer in bringing our embed method to the market, we had to re-assess if SWFFix is the most fortunate name for the project. We had already received the feedback from the folks at Adobe that they were not entirely happy with the name, because is suggests the SWF format to be broken, while we are trying to communicate that it is the cross-browser support for embedding plug-in content that is broken.
 
-Furthermore, both SWFObject and UFO are already two existing and strong open source ‘brands’ for embedding Flash content. SWFObject is the most widely used of the two and immensely popular within the Flash community, while UFO has a large user share within the web standards community. So why kill two established brands and start an entire new one?
-
-As a result we renamed SWFFix to SWFObject. Our new method will start at SWFObject version 2.0."
-}}}
+"While getting closer in bringing our embed method to the market, we had to re-assess if SWFFix is the most fortunate name for the project. We had already received the feedback from the folks at Adobe that they were not entirely happy with the name, because is suggests the SWF format to be broken, while we are trying to communicate that it is the cross-browser support for embedding plug-in content that is broken. Furthermore, both SWFObject and UFO are already two existing and strong open source 'brands' for embedding Flash content. SWFObject is the most widely used of the two and immensely popular within the Flash community, while UFO has a large user share within the web standards community. So why kill two established brands and start an entire new one? As a result we renamed SWFFix to SWFObject. Our new method will start at SWFObject version 2.0."
 
 == SWFObject 2 ==
 
@@ -82,7 +77,7 @@ As a result we renamed SWFFix to SWFObject. Our new method will start at SWFObje
   # A static publishing method
   # A dynamic publishing method
   # A JavaScript API that enables you to reuse SWFObjects internal functions for common Flash based tasks
-  # A publishing tool called _SWFObject 2 HTML and JavaScript generator_ (both an HTML and an Adobe AIR version)
+  # A publishing tool called [http://code.google.com/p/swfobject/wiki/generator SWFObject 2 HTML and JavaScript generator] (both an HTML and an Adobe AIR version)
   
 One month before it's first release Michael Williams unexpectedly passed away. Both SWFObject 2.0 and Flash CS4 are dedicated to the memory of Michael Williams (in Flash CS4 go to the menu, click About Flash and click on the top of the letter "l" in the Fl logo).
 
