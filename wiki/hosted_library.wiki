@@ -13,17 +13,17 @@ If you are unfamiliar with the AJAX Library API, you can find more information o
 
 We imagine that most SWFObject users most likely only use SWFObject and none of the other libraries hosted on the AJAX Libraries site. In that case it's the best to directly link to the latest version of SWFObject 2:
 {{{
-http://ajax.googleapis.com/ajax/libs/swfobject/2.1/swfobject.js
+http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js
 }}}
 Yep, that’s it. Just replace the path to your local copy of swfobject.js with this one and you are done.
 
 The uncompressed _'debug'_ version of the library (that should *not* be used for production purposes) is hosted at:  
 {{{
-http://ajax.googleapis.com/ajax/libs/swfobject/2.1/swfobject_src.js
+http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject_src.js
 }}}
 For developers that like to create mashups using multiple libraries, Google's loader mechanism can be an interesting option:
 {{{
-google.load("swfobject", "2.1");
+google.load("swfobject", "2.2");
 }}}
 This method is fully documented [http://code.google.com/apis/ajax/documentation/ here]. 
 
