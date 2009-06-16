@@ -1,1 +1,102 @@
 #summary The incomplete history of SWFObject
+
+= The incomplete history of SWFObject =
+
+Recently several people asked us about the history of SWFObject, so we thought it would be a neat idea to document where the project comes from and which road it has traveled so far.
+
+In short, SWFObject has followed a path of evolution - much more than revolution - and much of its popularity is due to the determination of the project team and the open source nature of the project.
+
+== FlashObject ==
+
+On October 14th 2004 Geoff Stearns [http://blog.deconcept.com/2004/10/14/web-standards-compliant-javascript-flash-detect-and-embed/ released FlashObject], a JavaScript based Flash embed method that combined a couple of nifty features in a new way:
+  # The ability to detect the major Flash player version in the user’s browser and display alternate content if needed
+  # Different alternate content options: plain text (HTML), redirect, or image
+  # Powered by one small reusable JavaScript file; only your Flash embed definition has to be defined in a Web page  
+  # Ease of use (it was also aimed at non-technical designers)
+  
+Soon FlashObject got picked up by many Flash developers around the globe.  
+
+When Macromedia released a new version of the [http://blog.deconcept.com/2005/08/08/new-macromedia-flash-player-detection-kit/ Flash Player Detection Kit] with the release of Flash 8 in 2005 it became obvious that the official embed library was far from perfect:
+  # Loads of non-reusable inline Javascript code
+  # Tough to modify
+
+Slowly SWFObject became a popular tool of choice in the Flash community. The project went through 3 revisions under the FlashObject name:
+  # FlashObject 1.1
+  # [http://blog.deconcept.com/2005/07/24/flashobject-1-2/ FlashObject 1.2] (July 2005) introduced minor and revision version detection and name spacing (with the advice of [http://www.tobyjoe.com/ Toby Boudreaux])
+  # [http://blog.deconcept.com/2006/01/17/flashobject-1-3-released/ FlashObject 1.3] (January 2006) introduced Adobe Express Install, integration with Macromedia's JavaScript Integration Kit and minified the library using Dojo Shrinksafe
+
+== SWFObject 1.4 and 1.5 ==
+
+In April 2006 [http://blog.deconcept.com/2006/04/21/flashobject-to-become-swfobject/ FlashObject was renamed to SWFObject], because Adobe's lawyers had complained that the name FlashObject could not be used anymore, because it wasn't in line with Adobe's Trademark policy.
+
+In the next year SWFObject went through 2 more revisions:
+  # [http://blog.deconcept.com/2006/04/24/swfobject-nee-flashobject-1-4-released/ SWFObject 1.4] (April 2006)
+  # [http://blog.deconcept.com/2007/02/28/swfobject-1-5-released/ SWFObject 1.5] (February 2007)
+
+== Unobtrusive Flash Objects (UFO) ==
+
+On July 20th 2005 Bobby van der Sluis released [http://www.bobbyvandersluis.com/ufo/index.html Unobtrusive Flash Objects], a JavaScript based Flash embed method that was based on the same principles as introduced by FlashObject:
+  # The ability to detect the Flash player version in the user’s browser and display alternate content if needed
+  # Powered by one small reusable JavaScript file; only your Flash embed definition has to be defined in a Web page
+  # Ease of use (it was also aimed at non-technical designers)
+   
+UFO differentiated itself from FlashObject, because it:
+  # Followed the principles of unobtrusive scripting, so all JavaScript was placed in the header of an HTML file
+  # Focused on dynamically publishing standards compliant HTML elements (note that HTML validators are unable to validate dynamically generated mark-up)
+  # Performed major and release version tests using JavaScript only (where other detection methods used a blob of VBScript to detect minor and release versions)
+  # Used functions and objects for its scoping (versus prototype based development)
+
+UFO soon became a very popular dynamic embed script in the Web standards community. The project went through [http://www.bobbyvandersluis.com/ufo/archive/changeHistory.txt 2 major revisions]:
+  # UFO 2 (October 2005) introduced support for Macromedia express install
+  # UFO 3 (January 2006) introduced a Dom load routine (where previously it relied on the much slower window onload event)
+  
+== SWFFix ==
+
+In September 2006 Geoff Stearns and Bobby van der Sluis met on the first Flash on the Beach conference in Brighton, UK. They shared their ideas about embedding Flash content and agreed that instead of being competitive, cooperation would be the new road to travel. A new open source project named [http://code.google.com/p/swffix/ SWFFix] was born.
+
+SWFFix was officially announced on February 6th 2007 in the [http://www.alistapart.com/articles/flashembedcagematch/ Flash Embedding Cage Match] on A List Apart. As a part of the project the [http://www.bobbyvandersluis.com/flashembed/testsuite/ Flash embed test suite] was published.
+
+In July 2007 Michael Williams, a software engineer at Adobe and has been involved in the creation of both the Adobe Flash player detection kit and Adobe Express Install, joined the project.
+
+SWFFix followed the following basic principles:
+  # Intends to unify all existing Flash Player embed methods and provide a new standard for embedding Adobe Flash Player content, so it should become the successor of SWFObject, UFO and the Adobe Flash Player Detection Kit
+  # It should contain a good mix of all the the good features of the existing libraries
+  # It should offer one solution for everybody; It shouldn't matter if you are an HTML, Flash, or JavaScript developer, there should be something in it for everyone
+  # A function based library that uses functions and closures for its scoping and to create public/private methods
+  # Utilizes one JavaScript file of max 10Kb in file size
+
+SWFFix' early prototypes focused on static publishing by parsing mark-up and enhancing it with unobtrusive JavaScript. However it soon became clear that also a dynamic publishing method should be made available. Also the idea of a public JavaScript API with which a developer can reuse SWFFix' internal functions was born.
+
+The SWFFix project produced two public alpha versions and was renamed to SWFObject 2 on October 1st 2007, because it didn't really make sense to throw away two established open source brands to create a new one:
+{{{
+"While getting closer in bringing our embed method to the market, we had to re-assess if SWFFix is the most fortunate name for the project. We had already received the feedback from the folks at Adobe that they were not entirely happy with the name, because is suggests the SWF format to be broken, while we are trying to communicate that it is the cross-browser support for embedding plug-in content that is broken.
+
+Furthermore, both SWFObject and UFO are already two existing and strong open source ‘brands’ for embedding Flash content. SWFObject is the most widely used of the two and immensely popular within the Flash community, while UFO has a large user share within the web standards community. So why kill two established brands and start an entire new one?
+
+As a result we renamed SWFFix to SWFObject. Our new method will start at SWFObject version 2.0."
+}}}
+
+== SWFObject 2 ==
+
+[http://code.google.com/p/swfobject/ SWFObject 2.0] was released on March 14th 2008. It introduced:
+  # A static publishing method
+  # A dynamic publishing method
+  # A JavaScript API that enables you to reuse SWFObjects internal functions for common Flash based tasks
+  # A publishing tool called _SWFObject 2 HTML and JavaScript generator_ (both an HTML and an Adobe AIR version)
+  
+One month before it's first release Michael Williams unexpectedly passed away. Both SWFObject 2.0 and Flash CS4 are dedicated to the memory of Michael Williams (in Flash CS4 go to the menu, click About Flash and click on the top of the letter "l" in the Fl logo).
+
+As of the October 15, 2008 release of Flash Player 10, [http://kb2.adobe.com/cps/253/6a253b75.html Adobe recommends] that developers use SWFObject2 for Flash Player detection. SWFObject publishing was included in Dreamwaever CS4.
+
+As of  November 10th 2008 [http://code.google.com/apis/ajaxlibs/ Google Ajax Libraries API] hosts SWFObject 2.
+
+In February 2009 Aran Rhee, Philip Hutchison and Kyle Simpson joined the project. Aran, Philip and Kyle have been involved with SWFObject's development and support for a long time and are also managers on the [http://groups.google.com/group/swfobject SWFObject Discussion Group].
+
+[http://trends.builtwith.com/?tag=javascript A survey from BuiltWith] dated June 15th shows that SWFObject is the second biggest JavaScript library used on the Web and the de facto standard to embed Flash content.
+
+Since it's first release SWFObject 2 went to [http://code.google.com/p/swfobject/wiki/release_notes various releases].
+
+SWFObject publishing is planned to be included in the upcoming versions of Flash Catalyst and Flash Developer.
+
+
+
