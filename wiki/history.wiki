@@ -78,19 +78,19 @@ The SWFFix project produced two public alpha versions and was renamed to SWFObje
   # A JavaScript API that enables you to reuse SWFObjects internal functions for common Flash based tasks
   # A publishing tool called [http://code.google.com/p/swfobject/wiki/generator SWFObject 2 HTML and JavaScript generator] (both an HTML and an Adobe AIR version)
   
-One month before it's first release Michael Williams unexpectedly passed away. Both SWFObject 2.0 and Flash CS4 are dedicated to the memory of Michael Williams (in Flash CS4 go to the menu, click About Flash and click on the top of the letter "l" in the Fl logo).
+One month before it's first release Michael Williams unexpectedly passed away. Both SWFObject 2.0 and Flash CS4 are dedicated to the memory of Michael Williams (in Flash CS4 go to the menu, click About Flash and click on the top of the letter "l" in the Fl logo to display the memorial panel).
 
-As of the October 15, 2008 release of Flash Player 10, [http://kb2.adobe.com/cps/253/6a253b75.html Adobe recommends] that developers use SWFObject2 for Flash Player detection. SWFObject publishing was included in Dreamwaever CS4.
+As of the October 15, 2008 release of Flash Player 10, [http://kb2.adobe.com/cps/253/6a253b75.html Adobe recommends] that developers use SWFObject2 for Flash Player detection. SWFObject publishing was included in Dreamweaver CS4.
 
 As of  November 10th 2008 [http://code.google.com/apis/ajaxlibs/ Google Ajax Libraries API] hosts SWFObject 2.
 
 In February 2009 Aran Rhee, Philip Hutchison and Kyle Simpson joined the project. Aran, Philip and Kyle have been involved with SWFObject's development and support for a long time and are also managers on the [http://groups.google.com/group/swfobject SWFObject Discussion Group].
 
-[http://trends.builtwith.com/?tag=javascript A survey from BuiltWith] dated June 15th shows that SWFObject is the second biggest JavaScript library used on the Web and the de facto standard to embed Flash content.
+[http://trends.builtwith.com/?tag=javascript A survey from BuiltWith] dated June 15th shows that SWFObject is the second biggest JavaScript library used on the Web and the de facto standard to embed Adobe Flash content.
 
 Since it's first release SWFObject 2 went to [http://code.google.com/p/swfobject/wiki/release_notes various releases].
 
-SWFObject publishing is planned to be included in the upcoming versions of Flash Catalyst and Flash Developer.
+SWFObject publishing is planned to be included in the upcoming versions of Adobe Flash Catalyst and Adobe Flash Developer.
 
 
 
