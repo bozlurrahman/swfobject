@@ -86,9 +86,8 @@ As of  November 10th 2008 [http://code.google.com/apis/ajaxlibs/ Google Ajax Lib
 
 In February 2009 Aran Rhee, Philip Hutchison and Kyle Simpson joined the project. Aran, Philip and Kyle have been involved with SWFObject's development and support for a long time and are also managers on the [http://groups.google.com/group/swfobject SWFObject Discussion Group].
 
-[http://trends.builtwith.com/?tag=javascript A survey from BuiltWith] dated June 15th shows that SWFObject is the second biggest JavaScript library used on the Web and the de facto standard to embed Adobe Flash content.
+[http://trends.builtwith.com/?tag=javascript A survey from BuiltWith] dated June 15th 2009 shows that SWFObject is the second biggest JavaScript library used on the Web and the de facto standard to embed Adobe Flash content.
 
-Since it's first release SWFObject 2 went to [http://code.google.com/p/swfobject/wiki/release_notes various releases].
+Since it's first release SWFObject 2 went through [http://code.google.com/p/swfobject/wiki/release_notes various releases].
 
 SWFObject publishing is planned to be included in the upcoming versions of Adobe Flash Catalyst and Adobe Flash Developer.
-
