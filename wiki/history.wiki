@@ -80,7 +80,7 @@ The SWFFix project produced two public alpha versions and was renamed to SWFObje
   
 One month before it's first release Michael Williams unexpectedly passed away. Both SWFObject 2.0 and Flash CS4 are dedicated to the memory of Michael Williams (in Flash CS4 go to the menu, click About Flash and click on the top of the letter "l" in the Fl logo to display the memorial panel).
 
-As of the October 15, 2008 release of Flash Player 10, [http://kb2.adobe.com/cps/253/6a253b75.html Adobe recommends] that developers use SWFObject 2 for Flash Player detection. SWFObject publishing is also included in Dreamweaver CS4.
+As of the October 15, 2008 release of Flash Player 10, [http://kb2.adobe.com/cps/253/6a253b75.html Adobe recommends] that developers should use SWFObject 2 for Flash Player detection. SWFObject publishing is also included in Dreamweaver CS4.
 
 As of  November 10th 2008 [http://code.google.com/apis/ajaxlibs/ Google Ajax Libraries API] hosts SWFObject 2.
 
@@ -90,4 +90,4 @@ In February 2009 Aran Rhee, Philip Hutchison and Kyle Simpson joined the project
 
 Since it's first release SWFObject 2 went through [http://code.google.com/p/swfobject/wiki/release_notes various releases].
 
-SWFObject publishing is planned to be included in the upcoming versions of Adobe Flash Catalyst and Adobe Flash Developer.
+SWFObject publishing is planned to be included in the upcoming versions of Adobe Flash Catalyst (codenamed "Thermo") and Adobe Flash Builder 4 (codenamed "Gumbo", and previously known as Flex Builder)".
