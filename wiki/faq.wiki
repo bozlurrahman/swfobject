@@ -55,9 +55,9 @@ function resizeHandler(event:Event):void {
 *NOTE:* For positioning elements always define a resize handler, because a user can resize the browser window and in Internet Explorer (using the _dynamic publishing method_) the stage size is only available on first load. When reloading or revisiting a page it will initially be 0, causing the Flash player to keep on triggering the stage.resize event until it receives its current value
 
 Three code examples can be found in the SWFObject test suite:
-  * [http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_fullbrowserflash.html Static publishing]
-  * [http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_dynamic_fullbrowserflash.html Dynamic publishing]
-  * [http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_dynamic_fullbrowserflash_adv.html Dynamic publishing including min-width, min-height and scrollbars]
+  * [http://www.bobbyvandersluis.com/swfobject/testsuite_2_2/test_fullbrowserflash.html Static publishing]
+  * [http://www.bobbyvandersluis.com/swfobject/testsuite_2_2/test_dynamic_fullbrowserflash.html Dynamic publishing]
+  * [http://www.bobbyvandersluis.com/swfobject/testsuite_2_2/test_dynamic_fullbrowserflash_adv.html Dynamic publishing including min-width, min-height and scrollbars]
 
 == 2. Why don't I see Flash content in Internet Explorer on Windows while I do have the required minimal Flash Player version installed? ==
 
@@ -78,7 +78,7 @@ Known erroneous versions are (major.minor.release version):
   
 All corrupt installers have been replaced by correct installers. You can avoid this issue by getting the latest version of the Flash Player via the [http://www.adobe.com/go/getflashplayer Adobe Flash Player installation page] or via the Adobe Express Install mechanism.
 
-You can test the [http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_api_getflashplayerversion.html by SWFObject detected Flash Player version] versus the [http://www.bobbyvandersluis.com/flashembed/testsuite/15_nested_iecc.html Flash Player version from within Flash].
+You can test the [http://www.bobbyvandersluis.com/swfobject/testsuite_2_2/test_api_getflashplayerversion.html by SWFObject detected Flash Player version] versus the [http://www.bobbyvandersluis.com/flashembed/testsuite/15_nested_iecc.html Flash Player version from within Flash].
 
 == 4. How do I prevent Internet Explorer from crashing and showing an "Operation Aborted" error when a `<base>` tag is defined? ==
 
@@ -112,7 +112,7 @@ Can be replaced with:
 
 *NOTE:* When publishing for Flash 8 or higher, the use of ExternalInterface is recommended for JavaScript-ActionScript communication over the use of fscommand()
 
-A [http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_dynamic_com.html code example] can be found in the SWFObject test suite.
+A [http://www.bobbyvandersluis.com/swfobject/testsuite_2_2/test_dynamic_com.html code example] can be found in the SWFObject test suite.
 
 == 6. How do I fix a "Line 56: Out of Memory" error, when unloading a page in Internet Explorer using earlier versions of Flash Player 9 and multiple SWFs using ExternalInterface? ==
 
@@ -204,7 +204,7 @@ You can use CSS to center your `object` element. Which styles to use depends on 
 </html>
 }}}
 
-or view the [http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_dynamic_centered_inline.html example from our test suite].
+or view the [http://www.bobbyvandersluis.com/swfobject/testsuite_2_2/test_dynamic_centered_inline.html example from our test suite].
 
 {{{
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -228,7 +228,7 @@ or view the [http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_dynami
 </html>
 }}}
 
-or view the [http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_dynamic_centered_block.html example from our test suite].
+or view the [http://www.bobbyvandersluis.com/swfobject/testsuite_2_2/test_dynamic_centered_block.html example from our test suite].
 
 == 11. How can I avoid that extra whitespace is created underneath my SWF? ==
 
@@ -314,7 +314,7 @@ The Flash Player version as installed by:
   * Safari 3: Click "Help > Installed Plug-ins" in the main menu and look for the "Shockwave Flash" entry
 
 The Flash Player version as detected by:
-  * [http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_api_getflashplayerversion.html SWFObject 2] 
+  * [http://www.bobbyvandersluis.com/swfobject/testsuite_2_2/test_api_getflashplayerversion.html SWFObject 2] 
   * [http://www.bobbyvandersluis.com/flashembed/testsuite/15_nested_iecc.html Flash (using HTML `object` element only)]
   * [http://www.bobbyvandersluis.com/flashembed/testsuite/21_embed.html Flash (using HTML `embed` element only)]
 
