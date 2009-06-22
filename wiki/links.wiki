@@ -16,6 +16,8 @@
 
 [http://googlewebmastercentral.blogspot.com/2008/06/improved-flash-indexing.html Improved Flash indexing] on Google Webmaster Central Blog
 
+[http://googlewebmastercentral.blogspot.com/2009/06/flash-indexing-with-external-resource.html Flash indexing with external resource loading]  on Google Webmaster Central Blog
+
 [http://googlewebmastercentral.blogspot.com/2008/10/video-tutorial-google-for-webmasters.html Video tutorial:Google for webmasters]
 
 [http://www.hochmanconsultants.com/articles/seo-friendly-flash.shtml How to SEO Flash] by Jonathan Hochman
