@@ -28,6 +28,7 @@
   # Why do `stage.stageWidth` and `stage.stageHeight` return `0` in Firefox or Internet Explorer when using dynamic publishing?
   # Why does Firefox report Permission denied to call method Location.toString in the error console?
   # Why does Internet Explorer 6 and 7 show the error message J.parentNode is null or not an object?
+  # Why can I see memory usage increase on every page refresh in Internet Explorer?
 
 == 1. How can I create a SWF that will encompass 100% of the browser window?  ==
 
@@ -350,6 +351,13 @@ When you create an iframe on a page that resides on a different domain than the 
 == 23. Why does Internet Explorer 6 and 7 show the error message J.parentNode is null or not an object? ==
 
 This happens when the SWFObject library (versions 2.0 or 2.1) are included more than once on the same web page. To avoid this, make sure that your swfobject.js file is only included once. SWFObject 2.2 will include a fix for this issue.
+
+
+==24. Why can I see memory usage increase on every page refresh in Internet Explorer? ==
+
+Recently the team from Anychart.com discovered the reason behind a long standing apparent Flash Player 9/10 memory leak when a user refreshes the page. This bug affects HTML pages which has a swf embedded on the page (whether using SWFObject or not) when viewed in IE 6/7/8. The reason for the bug was actually not the Flash player itself, but the Skype IE plug-in. You can find out more in depth information and how to disable the plug-in [http://www.anychart.com/blog/2009/07/27/anychart-has-discovered-bug-in-skype-skype-promises-to-fix-it-asap-2/ on the Anychart.com blog]. 
+
+The Skype team have now implemented a fix which will be made available in a future build (available in Septemeber) 
 
 == Comments ==
 
