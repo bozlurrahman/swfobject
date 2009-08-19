@@ -4,6 +4,11 @@
 
 You use the [http://www.bobbyvandersluis.com/swfobject/generator/index.html online version]  or download one of the the ZIP files from the [http://code.google.com/p/swfobject/downloads/list downloads page].
 
+Generator Translations:
+  * [http://www.tonpoo.com/docs/swfobject_generator/ Japanese] by Tonpoo
+<br><br>
+
+
 == version 1.2 (November 28th, 2008) ==
 
   * Added two [http://www.kaourantin.net/2008/05/what-does-gpu-acceleration-mean.html new by Flash Player 10 introduced] `wmode` param element values: `direct` and `gpu`.
