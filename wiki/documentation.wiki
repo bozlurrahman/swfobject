@@ -9,6 +9,7 @@ Translations:
   * [http://mtl.recruit.co.jp/blog/2007/10/swfobject_v20.html Japanese] by Shuhei Terai
   * [http://designformasters.info/posts/flash-embed-with-swfobject-2/ Russian] by Denis Kuznetsov
   * [http://labb.seoserver.se/swfobject-2/ Swedish] by Seoserver
+  * [http://www.mediavilla.name/index.php/jr/post/swfobject_2/es Spanish] by Juan Mediavilla
 
 == What is SWFObject? == 
 
