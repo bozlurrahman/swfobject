@@ -5,7 +5,7 @@
 
 == OVERVIEW ==
 
-  # How can I create a SWF that will encompass 100% of the browser window? 
+  # How can I create a SWF that will encompass 100% of the browser window? --OR-- When I try to make my SWF stretch 100% of the browser window, why does it disappear in Firefox?
   # Why don't I see Flash content in Internet Explorer on Windows while I do have the required minimal Flash Player version installed?
   # Why does `swfobject.getFlashPlayerVersion()` sometimes incorrectly report the installed Flash Player version?
   # How do I prevent Internet Explorer from crashing when a `<base>` tag is defined?
@@ -30,7 +30,7 @@
   # Why does Internet Explorer 6 and 7 show the error message J.parentNode is null or not an object?
   # Why can I see memory usage increase on every page refresh in Internet Explorer?
 
-== 1. How can I create a SWF that will encompass 100% of the browser window?  ==
+== 1. How can I create a SWF that will encompass 100% of the browser window? --OR-- When I try to make my SWF stretch 100% of the browser window, why does it disappear in Firefox? ==
 
 The following technique is also known as Full Browser Flash:
   # Set both the width and height of your SWF to 100% in your SWFObject definition
