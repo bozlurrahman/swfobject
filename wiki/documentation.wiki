@@ -10,6 +10,7 @@ Translations:
   * [http://designformasters.info/posts/flash-embed-with-swfobject-2/ Russian] by Denis Kuznetsov
   * [http://labb.seoserver.se/swfobject-2/ Swedish] by Seoserver
   * [http://www.mediavilla.name/index.php/jr/post/swfobject_2/es Spanish] by Juan Mediavilla
+  * [http://www.katrasa.com/2010/06/swfobject-2/ Turkish] by Serkan Avcı
 
 == What is SWFObject? == 
 
