@@ -11,6 +11,7 @@ Translations:
   * [http://labb.seoserver.se/swfobject-2/ Swedish] by Seoserver
   * [http://www.mediavilla.name/index.php/jr/post/swfobject_2/es Spanish] by Juan Mediavilla
   * [http://www.katrasa.com/2010/06/swfobject-2/ Turkish] by Serkan Avcı
+  * [http://spiral1.my-webs.org/ Greek] by Kavvadias Spyridon
 
 == What is SWFObject? == 
 
