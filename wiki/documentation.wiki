@@ -298,9 +298,9 @@ The SWFObject library consists of one external JavaScript file. SWFObject will b
 You can add the following often-used [http://www.w3schools.com/tags/tag_object.asp optional attributes] to the `object` element:
   * `id` (NOTE: when undefined, the `object` element automatically inherits the `id` from the alternative content container element)
   * `align`
-  * `class` _Note: `class` is a reserved ECMA4 keyword and will throw errors in Internet Explorer unless it is surrounded by quotation marks: `"class"` or '`class`'. For this reason, swfobject provides the `styleclass` keyword as a safe alternative syntax for `class`; if you use `styleclass`, swfobject will automatically insert it as `class` for you._
   * `name`
   * `styleclass` (see note about `class`)
+  * `class` _Note: `class` is a reserved ECMA4 keyword and will throw errors in Internet Explorer unless it is surrounded by quotation marks: `"class"` or '`class`'. For this reason, swfobject provides the `styleclass` keyword as a safe alternative syntax for `class`; if you use `styleclass`, swfobject will automatically insert it as `class` for you._
 
 Example:
 
