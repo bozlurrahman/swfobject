@@ -297,9 +297,31 @@ The SWFObject library consists of one external JavaScript file. SWFObject will b
 
 You can add the following often-used [http://www.w3schools.com/tags/tag_object.asp optional attributes] to the `object` element:
   * `id` (NOTE: when undefined, the `object` element automatically inherits the `id` from the alternative content container element)
-  * `name`
-  * `styleclass` (used instead of `class`, because this is also an ECMA4 reserved keyword)
   * `align`
+  * `class` _Note: `class` is a reserved ECMA4 keyword and will throw errors in Internet Explorer unless it is surrounded by quotation marks: `"class"` or '`class`'. For this reason, swfobject provides the `styleclass` keyword as a safe alternative syntax for `class`; if you use `styleclass`, swfobject will automatically insert it as `class` for you._
+  * `name`
+  * `styleclass` (see note about `class`)
+
+Example:
+
+{{{
+var attributes = {
+   id: "myId",
+   align: "left",
+   styleclass: "myclass"
+};
+}}}
+
+If you would rather use `class` instead of `styleclass`, wrap the word `class` in quotes like this:
+
+{{{
+var attributes = {
+   id: "myId",
+   align: "left",
+   "class": "myclass"
+};
+}}}
+
 
 You can use the following optional Flash specific `param` elements [http://www.adobe.com/cfusion/knowledgebase/index.cfm?id=tn_12701 (more info)]:
   * `play`
