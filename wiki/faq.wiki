@@ -29,6 +29,7 @@
   # Why does Firefox report Permission denied to call method Location.toString in the error console?
   # Why does Internet Explorer 6 and 7 show the error message J.parentNode is null or not an object?
   # Why can I see memory usage increase on every page refresh in Internet Explorer?
+  # Why is the "Settings..." option in the Flash Player context menu grayed out?
 
 == 1. How can I create a SWF that will encompass 100% of the browser window? --OR-- When I try to make my SWF stretch 100% of the browser window, why does it disappear in Firefox? ==
 
@@ -358,6 +359,12 @@ This happens when the SWFObject library (versions 2.0 or 2.1) are included more 
 Recently the team from Anychart.com discovered the reason behind a long standing apparent Flash Player 9/10 memory leak when a user refreshes the page. This bug affects HTML pages which has a swf embedded on the page (whether using SWFObject or not) when viewed in IE 6/7/8. The reason for the bug was actually not the Flash player itself, but the Skype IE plug-in. You can find out more in depth information and how to disable the plug-in [http://www.anychart.com/blog/2009/07/27/anychart-has-discovered-bug-in-skype-skype-promises-to-fix-it-asap-2/ on the Anychart.com blog]. 
 
 The Skype team have now implemented a fix which will be made available in a future build (available in Septemeber) 
+
+==25. Why is the "Settings..." option in the Flash Player context menu grayed out?==
+Flash Player's "Settings" panel has a minimum size of 214x137 pixels. If your embedded SWF is smaller than 214x137, Flash Player will not have enough room to display the settings panel, and will make the "Settings..." menu item inactive (grayed out). If you would like the "Settings..." menu item to be clickable, you will need to ensure your SWF is at least 214px wide by 137px tall.
+
+This size constraint also applies to the Express Install dialog.
+
 
 == Comments ==
 
