@@ -12,6 +12,7 @@ Translations:
   * [http://www.mediavilla.name/index.php/jr/post/swfobject_2/es Spanish] by Juan Mediavilla
   * [http://www.katrasa.com/2010/06/swfobject-2/ Turkish] by Serkan Avcı
   * [http://spiral1.my-webs.org/ Greek] by Kavvadias Spyridon
+  * [http://www.maba3ref.com/blog.php?11-SWFObject-2.0-Library uvfd] by إسماعيل عنجريني
 
 == What is SWFObject? == 
 
