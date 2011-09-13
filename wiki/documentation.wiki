@@ -3,7 +3,6 @@
 
 Translations:
   * [http://farthinker.cn/2007/12/27/swfobject-2_0-doc-translation/ Chinese] by FarThinker
-  * [http://www.actionscript-facile.com/afficher-flash-dans-une-page-html-avec-swfobject/article1213593.html French] by Matthieu Deloison
   * [http://blog.powerflasher.de/swfobject2/ German] by Powerflasher
   * [http://www.magnificaweb.it/swfobject-2/ Italian] by Luka M.
   * [http://mtl.recruit.co.jp/blog/2007/10/swfobject_v20.html Japanese] by Shuhei Terai
@@ -485,6 +484,7 @@ There are a number of reasons why we are not supporting this:
   * [http://www.adobe.com/devnet/flashplayer/articles/swfobject.html Detecting Flash Player versions and embedding SWF files with SWFObject 2]
   * [http://www.adobe.com/devnet/flashplayer/articles/alternative_content.html Providing alternative content for SWF files]
   * [http://www.gotoandlearn.com/play?id=77 Embedding Flash with SWFObject 2.0] (video tutorial) by Lee Brimelow
+  * [http://www.actionscript-facile.com/afficher-flash-dans-une-page-html-avec-swfobject/article1213593.html French (video tutorial)] by Matthieu Deloison
 
 == Comments ==
 
