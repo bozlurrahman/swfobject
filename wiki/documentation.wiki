@@ -484,7 +484,7 @@ There are a number of reasons why we are not supporting this:
   * [http://www.adobe.com/devnet/flashplayer/articles/swfobject.html Detecting Flash Player versions and embedding SWF files with SWFObject 2]
   * [http://www.adobe.com/devnet/flashplayer/articles/alternative_content.html Providing alternative content for SWF files]
   * [http://www.gotoandlearn.com/play?id=77 Embedding Flash with SWFObject 2.0] (video tutorial) by Lee Brimelow
-  * [http://www.actionscript-facile.com/afficher-flash-dans-une-page-html-avec-swfobject/article1213593.html French (video tutorial)] by Matthieu Deloison
+  * [http://www.actionscript-facile.com/afficher-flash-dans-une-page-html-avec-swfobject/article1213593.html Adding Flash content in an HTML page - French (video tutorial)] by Matthieu Deloison
 
 == Comments ==
 
