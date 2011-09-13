@@ -3,7 +3,7 @@
 
 Translations:
   * [http://farthinker.cn/2007/12/27/swfobject-2_0-doc-translation/ Chinese] by FarThinker
-  * [http://egypte.olympe-network.com/swfobject-francais.html French] by Montoumes
+  * [http://www.actionscript-facile.com/afficher-flash-dans-une-page-html-avec-swfobject/article1213593.html French] by Matthieu Deloison
   * [http://blog.powerflasher.de/swfobject2/ German] by Powerflasher
   * [http://www.magnificaweb.it/swfobject-2/ Italian] by Luka M.
   * [http://mtl.recruit.co.jp/blog/2007/10/swfobject_v20.html Japanese] by Shuhei Terai
