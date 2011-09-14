@@ -65,7 +65,7 @@ Three code examples can be found in the SWFObject test suite:
 
 When an install gets corrupted (very often caused by corrupt installers) it is impossible to read the Flash Player version number externally using scripting languages. When using dynamic publishing this results in the display of alternative content, with static publishing we let the object element do its job (it decides whether to show Flash content or alternative content based on its built-in MIME type mechanism) which results in the display of Flash content.
 
-You can test the by SWFObject detected Flash Player version [http://www.bobbyvandersluis.com/swfobject/testsuite_2_1/test_api_getflashplayerversion.html here].
+You can test the by SWFObject detected Flash Player version [http://www.bobbyvandersluis.com/swfobject/testsuite_2_2/test_api_getflashplayerversion.html here].
 
 The only way to avoid this issue is by uninstalling the Flash Player using the [http://www.adobe.com/go/tn_14157 Adobe uninstaller] and by reinstalling the plug-in via the [http://www.adobe.com/go/getflashplayer Adobe Flash Player installation page].
 
