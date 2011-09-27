@@ -64,7 +64,7 @@ The advantages of the *dynamic publishing method* are:
 
 === STEP 1: Embed both Flash content and alternative content using standards compliant markup ===
 
-SWFObject's base markup uses the nested-objects method (with proprietary Internet Explorer conditional comments) [ http://www.alistapart.com/articles/flashembedcagematch/ ] to ensure the most optimal cross-browser support by means of markup only, while being standards compliant and supporting alternative content [ http://www.bobbyvandersluis.com/flashembed/testsuite/ ]:
+SWFObject's base markup uses the nested-objects method (with proprietary Internet Explorer conditional comments.  See [http://www.alistapart.com/articles/flashembedcagematch/ Flash Embedding Cage Match]) to ensure the most optimal cross-browser support by means of markup only, while being standards compliant and supporting alternative content (See [http://www.bobbyvandersluis.com/flashembed/testsuite/ Flash Embed Test Suite]):
 
 {{{
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
