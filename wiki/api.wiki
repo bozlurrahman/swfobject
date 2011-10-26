@@ -15,7 +15,7 @@ SWFObject 2 contains an API that allows JavaScript developers to reuse SWFObject
   * `objectIdStr` (String, required) specifies the `id` used in the markup.
   * `swfVersionStr` (String, required) specifies the Flash player version your content is published for. It activates the Flash version detection for a SWF to determine whether to show Flash content or force alternative content by doing a DOM manipulation. While Flash version numbers normally consist of major.minor.release.build, SWFObject only looks at the first 3 numbers, so both "WIN 9,0,18,0" (IE) or "Shockwave Flash 9 r18" (all other browsers) will translate to "9.0.18". If you only want to test for a major version you can omit the minor and release numbers, like "9" instead of "9.0.0".
   * `xiSwfUrlStr` (String, optional) can be used to activate [http://www.adobe.com/cfusion/knowledgebase/index.cfm?id=6a253b75 Adobe express install] and specifies the URL of your express install SWF file. Express install displays a standardized Flash plugin download dialog instead of your Flash content when the required plugin version is not available. A default expressInstall.swf file is packaged with the project. It also contains the corresponding expressInstall.fla and AS files (in the SRC directory) to let you create your own custom express install experience. Please note that express install will only fire once (the first time that it is invoked), that it is only supported by Flash Player 6.0.65 or higher on Win or Mac platforms, and that it requires a minimal SWF size of 310x137px. 
-  * `callbackFn` (JavaScript function, optional) can be used to define a callback function that is called on both success or failure of embedding a SWF file (SWFObject 2.2+)
+  * `callbackFn` (JavaScript function, optional) can be used to define a callback function that is called on both success or failure of creating a Flash plug-in {{{<object>}}} on the page (SWFObject 2.2+)
  
  Where `callbackFn` is a JavaScript function that has an event object as a parameter:
 {{{
@@ -23,9 +23,11 @@ function callbackFn(e) { ... }
 }}}
 
  Properties of this event object are:
-  * `success`, Boolean to indicate whether the embedding of a SWF was success or not
+  * `success`, Boolean to indicate whether the creation of a Flash plugin-in {{{<object>}}} DOM was successful or not
   * `id`, String indicating the ID used in swfobject.registerObject
   * `ref`, HTML object element reference (returns `undefined` when `success=false`) 
+
+ NOTE: `success` is report as true if the minimum Flash player required is available and that the Flash plugin-in {{{<object>}}} DOM element for the SWF was created. SWFObject *cannot detect* if the swf file request has actually loaded or not.
  
  This method is explained in "How to embed Flash Player content using SWFObject static publishing" of the [http://code.google.com/p/swfobject/wiki/documentation SWFObject documentation page].
 
@@ -72,7 +74,7 @@ if (obj) {
   * `flashvars` (Object, optional) specifies your flashvars with name:value pairs 
   * `params` (Object, optional) specifies your nested `object` element `params` with name:value pairs 
   * `attributes` (Object, optional) specifies your `object`'s attributes with name:value pairs
-  * `callbackFn` (JavaScript function, optional) can be used to define a callback function that is called on both success or failure of embedding a SWF file (SWFObject 2.2+)
+  * `callbackFn` (JavaScript function, optional) can be used to define a callback function that is called on both success or failure of creating a Flash plug-in {{{<object>}}} on the page (SWFObject 2.2+)
  
  Where `callbackFn` is a JavaScript function that has an event object as a parameter:
 {{{
@@ -80,9 +82,11 @@ function callbackFn(e) { ... }
 }}}
 
  Properties of this event object are:
-  * `success`, Boolean to indicate whether the embedding of a SWF was success or not
+  * `success`, Boolean to indicate whether the creation of a Flash plugin-in {{{<object>}}} DOM was successful or not
   * `id`, String indicating the ID used in swfobject.registerObject
   * `ref`, HTML object element reference (returns `undefined` when `success=false`) 
+
+ NOTE: `success` is report as true if the minimum Flash player required is available and that the Flash plugin-in {{{<object>}}} DOM element for the SWF was created. SWFObject *cannot detect* if the swf file request has actually loaded or not.
   
   This method is explained in "How to embed Flash Player content using SWFObject dynamic publishing" of the [http://code.google.com/p/swfobject/wiki/documentation SWFObject documentation page]
   
