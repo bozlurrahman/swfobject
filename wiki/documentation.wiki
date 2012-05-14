@@ -134,7 +134,7 @@ You can use the following optional Flash specific `param` elements [http://www.a
 
 ==== Why should you use alternative content? ====
 
-The `object` element allows you to nest alternative content inside of it, which will be displayed if Flash is not installed or supported. This content will also be picked up by search engines, making it a great tool for creating search-engine-friendly content. Summarizing, you should use alternative content when you like to create content that is accessible for [http://www.adobe.com/devnet/flashplayer/articles/alternative_content_02.html people who browse the Web without plugins], create [http://www.adobe.com/devnet/flashplayer/articles/alternative_content_04.html search-engine-friendly content] or tell visitors that they can have a richer user experience by [http://www.adobe.com/devnet/flashplayer/articles/alternative_content_03.html downloading the Flash plug-in].
+The `object` element allows you to nest alternative content inside of it, which will be displayed if Flash is not installed or supported. This content will also be picked up by search engines, making it a great tool for creating search-engine-friendly content. Summarizing, you should use alternative content when you like to create content that is accessible for [http://www.adobe.com/devnet/flashplayer/articles/alternative_content.html people who browse the Web without plugins], create [http://www.adobe.com/devnet/flashplayer/articles/alternative_content.html search-engine-friendly content] or tell visitors that they can have a richer user experience by [http://www.adobe.com/devnet/flashplayer/articles/alternative_content.html downloading the Flash plug-in].
 
 === STEP 2: Include the SWFObject JavaScript library in the head of your HTML page ===
 
