@@ -2,7 +2,6 @@
 #labels Featured
 
 Translations:
-  * [http://farthinker.cn/2007/12/27/swfobject-2_0-doc-translation/ Chinese] by FarThinker
   * [http://blog.powerflasher.de/swfobject2/ German] by Powerflasher
   * [http://www.actionscript-facile.com/documentation-swfobject-afficher-flash-page-html/article1214713.html French] by Matthieu Deloison 
   * [http://www.magnificaweb.it/swfobject-2/ Italian] by Luka M.
